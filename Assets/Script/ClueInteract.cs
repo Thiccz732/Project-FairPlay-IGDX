@@ -9,10 +9,12 @@ public class ClueInteract : MonoBehaviour
     public GameObject interactPrompt;   
     public GameObject clueCamera;       
 
-    private Image whiteFlashImage;       
-    private MonoBehaviour playerController; 
-    private PlayerControls inputActions;
+    private static Image sharedWhiteFlash;       
+    private static PlayerController sharedPlayer; 
+    
+    private static GameObject sharedRadarUI; 
 
+    private PlayerControls inputActions;
     private bool isPlayerNear = false;
     private bool isCameraMode = false;
     private bool hasBeenPhotographed = false;
@@ -20,11 +22,7 @@ public class ClueInteract : MonoBehaviour
     private void Awake()
     {
         inputActions = new PlayerControls(); 
-        
-        // Membaca input tombol Interact (Untuk masuk kamera & jepret)
         inputActions.Main.Interact.performed += ctx => TryInteract();
-
-        // Membaca input tombol Cancel (Tambahan Baru)
         inputActions.Main.Cancel.performed += ctx => CancelCamera();
     }
 
@@ -36,16 +34,29 @@ public class ClueInteract : MonoBehaviour
         if (interactPrompt != null) interactPrompt.SetActive(false);
         if (clueCamera != null) clueCamera.SetActive(false);
 
-        GameObject flashObj = GameObject.Find("WhiteFlash");
-        if (flashObj != null) whiteFlashImage = flashObj.GetComponent<Image>();
+        if (sharedWhiteFlash == null)
+        {
+            GameObject flashObj = GameObject.Find("WhiteFlash");
+            if (flashObj != null) sharedWhiteFlash = flashObj.GetComponent<Image>();
+        }
 
-        GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
-        if (playerObj != null) playerController = playerObj.GetComponent<PlayerController>(); 
+        if (sharedPlayer == null)
+        {
+            GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
+            if (playerObj != null) sharedPlayer = playerObj.GetComponent<PlayerController>(); 
+        }
+
+        // PERUBAHAN DI SINI: Mencari objek radar secara otomatis
+        if (sharedRadarUI == null)
+        {
+            // Catatan: Pastikan nama objek radarmu di Canvas tetap "RawImage" 
+            sharedRadarUI = GameObject.Find("RadarUI");
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player") && !hasBeenPhotographed)
+        if (!hasBeenPhotographed && collision.CompareTag("Player"))
         {
             isPlayerNear = true;
             if (!isCameraMode && interactPrompt != null) interactPrompt.SetActive(true);
@@ -72,15 +83,11 @@ public class ClueInteract : MonoBehaviour
         else StartCoroutine(TakePhotoRoutine());
     }
 
-    // --- FUNGSI CANCEL BARU ---
     private void CancelCamera()
     {
-        // Kalau lagi di dalam mode bidik kamera dan BELUM difoto, batalkan!
         if (isCameraMode && !hasBeenPhotographed)
         {
             ExitCameraMode();
-            
-            // Munculkan lagi teks "Interact"-nya karena masih bisa difoto
             if (interactPrompt != null) interactPrompt.SetActive(true); 
         }
     }
@@ -88,34 +95,39 @@ public class ClueInteract : MonoBehaviour
     private void EnterCameraMode()
     {
         isCameraMode = true;
-        if (interactPrompt != null) interactPrompt.SetActive(false); // Hilangkan teks saat bidik
-        if (playerController != null) playerController.enabled = false; 
+        if (interactPrompt != null) interactPrompt.SetActive(false); 
+        if (sharedPlayer != null) sharedPlayer.enabled = false; 
         if (clueCamera != null) clueCamera.SetActive(true); 
+        
+        // PERUBAHAN DI SINI: Matikan radar saat lagi bidik
+        if (sharedRadarUI != null) sharedRadarUI.SetActive(false);
     }
 
     private void ExitCameraMode()
     {
         isCameraMode = false;
-        if (playerController != null) playerController.enabled = true; 
+        if (sharedPlayer != null) sharedPlayer.enabled = true; 
         if (clueCamera != null) clueCamera.SetActive(false); 
+        
+        // PERUBAHAN DI SINI: Nyalakan kembali radar setelah batal/selesai foto
+        if (sharedRadarUI != null) sharedRadarUI.SetActive(true);
     }
 
     private IEnumerator TakePhotoRoutine()
     {
-        hasBeenPhotographed = true; // Kunci objek ini biar gak bisa difoto lagi
-        
+        hasBeenPhotographed = true;
         if (interactPrompt != null) interactPrompt.SetActive(false);
 
-        if (whiteFlashImage != null)
+        if (sharedWhiteFlash != null)
         {
-            Color flashColor = whiteFlashImage.color;
+            Color flashColor = sharedWhiteFlash.color;
             flashColor.a = 1f; 
-            whiteFlashImage.color = flashColor;
+            sharedWhiteFlash.color = flashColor;
 
-            while (whiteFlashImage.color.a > 0)
+            while (sharedWhiteFlash.color.a > 0)
             {
                 flashColor.a -= Time.deltaTime * 2.5f; 
-                whiteFlashImage.color = flashColor;
+                sharedWhiteFlash.color = flashColor;
                 yield return null; 
             }
         }
