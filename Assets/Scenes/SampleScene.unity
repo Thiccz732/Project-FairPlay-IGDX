@@ -278,8 +278,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   cluePrefab: {fileID: 5645975296016794199, guid: 235cd549a1321444ba8a3a9ea81b1288, type: 3}
   amountToSpawn: 5
-  minimumDistance: 20
-  spawnAreaSize: {x: 50.5, y: 31.1}
+  minimumDistance: 60
+  spawnAreaSize: {x: 187.4, y: 120.2}
 --- !u!4 &279987351
 Transform:
   m_ObjectHideFlags: 0
@@ -874,8 +874,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -661, y: 260}
-  m_SizeDelta: {x: 400, y: 400}
+  m_AnchoredPosition: {x: -710.1, y: 310.4}
+  m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1030739445
 MonoBehaviour:
@@ -1229,7 +1229,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.00024414062, y: -0.00024414062}
-  m_SizeDelta: {x: 400, y: 400}
+  m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1643148001
 MonoBehaviour:

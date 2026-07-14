@@ -5,14 +5,19 @@ using System.Collections;
 
 public class ClueInteract : MonoBehaviour
 {
+    [Header("Tipe Objek (PENTING)")]
+    [Tooltip("Centang ini HANYA JIKA objek ini adalah Hewan Utama yang harus difoto untuk menang")]
+    public bool isFinalAnimal = false; 
+
     [Header("Komponen Bawaan Prefab")]
     public GameObject interactPrompt;   
     public GameObject clueCamera;       
 
     private static Image sharedWhiteFlash;       
     private static PlayerController sharedPlayer; 
-    
     private static GameObject sharedRadarUI; 
+
+    private GameObject radarBlip;
 
     private PlayerControls inputActions;
     private bool isPlayerNear = false;
@@ -46,11 +51,20 @@ public class ClueInteract : MonoBehaviour
             if (playerObj != null) sharedPlayer = playerObj.GetComponent<PlayerController>(); 
         }
 
-        // PERUBAHAN DI SINI: Mencari objek radar secara otomatis
         if (sharedRadarUI == null)
         {
-            // Catatan: Pastikan nama objek radarmu di Canvas tetap "RawImage" 
             sharedRadarUI = GameObject.Find("RadarUI");
+        }
+
+        // Cari objek radar blip. Karena namanya mungkin ClueBip atau AnimalBip,
+        // kita cari manual dari daftar anak-anaknya.
+        foreach (Transform child in transform)
+        {
+            if (child.name.Contains("Bip") || child.name.Contains("Blip"))
+            {
+                radarBlip = child.gameObject;
+                break;
+            }
         }
     }
 
@@ -98,8 +112,6 @@ public class ClueInteract : MonoBehaviour
         if (interactPrompt != null) interactPrompt.SetActive(false); 
         if (sharedPlayer != null) sharedPlayer.enabled = false; 
         if (clueCamera != null) clueCamera.SetActive(true); 
-        
-        // PERUBAHAN DI SINI: Matikan radar saat lagi bidik
         if (sharedRadarUI != null) sharedRadarUI.SetActive(false);
     }
 
@@ -108,8 +120,6 @@ public class ClueInteract : MonoBehaviour
         isCameraMode = false;
         if (sharedPlayer != null) sharedPlayer.enabled = true; 
         if (clueCamera != null) clueCamera.SetActive(false); 
-        
-        // PERUBAHAN DI SINI: Nyalakan kembali radar setelah batal/selesai foto
         if (sharedRadarUI != null) sharedRadarUI.SetActive(true);
     }
 
@@ -117,6 +127,25 @@ public class ClueInteract : MonoBehaviour
     {
         hasBeenPhotographed = true;
         if (interactPrompt != null) interactPrompt.SetActive(false);
+
+        if (radarBlip != null) radarBlip.SetActive(false);
+
+        if (GameManager.instance != null)
+        {
+            if (isFinalAnimal)
+            {
+                // Kalau ini hewan, berarti game tamat!
+                Debug.Log("=================================");
+                Debug.Log("HEWAN BERHASIL DIFOTO! YOU WIN!");
+                Debug.Log("=================================");
+                // Nanti kamu bisa tambahkan kode di GameManager untuk memunculkan layar menang (Win Screen)
+            }
+            else
+            {
+                // Kalau ini clue biasa, tambahkan poin
+                GameManager.instance.AddClueFound();
+            }
+        }
 
         if (sharedWhiteFlash != null)
         {
