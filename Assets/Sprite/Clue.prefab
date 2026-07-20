@@ -408,6 +408,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43a207ef150d95c4b9050cb855ef0584, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClueInteract
+  isFinalAnimal: 0
   interactPrompt: {fileID: 4798848328388508688}
   clueCamera: {fileID: 4133668017798608160}
 --- !u!58 &5407775224525766386
