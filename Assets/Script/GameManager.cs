@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    // Singleton
     public static GameManager instance;
 
     [Header("Pengaturan Hewan")]
@@ -10,13 +9,15 @@ public class GameManager : MonoBehaviour
     public int requiredClues = 3;        
 
     [Header("Radius Spawn Hewan (Dari Player)")]
-    [Tooltip("Jarak paling dekat hewan boleh muncul (biar gak nabrak player)")]
     public float minSpawnRadius = 8f;
-    
-    [Tooltip("Jarak paling jauh hewan boleh muncul")]
     public float maxSpawnRadius = 15f;
 
+    [Header("UI Akhir Game")]
+    public GameObject finalPanelUI;      // Panel tempat pasang foto
+    public int totalPhotosToMatch = 4;   // 3 Clue + 1 Hewan
+
     private int cluesFound = 0;
+    private int matchedPhotos = 0; // Menghitung foto yang sudah benar di slot
     private bool isAnimalSpawned = false;
     private Transform playerTransform; 
 
@@ -28,9 +29,11 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        // Cari player di awal biar game tetap enteng
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         if (player != null) playerTransform = player.transform;
+
+        // Sembunyikan panel foto di awal permainan
+        if (finalPanelUI != null) finalPanelUI.SetActive(false);
     }
 
     public void AddClueFound()
@@ -38,45 +41,48 @@ public class GameManager : MonoBehaviour
         if (isAnimalSpawned) return;
 
         cluesFound++;
-        Debug.Log("Clue Difoto! Total sekarang: " + cluesFound);
-
-        if (cluesFound >= requiredClues)
-        {
-            SpawnAnimal();
-        }
+        if (cluesFound >= requiredClues) SpawnAnimal();
     }
 
     private void SpawnAnimal()
     {
         isAnimalSpawned = true;
-
-        // Ambil titik pusat dari posisi Player saat ini (kalau playernya ada)
         Vector2 spawnCenter = playerTransform != null ? (Vector2)playerTransform.position : (Vector2)transform.position;
-
-        // 1. Tentukan arah secara acak 360 derajat
         Vector2 randomDirection = Random.insideUnitCircle.normalized;
-        
-        // 2. Tentukan jarak secara acak antara radius minimum dan maksimum
         float randomDistance = Random.Range(minSpawnRadius, maxSpawnRadius);
-        
-        // 3. Gabungkan jadi kordinat akhir
         Vector2 randomSpawnPos = spawnCenter + (randomDirection * randomDistance);
 
-        if (animalPrefab != null)
+        if (animalPrefab != null) Instantiate(animalPrefab, randomSpawnPos, Quaternion.identity);
+    }
+
+    // Fungsi ini dipanggil dari ClueInteract hewan
+    public void ShowFinalPanel()
+    {
+        if (finalPanelUI != null)
         {
-            Instantiate(animalPrefab, randomSpawnPos, Quaternion.identity);
-            Debug.Log("Hewan Muncul di jarak: " + randomDistance + " dari player");
+            finalPanelUI.SetActive(true);
+            
+            // Matikan pergerakan player biar gak jalan-jalan pas main puzzle
+            if (playerTransform != null) 
+                playerTransform.GetComponent<PlayerController>().enabled = false;
         }
     }
 
-    // Menggambar lingkaran bantu di Scene View
+    // Fungsi ini dipanggil dari PhotoSlot setiap kali tebakan benar
+    public void AddMatchedPhoto()
+    {
+        matchedPhotos++;
+        if (matchedPhotos >= totalPhotosToMatch)
+        {
+            Debug.Log("SEMUA FOTO COCOK! GAME TAMAT!");
+            // Di sini kamu bisa munculkan panel WIN atau Load Scene Credit Title
+        }
+    }
+
     private void OnDrawGizmosSelected()
     {
-        // Lingkaran Merah: Batas area terlarang (Hewan nggak akan spawn di dalam sini)
         Gizmos.color = new Color(1, 0, 0, 0.5f); 
         Gizmos.DrawWireSphere(transform.position, minSpawnRadius);
-
-        // Lingkaran Hijau: Batas area maksimal (Hewan akan spawn di antara merah dan hijau)
         Gizmos.color = new Color(0, 1, 0, 0.5f); 
         Gizmos.DrawWireSphere(transform.position, maxSpawnRadius);
     }
