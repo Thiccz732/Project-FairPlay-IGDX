@@ -1681,6 +1681,10 @@ MonoBehaviour:
   maxSpawnRadius: 30
   finalPanelUI: {fileID: 961121790}
   totalPhotosToMatch: 4
+  draggablePhotoUI:
+  - {fileID: 2061431981}
+  - {fileID: 302731595}
+  - {fileID: 1672533849}
 --- !u!4 &1244495250
 Transform:
   m_ObjectHideFlags: 0

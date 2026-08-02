@@ -13,11 +13,18 @@ public class GameManager : MonoBehaviour
     public float maxSpawnRadius = 15f;
 
     [Header("UI Akhir Game")]
-    public GameObject finalPanelUI;      // Panel tempat pasang foto
-    public int totalPhotosToMatch = 4;   // 3 Clue + 1 Hewan
+    public GameObject finalPanelUI;      
+    public int totalPhotosToMatch = 4;   
+
+    [Header("Sistem Jepretan Foto")]
+    [Tooltip("Tarik 4 objek Image 'Foto Drag' dari UI Final Panel ke sini")]
+    public UnityEngine.UI.Image[] draggablePhotoUI; 
+    
+    // Array memori untuk nyimpen foto asli saat main (Index 1-3 untuk clue, 4 untuk Hewan)
+    private Sprite[] capturedSnapshots = new Sprite[5]; 
 
     private int cluesFound = 0;
-    private int matchedPhotos = 0; // Menghitung foto yang sudah benar di slot
+    private int matchedPhotos = 0; 
     private bool isAnimalSpawned = false;
     private Transform playerTransform; 
 
@@ -32,16 +39,35 @@ public class GameManager : MonoBehaviour
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         if (player != null) playerTransform = player.transform;
 
-        // Sembunyikan panel foto di awal permainan
         if (finalPanelUI != null) finalPanelUI.SetActive(false);
     }
 
-    public void AddClueFound()
+    // FUNGSI BARU: Menerima gambar asli dari kamera player
+    public void RegisterSnapshot(Sprite snapshot, bool isAnimal)
     {
-        if (isAnimalSpawned) return;
+        if (isAnimal)
+        {
+            // Simpan foto hewan di index 4
+            capturedSnapshots[4] = snapshot;
+            ShowFinalPanel(); // Langsung tamat dan buka panel puzzle
+        }
+        else
+        {
+            // Tambah clue, lalu simpan fotonya di index 1, 2, atau 3
+            cluesFound++;
+            if (cluesFound <= 3) 
+            {
+                capturedSnapshots[cluesFound] = snapshot;
+            }
 
-        cluesFound++;
-        if (cluesFound >= requiredClues) SpawnAnimal();
+            Debug.Log("Clue " + cluesFound + " Berhasil Difoto!");
+
+            // Kalau clue udah 3, panggil hewan
+            if (cluesFound >= requiredClues && !isAnimalSpawned) 
+            {
+                SpawnAnimal();
+            }
+        }
     }
 
     private void SpawnAnimal()
@@ -55,35 +81,36 @@ public class GameManager : MonoBehaviour
         if (animalPrefab != null) Instantiate(animalPrefab, randomSpawnPos, Quaternion.identity);
     }
 
-    // Fungsi ini dipanggil dari ClueInteract hewan
-    public void ShowFinalPanel()
+    private void ShowFinalPanel()
     {
         if (finalPanelUI != null)
         {
             finalPanelUI.SetActive(true);
+            if (playerTransform != null) playerTransform.GetComponent<PlayerController>().enabled = false;
             
-            // Matikan pergerakan player biar gak jalan-jalan pas main puzzle
-            if (playerTransform != null) 
-                playerTransform.GetComponent<PlayerController>().enabled = false;
+            // Masukkan foto-foto jepretan tadi ke dalam UI Drag & Drop
+            foreach (var photoImage in draggablePhotoUI)
+            {
+                DraggablePhoto dragScript = photoImage.GetComponent<DraggablePhoto>();
+                if (dragScript != null)
+                {
+                    int id = dragScript.photoID;
+                    // Kalau fotonya ada di memori, timpa gambar aslinya!
+                    if (id >= 1 && id <= 4 && capturedSnapshots[id] != null)
+                    {
+                        photoImage.sprite = capturedSnapshots[id];
+                    }
+                }
+            }
         }
     }
 
-    // Fungsi ini dipanggil dari PhotoSlot setiap kali tebakan benar
     public void AddMatchedPhoto()
     {
         matchedPhotos++;
         if (matchedPhotos >= totalPhotosToMatch)
         {
             Debug.Log("SEMUA FOTO COCOK! GAME TAMAT!");
-            // Di sini kamu bisa munculkan panel WIN atau Load Scene Credit Title
         }
-    }
-
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = new Color(1, 0, 0, 0.5f); 
-        Gizmos.DrawWireSphere(transform.position, minSpawnRadius);
-        Gizmos.color = new Color(0, 1, 0, 0.5f); 
-        Gizmos.DrawWireSphere(transform.position, maxSpawnRadius);
     }
 }
