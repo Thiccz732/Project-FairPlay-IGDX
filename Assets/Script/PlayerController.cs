@@ -9,6 +9,9 @@ public class PlayerController : MonoBehaviour
     public float acceleration = 40f;
     public float deceleration = 50f;
 
+    [Header("Effects")]
+    public ParticleSystem walkParticle; // Slot Particle System di Inspector
+
     private Rigidbody2D rb;
     private Vector2 moveInput;
     private PlayerControls inputActions; 
@@ -33,14 +36,14 @@ public class PlayerController : MonoBehaviour
 
     private void OnEnable() => inputActions.Enable();
     
-    // PERUBAHAN DI SINI: Saat dimatikan oleh clue, rem mendadak & hentikan animasi jalan!
+    // Saat dimatikan oleh clue, rem mendadak, hentikan animasi & partikel!
     private void OnDisable()
     {
         inputActions.Disable();
         if (rb != null) rb.linearVelocity = Vector2.zero; 
         
-        // Pastikan karakter langsung kembali ke pose Idle saat kuncian kamera aktif
         if (anim != null) anim.SetBool("isWalking", false); 
+        SetWalkParticle(false); // Matikan partikel saat terkunci
     }
 
     private void Update()
@@ -48,16 +51,35 @@ public class PlayerController : MonoBehaviour
         // 1. Cek apakah ada input pergerakan
         bool isMoving = moveInput != Vector2.zero;
 
-        // 2. Set bool "isWalking" di Animator sesuai status pergerakan
+        // 2. Set bool "isWalking" di Animator
         if (anim != null)
         {
             anim.SetBool("isWalking", isMoving);
         }
 
-        // 3. Otomatis balik badan (Flip) sesuai arah horizontal Kiri/Kanan
+        // 3. Pemicu Partikel Jalan (DITAMBAHKAN DI SINI)
+        SetWalkParticle(isMoving);
+
+        // 4. Otomatis balik badan (Flip) sesuai arah horizontal
         if (spriteRenderer != null && moveInput.x != 0)
         {
             spriteRenderer.flipX = (moveInput.x > 0);
+        }
+    }
+
+    // --- FUNGSI UNTUK KONTROL PARTIKEL ---
+    private void SetWalkParticle(bool enable)
+    {
+        if (walkParticle != null)
+        {
+            if (enable && !walkParticle.isPlaying) 
+            {
+                walkParticle.Play(); // Nyalakan saat jalan
+            }
+            else if (!enable && walkParticle.isPlaying) 
+            {
+                walkParticle.Stop(); // Matikan saat diam
+            }
         }
     }
 
