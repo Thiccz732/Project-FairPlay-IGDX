@@ -8,6 +8,14 @@ public class ClueInteract : MonoBehaviour
     [Header("Tipe Objek (PENTING)")]
     public bool isFinalAnimal = false; 
 
+    // --- TAMBAHAN KODE BARU DI SINI ---
+    [Header("Variasi Gambar Clue")]
+    [Tooltip("Masukkan gambar-gambar clue (bulu, biji, dll) ke sini")]
+    public Sprite[] pilihanSpriteClue; 
+    
+    private SpriteRenderer sr;
+    // ----------------------------------
+
     [Header("Komponen Bawaan Prefab")]
     public GameObject interactPrompt;   
     public GameObject clueCamera;       
@@ -34,6 +42,18 @@ public class ClueInteract : MonoBehaviour
 
     private void Start()
     {
+        // --- TAMBAHAN KODE BARU DI SINI ---
+        // Ambil komponen SpriteRenderer dari objek ini
+        sr = GetComponent<SpriteRenderer>();
+
+        // Pastikan ngacaknya cuma jalan kalau ini BUKAN hewan, array udah diisi, dan SpriteRenderer-nya ada
+        if (!isFinalAnimal && pilihanSpriteClue != null && pilihanSpriteClue.Length > 0 && sr != null)
+        {
+            int indexAcak = Random.Range(0, pilihanSpriteClue.Length);
+            sr.sprite = pilihanSpriteClue[indexAcak];
+        }
+        // ----------------------------------
+
         if (interactPrompt != null) interactPrompt.SetActive(false);
         if (clueCamera != null) clueCamera.SetActive(false);
 
