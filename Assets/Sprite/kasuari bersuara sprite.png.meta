@@ -1,49 +1,40 @@
 fileFormatVersion: 2
-guid: 4a5454ab21ae39148850817ab5cf8eee
+guid: d0e13b0f3a8f3f34c8047eac4ff4c6ad
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 453858496621010673
-    second: cenderawasih clue item_0
+      213: 5257654862313736427
+    second: kasuari bersuara sprite_0
   - first:
-      213: 5325909555627967447
-    second: cenderawasih clue item_1
+      213: 7455133032171728765
+    second: kasuari bersuara sprite_1
   - first:
-      213: 6157868529206123464
-    second: cenderawasih clue item_2
+      213: 913716554201302679
+    second: kasuari bersuara sprite_2
   - first:
-      213: 5901722272832177895
-    second: cenderawasih clue item_3
+      213: 7274212815453034187
+    second: kasuari bersuara sprite_3
   - first:
-      213: -1756361519536681895
-    second: cenderawasih clue item_4
+      213: 5075514161491732852
+    second: kasuari bersuara sprite_4
   - first:
-      213: -1224092754820846147
-    second: cenderawasih clue item_5
+      213: 7943445987067838398
+    second: kasuari bersuara sprite_5
   - first:
-      213: 8039653460946787353
-    second: cenderawasih clue item_6
+      213: -6760558594046643543
+    second: kasuari bersuara sprite_6
   - first:
-      213: -2892344129195247391
-    second: cenderawasih clue item_7
+      213: -4522865055869464294
+    second: kasuari bersuara sprite_7
   - first:
-      213: -639047290741014166
-    second: cenderawasih clue item_8
+      213: -9096059690065867150
+    second: kasuari bersuara sprite_8
   - first:
-      213: -3765649668214232058
-    second: cenderawasih clue item_9
+      213: 2531087336348980174
+    second: kasuari bersuara sprite_9
   - first:
-      213: -8176430386435716171
-    second: cenderawasih clue item_10
-  - first:
-      213: -9032337035904278877
-    second: cenderawasih clue item_11
-  - first:
-      213: 4937976991807119119
-    second: cenderawasih clue item_12
-  - first:
-      213: 4451679504371943918
-    second: cenderawasih clue item_13
+      213: -5364657362731178376
+    second: kasuari bersuara sprite_10
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -152,309 +143,243 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: cenderawasih clue item_0
+      name: kasuari bersuara sprite_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 481
-        width: 361
-        height: 387
+        x: 158
+        y: 12
+        width: 1144
+        height: 1564
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1fe5365e5ed6c4600800000000000000
-      internalID: 453858496621010673
+      spriteID: be8c0d3bd31f6f840800000000000000
+      internalID: 5257654862313736427
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cenderawasih clue item_1
+      name: kasuari bersuara sprite_1
       rect:
         serializedVersion: 2
-        x: 419
-        y: 478
-        width: 354
-        height: 390
+        x: 3137
+        y: 12
+        width: 1209
+        height: 1730
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7d34011e58e69e940800000000000000
-      internalID: 5325909555627967447
+      spriteID: d7f60e76ef3f57760800000000000000
+      internalID: 7455133032171728765
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cenderawasih clue item_2
+      name: kasuari bersuara sprite_2
       rect:
         serializedVersion: 2
-        x: 830
-        y: 483
-        width: 362
-        height: 381
+        x: 4396
+        y: 1518
+        width: 291
+        height: 178
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8cb53e03dc4257550800000000000000
-      internalID: 6157868529206123464
+      spriteID: 796009e6d5c2eac00800000000000000
+      internalID: 913716554201302679
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cenderawasih clue item_3
+      name: kasuari bersuara sprite_3
       rect:
         serializedVersion: 2
-        x: 1265
-        y: 477
-        width: 290
-        height: 415
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7e64c23732127e150800000000000000
-      internalID: 5901722272832177895
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cenderawasih clue item_4
-      rect:
-        serializedVersion: 2
-        x: 39
-        y: 483
-        width: 277
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 95cc9dae08620a7e0800000000000000
-      internalID: -1756361519536681895
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cenderawasih clue item_5
-      rect:
-        serializedVersion: 2
-        x: 407
-        y: 484
-        width: 325
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: dbd26c00026230fe0800000000000000
-      internalID: -1224092754820846147
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cenderawasih clue item_6
-      rect:
-        serializedVersion: 2
-        x: 853
-        y: 480
-        width: 324
-        height: 37
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 91c19f01a36929f60800000000000000
-      internalID: 8039653460946787353
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cenderawasih clue item_7
-      rect:
-        serializedVersion: 2
-        x: 1272
-        y: 480
-        width: 252
-        height: 37
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1e8712bb6545cd7d0800000000000000
-      internalID: -2892344129195247391
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cenderawasih clue item_8
-      rect:
-        serializedVersion: 2
-        x: 201
-        y: 4
-        width: 271
-        height: 391
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a61c4b8ffd5a127f0800000000000000
-      internalID: -639047290741014166
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cenderawasih clue item_9
-      rect:
-        serializedVersion: 2
-        x: 639
+        x: 6158
         y: 0
-        width: 284
-        height: 384
+        width: 1209
+        height: 1742
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 60ce589f399bdbbc0800000000000000
-      internalID: -3765649668214232058
+      spriteID: bc61ca5e30233f460800000000000000
+      internalID: 7274212815453034187
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cenderawasih clue item_10
+      name: kasuari bersuara sprite_4
       rect:
         serializedVersion: 2
-        x: 1076
-        y: 42
-        width: 159
-        height: 232
+        x: 7417
+        y: 1518
+        width: 291
+        height: 178
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5bb0ac552eb778e80800000000000000
-      internalID: -8176430386435716171
+      spriteID: 479ed281d39df6640800000000000000
+      internalID: 5075514161491732852
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cenderawasih clue item_11
+      name: kasuari bersuara sprite_5
       rect:
         serializedVersion: 2
-        x: 1078
-        y: 36
-        width: 351
-        height: 344
+        x: 4415
+        y: 1427
+        width: 304
+        height: 85
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3ae125b3251b6a280800000000000000
-      internalID: -9032337035904278877
+      spriteID: ebf3eaff90acc3e60800000000000000
+      internalID: 7943445987067838398
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cenderawasih clue item_12
+      name: kasuari bersuara sprite_6
       rect:
         serializedVersion: 2
-        x: 185
+        x: 7436
+        y: 1427
+        width: 303
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a2b2a617cbad22a0800000000000000
+      internalID: -6760558594046643543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kasuari bersuara sprite_7
+      rect:
+        serializedVersion: 2
+        x: 1651
         y: 0
-        width: 251
-        height: 36
+        width: 1284
+        height: 1344
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f0f17b959e7378440800000000000000
-      internalID: 4937976991807119119
+      spriteID: a119fd1e13e8b31c0800000000000000
+      internalID: -4522865055869464294
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cenderawasih clue item_13
+      name: kasuari bersuara sprite_8
       rect:
         serializedVersion: 2
-        x: 655
-        y: 3
-        width: 252
-        height: 37
+        x: 4396
+        y: 1248
+        width: 304
+        height: 123
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ee90af75cea87cd30800000000000000
-      internalID: 4451679504371943918
+      spriteID: 27ecfd5a7ed44c180800000000000000
+      internalID: -9096059690065867150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kasuari bersuara sprite_9
+      rect:
+        serializedVersion: 2
+        x: 4672
+        y: 0
+        width: 1283
+        height: 1344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec3129aa58a302320800000000000000
+      internalID: 2531087336348980174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kasuari bersuara sprite_10
+      rect:
+        serializedVersion: 2
+        x: 7417
+        y: 1248
+        width: 303
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87669b04d88ec85b0800000000000000
+      internalID: -5364657362731178376
       vertices: []
       indices: 
       edges: []
@@ -463,7 +388,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: be9a51c47df783043af285f8cea0d8f3
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -473,20 +398,17 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      cenderawasih clue item_0: 453858496621010673
-      cenderawasih clue item_1: 5325909555627967447
-      cenderawasih clue item_10: -8176430386435716171
-      cenderawasih clue item_11: -9032337035904278877
-      cenderawasih clue item_12: 4937976991807119119
-      cenderawasih clue item_13: 4451679504371943918
-      cenderawasih clue item_2: 6157868529206123464
-      cenderawasih clue item_3: 5901722272832177895
-      cenderawasih clue item_4: -1756361519536681895
-      cenderawasih clue item_5: -1224092754820846147
-      cenderawasih clue item_6: 8039653460946787353
-      cenderawasih clue item_7: -2892344129195247391
-      cenderawasih clue item_8: -639047290741014166
-      cenderawasih clue item_9: -3765649668214232058
+      kasuari bersuara sprite_0: 5257654862313736427
+      kasuari bersuara sprite_1: 7455133032171728765
+      kasuari bersuara sprite_10: -5364657362731178376
+      kasuari bersuara sprite_2: 913716554201302679
+      kasuari bersuara sprite_3: 7274212815453034187
+      kasuari bersuara sprite_4: 5075514161491732852
+      kasuari bersuara sprite_5: 7943445987067838398
+      kasuari bersuara sprite_6: -6760558594046643543
+      kasuari bersuara sprite_7: -4522865055869464294
+      kasuari bersuara sprite_8: -9096059690065867150
+      kasuari bersuara sprite_9: 2531087336348980174
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

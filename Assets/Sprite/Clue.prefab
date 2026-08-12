@@ -330,7 +330,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.79977, y: 1.4232, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 3531054099771529602}
   - {fileID: 2369939057141767495}
@@ -384,9 +384,9 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 322965540291318691, guid: 318f8588097e4c34f9c79d31aaea6b63, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -394,7 +394,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!114 &8286197217942639545
 MonoBehaviour:
@@ -409,6 +409,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClueInteract
   isFinalAnimal: 0
+  pilihanSpriteClue:
+  - {fileID: 453858496621010673, guid: 4a5454ab21ae39148850817ab5cf8eee, type: 3}
+  - {fileID: 5325909555627967447, guid: 4a5454ab21ae39148850817ab5cf8eee, type: 3}
+  - {fileID: 6157868529206123464, guid: 4a5454ab21ae39148850817ab5cf8eee, type: 3}
+  - {fileID: 5901722272832177895, guid: 4a5454ab21ae39148850817ab5cf8eee, type: 3}
+  - {fileID: -639047290741014166, guid: 4a5454ab21ae39148850817ab5cf8eee, type: 3}
+  - {fileID: -3765649668214232058, guid: 4a5454ab21ae39148850817ab5cf8eee, type: 3}
+  - {fileID: -9032337035904278877, guid: 4a5454ab21ae39148850817ab5cf8eee, type: 3}
   interactPrompt: {fileID: 4798848328388508688}
   clueCamera: {fileID: 4133668017798608160}
 --- !u!58 &5407775224525766386
