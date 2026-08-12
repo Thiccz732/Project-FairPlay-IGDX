@@ -1,16 +1,10 @@
 fileFormatVersion: 2
-guid: a4cd47cb89146a846a2b23d73edb5f95
+guid: 85e2c80d5b3bdaa4ebc9df96e5723fbb
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 777403812944894546
-    second: sprite idle_0
-  - first:
-      213: -4127009068702675945
-    second: sprite idle_1
-  - first:
-      213: 6656417443590621044
-    second: sprite idle_2
+      213: 1353394375417978854
+    second: Batu2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -102,84 +96,27 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sprite idle_0
+      name: Batu2_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 49
         y: 0
-        width: 2385
-        height: 5172
+        width: 962
+        height: 729
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 25a5d9526a4e9ca00800000000000000
-      internalID: 777403812944894546
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sprite idle_1
-      rect:
-        serializedVersion: 2
-        x: 2951
-        y: 0
-        width: 2385
-        height: 4698
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 71c492b2e1be9b6c0800000000000000
-      internalID: -4127009068702675945
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sprite idle_2
-      rect:
-        serializedVersion: 2
-        x: 5871
-        y: 0
-        width: 2385
-        height: 5172
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 477cee1d568506c50800000000000000
-      internalID: 6656417443590621044
+      spriteID: 6efdccb830938c210800000000000000
+      internalID: 1353394375417978854
       vertices: []
       indices: 
       edges: []
@@ -188,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: ac3ff7d6a719452499598d27662cf33c
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -198,9 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      sprite idle_0: 777403812944894546
-      sprite idle_1: -4127009068702675945
-      sprite idle_2: 6656417443590621044
+      Batu2_0: 1353394375417978854
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
