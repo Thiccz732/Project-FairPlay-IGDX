@@ -5,6 +5,10 @@ public class ClueSpawner : MonoBehaviour
 {
     [Header("Pengaturan Spawner")]
     public GameObject cluePrefab;       
+    
+    [Tooltip("Masukkan berbagai macam gambar petunjuk (clue) ke sini")]
+    public Sprite[] clueImages; // BARU: Slot untuk menaruh banyak gambar
+
     public int amountToSpawn = 5;       
     public float minimumDistance = 3f;  
 
@@ -48,7 +52,22 @@ public class ClueSpawner : MonoBehaviour
 
                 if (!isTooClose)
                 {
-                    Instantiate(cluePrefab, randomPos, Quaternion.identity, transform);
+                    // 1. Spawn cluenya dan simpan ke dalam variabel
+                    GameObject spawnedClue = Instantiate(cluePrefab, randomPos, Quaternion.identity, transform);
+                    
+                    // 2. BARU: Ganti gambarnya secara acak dari slot yang sudah diisi
+                    if (clueImages.Length > 0)
+                    {
+                        // Mencari komponen SpriteRenderer di Prefab Clue
+                        SpriteRenderer sr = spawnedClue.GetComponent<SpriteRenderer>();
+                        if (sr != null)
+                        {
+                            // Mengocok dadu untuk memilih gambar dari daftar
+                            int randomIndex = Random.Range(0, clueImages.Length);
+                            sr.sprite = clueImages[randomIndex];
+                        }
+                    }
+
                     spawnedPositions.Add(randomPos);
                     spawned = true;
                 }
