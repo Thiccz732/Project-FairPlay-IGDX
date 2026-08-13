@@ -102,8 +102,23 @@ public class ClueInteract : MonoBehaviour
     {
         if (!isPlayerNear || hasBeenPhotographed) return;
 
-        if (!isCameraMode) EnterCameraMode();
-        else StartCoroutine(TakePhotoRoutine());
+        if (!isCameraMode) 
+        {
+            EnterCameraMode();
+        }
+        else 
+        {
+            // --- TAMBAHAN BARU: CEK APAKAH LENSA SESUAI DENGAN LEVEL ---
+            CameraLensManager lensManager = GetComponentInChildren<CameraLensManager>();
+            if (lensManager != null && !lensManager.CanCapture())
+            {
+                // Kalau salah lensa, batalkan proses jepret! (Bisa ditambah suara error/pesan teks nanti)
+                return; 
+            }
+            // -----------------------------------------------------------
+
+            StartCoroutine(TakePhotoRoutine());
+        }
     }
 
     private void CancelCamera()
@@ -139,6 +154,11 @@ public class ClueInteract : MonoBehaviour
         // 1. Sembunyikan UI dan Radar dari layar biar fotonya bersih
         if (interactPrompt != null) interactPrompt.SetActive(false);
         if (radarBlip != null) radarBlip.SetActive(false);
+
+        // --- TAMBAHAN BARU: Sembunyikan tombol lensa biar gak ikut kefoto! ---
+        CameraLensManager lensManager = GetComponentInChildren<CameraLensManager>();
+        if (lensManager != null) lensManager.HideButtons();
+        // ---------------------------------------------------------------------
 
         // 2. Tunggu sisa milidetik sampai frame kamera selesai digambar oleh Unity
         yield return new WaitForEndOfFrame();
