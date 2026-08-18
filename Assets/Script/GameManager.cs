@@ -1,5 +1,5 @@
 using UnityEngine;
-using System.Collections; // Wajib ditambahkan untuk sistem timer (Coroutine)
+using System.Collections; 
 
 public class GameManager : MonoBehaviour
 {
@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     public GameObject animalPrefab;      
     public int requiredClues = 3;        
 
-    [Header("Sistem Teleport Hewan (BARU)")]
+    [Header("Sistem Teleport Hewan")]
     [Tooltip("Masukkan 4 titik lokasi (Empty GameObject) ke sini")]
     public Transform[] animalSpawnPoints;
     [Tooltip("Waktu tunggu sebelum hewan pindah (detik)")]
@@ -28,9 +28,11 @@ public class GameManager : MonoBehaviour
     private bool isAnimalSpawned = false;
     private Transform playerTransform; 
 
-    // Variabel untuk menyimpan data hewan dan timernya
     private GameObject spawnedAnimalInstance;
     private Coroutine teleportCoroutine;
+
+    // --- Variabel untuk Pause Teleport ---
+    [HideInInspector] public bool isTeleportPaused = false; 
 
     private void Awake()
     {
@@ -74,7 +76,6 @@ public class GameManager : MonoBehaviour
     {
         isAnimalSpawned = true;
 
-        // Cek apakah slot spawn point sudah diisi di Unity
         if (animalSpawnPoints == null || animalSpawnPoints.Length == 0)
         {
             Debug.LogError("Titik Spawn Hewan belum diisi di GameManager!");
@@ -83,47 +84,52 @@ public class GameManager : MonoBehaviour
 
         if (animalPrefab != null)
         {
-            // 1. Munculkan hewan di titik pertama (Index 0)
             spawnedAnimalInstance = Instantiate(animalPrefab, animalSpawnPoints[0].position, Quaternion.identity);
             Debug.Log("Hewan muncul di titik 1");
 
-            // 2. Mulai timer hitung mundur untuk teleportasi
             teleportCoroutine = StartCoroutine(AnimalTeleportRoutine());
         }
     }
 
+    // --- Sistem Timer Teleport dengan Pause ---
     private IEnumerator AnimalTeleportRoutine()
     {
         int currentIndex = 0;
 
-        // Loop ini akan terus berjalan selama hewannya belum difoto
         while (spawnedAnimalInstance != null)
         {
-            // Tunggu selama 5 detik
-            yield return new WaitForSeconds(teleportInterval);
-
-            // Pindah ke titik selanjutnya
-            currentIndex++;
-
-            // Jika sudah mencapai batas akhir (titik ke-4), balik lagi ke titik 1 (Index 0)
-            if (currentIndex >= animalSpawnPoints.Length)
+            float timer = 0f;
+            while (timer < teleportInterval)
             {
-                currentIndex = 0;
+                // Timer hanya berjalan kalau tidak sedang di-pause
+                if (!isTeleportPaused) 
+                {
+                    timer += Time.deltaTime;
+                }
+                yield return null; 
             }
 
-            // Pindahkan posisi hewannya
+            if (spawnedAnimalInstance == null) break; 
+
+            currentIndex++;
+            if (currentIndex >= animalSpawnPoints.Length) currentIndex = 0;
+
             spawnedAnimalInstance.transform.position = animalSpawnPoints[currentIndex].position;
             Debug.Log("Hewan teleport ke titik " + (currentIndex + 1));
         }
     }
 
+    // --- Fungsi Pause yang dipanggil oleh Kamera ---
+    public void PauseTeleport(bool isPaused)
+    {
+        isTeleportPaused = isPaused;
+        if (isPaused) Debug.Log("Teleport Hewan Di-pause (Player sedang membidik)!");
+        else Debug.Log("Teleport Hewan Dilanjutkan!");
+    }
+
     private void ShowFinalPanel()
     {
-        // Hentikan timer teleportasi agar hewannya tidak pindah-pindah lagi saat game tamat
-        if (teleportCoroutine != null)
-        {
-            StopCoroutine(teleportCoroutine);
-        }
+        if (teleportCoroutine != null) StopCoroutine(teleportCoroutine);
 
         if (finalPanelUI != null)
         {

@@ -8,13 +8,11 @@ public class ClueInteract : MonoBehaviour
     [Header("Tipe Objek (PENTING)")]
     public bool isFinalAnimal = false; 
 
-    // --- TAMBAHAN KODE BARU DI SINI ---
     [Header("Variasi Gambar Clue")]
     [Tooltip("Masukkan gambar-gambar clue (bulu, biji, dll) ke sini")]
     public Sprite[] pilihanSpriteClue; 
     
     private SpriteRenderer sr;
-    // ----------------------------------
 
     [Header("Komponen Bawaan Prefab")]
     public GameObject interactPrompt;   
@@ -23,6 +21,7 @@ public class ClueInteract : MonoBehaviour
     private static Image sharedWhiteFlash;       
     private static PlayerController sharedPlayer; 
     private static GameObject sharedRadarUI; 
+    private static GameObject sharedJoystickUI; 
     private GameObject radarBlip;
 
     private PlayerControls inputActions;
@@ -42,17 +41,13 @@ public class ClueInteract : MonoBehaviour
 
     private void Start()
     {
-        // --- TAMBAHAN KODE BARU DI SINI ---
-        // Ambil komponen SpriteRenderer dari objek ini
         sr = GetComponent<SpriteRenderer>();
 
-        // Pastikan ngacaknya cuma jalan kalau ini BUKAN hewan, array udah diisi, dan SpriteRenderer-nya ada
         if (!isFinalAnimal && pilihanSpriteClue != null && pilihanSpriteClue.Length > 0 && sr != null)
         {
             int indexAcak = Random.Range(0, pilihanSpriteClue.Length);
             sr.sprite = pilihanSpriteClue[indexAcak];
         }
-        // ----------------------------------
 
         if (interactPrompt != null) interactPrompt.SetActive(false);
         if (clueCamera != null) clueCamera.SetActive(false);
@@ -68,6 +63,8 @@ public class ClueInteract : MonoBehaviour
             if (playerObj != null) sharedPlayer = playerObj.GetComponent<PlayerController>(); 
         }
         if (sharedRadarUI == null) sharedRadarUI = GameObject.Find("RadarUI");
+        
+        if (sharedJoystickUI == null) sharedJoystickUI = GameObject.Find("Joystick_BG");
 
         foreach (Transform child in transform)
         {
@@ -108,14 +105,8 @@ public class ClueInteract : MonoBehaviour
         }
         else 
         {
-            // --- TAMBAHAN BARU: CEK APAKAH LENSA SESUAI DENGAN LEVEL ---
             CameraLensManager lensManager = GetComponentInChildren<CameraLensManager>();
-            if (lensManager != null && !lensManager.CanCapture())
-            {
-                // Kalau salah lensa, batalkan proses jepret! (Bisa ditambah suara error/pesan teks nanti)
-                return; 
-            }
-            // -----------------------------------------------------------
+            if (lensManager != null && !lensManager.CanCapture()) return;
 
             StartCoroutine(TakePhotoRoutine());
         }
@@ -137,6 +128,10 @@ public class ClueInteract : MonoBehaviour
         if (sharedPlayer != null) sharedPlayer.enabled = false; 
         if (clueCamera != null) clueCamera.SetActive(true); 
         if (sharedRadarUI != null) sharedRadarUI.SetActive(false);
+        
+        if (sharedJoystickUI != null) sharedJoystickUI.SetActive(false);
+        
+        if (isFinalAnimal && GameManager.instance != null) GameManager.instance.PauseTeleport(true);
     }
 
     private void ExitCameraMode()
@@ -145,39 +140,36 @@ public class ClueInteract : MonoBehaviour
         if (sharedPlayer != null) sharedPlayer.enabled = true; 
         if (clueCamera != null) clueCamera.SetActive(false); 
         if (sharedRadarUI != null) sharedRadarUI.SetActive(true);
+        
+        if (sharedJoystickUI != null) sharedJoystickUI.SetActive(true);
+        
+        if (isFinalAnimal && GameManager.instance != null) GameManager.instance.PauseTeleport(false);
     }
 
     private IEnumerator TakePhotoRoutine()
     {
         hasBeenPhotographed = true;
         
-        // 1. Sembunyikan UI dan Radar dari layar biar fotonya bersih
         if (interactPrompt != null) interactPrompt.SetActive(false);
         if (radarBlip != null) radarBlip.SetActive(false);
+        if (sharedJoystickUI != null) sharedJoystickUI.SetActive(false);
 
-        // --- TAMBAHAN BARU: Sembunyikan tombol lensa biar gak ikut kefoto! ---
         CameraLensManager lensManager = GetComponentInChildren<CameraLensManager>();
         if (lensManager != null) lensManager.HideButtons();
-        // ---------------------------------------------------------------------
 
-        // 2. Tunggu sisa milidetik sampai frame kamera selesai digambar oleh Unity
         yield return new WaitForEndOfFrame();
 
-        // 3. JEPRET KAMERA! (Baca layar dan jadikan tekstur 2D)
         Texture2D snapshotTex = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);
         snapshotTex.ReadPixels(new Rect(0, 0, Screen.width, Screen.height), 0, 0);
-        snapshotTex.Apply(); // Terapkan pikselnya
+        snapshotTex.Apply(); 
 
-        // 4. Ubah tekstur tadi jadi Sprite UI
         Sprite newSnapshot = Sprite.Create(snapshotTex, new Rect(0, 0, snapshotTex.width, snapshotTex.height), new Vector2(0.5f, 0.5f));
 
-        // 5. Kirim foto aslinya ke Bos (GameManager)
         if (GameManager.instance != null)
         {
             GameManager.instance.RegisterSnapshot(newSnapshot, isFinalAnimal);
         }
 
-        // 6. Baru setelah foto tersimpan, nyalakan kilat putihnya (Flash)
         if (sharedWhiteFlash != null)
         {
             Color flashColor = sharedWhiteFlash.color;
@@ -193,5 +185,33 @@ public class ClueInteract : MonoBehaviour
         }
         
         ExitCameraMode();
+    }
+
+    // ==========================================
+    // --- FITUR KONTROL MOBILE (LAYAR HP) ---
+    // ==========================================
+
+    private void OnMouseDown()
+    {
+        if (isPlayerNear && !isCameraMode && !hasBeenPhotographed)
+        {
+            TryInteract(); 
+        }
+    }
+
+    public void TombolJepretMobile()
+    {
+        if (isCameraMode && !hasBeenPhotographed)
+        {
+            CameraLensManager lensManager = GetComponentInChildren<CameraLensManager>();
+            if (lensManager != null && !lensManager.CanCapture()) return;
+
+            StartCoroutine(TakePhotoRoutine());
+        }
+    }
+
+    public void TombolBatalMobile()
+    {
+        CancelCamera();
     }
 }
