@@ -3,33 +3,46 @@ using System.Collections.Generic;
 
 public class ClueSpawner : MonoBehaviour
 {
+    public static ClueSpawner instance; // Biar gampang diperintah GameManager
+
     [Header("Pengaturan Spawner")]
     public GameObject cluePrefab;       
-    
-    [Tooltip("Masukkan berbagai macam gambar petunjuk (clue) ke sini")]
     public Sprite[] clueImages; 
-
-    public int amountToSpawn = 5;       
+    
+    [Tooltip("Jarak minimal antar clue agar tidak menumpuk")]
     public float minimumDistance = 3f;  
 
     [Header("Luas Area Spawn")]
     public Vector2 spawnAreaSize = new Vector2(20f, 10f); 
 
     [Header("Validasi Area (Anti-Sungai)")]
-    [Tooltip("Pilih layer Obstacle agar clue tidak spawn di air")]
     public LayerMask obstacleLayer;
-    [Tooltip("Jarak aman clue dari pinggiran sungai")]
     public float safeRadius = 0.5f;
 
-    private void Start()
+    // Menyimpan daftar clue yang ada di map saat ini
+    private List<GameObject> activeClues = new List<GameObject>();
+
+    private void Awake()
     {
-        SpawnClues();
+        if (instance == null) instance = this;
     }
 
-    private void SpawnClues()
+    // FUNGSI BARU: Sapu bersih semua clue lama dari map
+    public void ClearOldClues()
     {
-        List<Vector2> spawnedPositions = new List<Vector2>();
+        foreach (GameObject clue in activeClues)
+        {
+            if (clue != null) Destroy(clue);
+        }
+        activeClues.Clear(); // Kosongkan daftar
+    }
+
+    // Dipanggil oleh GameManager saat ronde baru dimulai
+    public void SpawnClues(int amountToSpawn)
+    {
+        ClearOldClues(); // Pastikan map bersih dulu!
         
+        List<Vector2> spawnedPositions = new List<Vector2>();
         float minDistanceSqr = minimumDistance * minimumDistance;
 
         for (int i = 0; i < amountToSpawn; i++)
@@ -37,23 +50,19 @@ public class ClueSpawner : MonoBehaviour
             bool spawned = false;
             int attempts = 0;
 
-            // Dibatasi maksimal 100 kali percobaan agar game tidak freeze
             while (!spawned && attempts < 100)
             {
                 float randomX = transform.position.x + Random.Range(-spawnAreaSize.x / 2, spawnAreaSize.x / 2);
                 float randomY = transform.position.y + Random.Range(-spawnAreaSize.y / 2, spawnAreaSize.y / 2);
                 Vector2 randomPos = new Vector2(randomX, randomY);
 
-                // --- 1. CEK APAKAH NABRAK SUNGAI/TEMBOK? ---
-                // Kalau ada objek ber-layer Obstacle di titik ini, langsung lewati!
                 Collider2D hitObstacle = Physics2D.OverlapCircle(randomPos, safeRadius, obstacleLayer);
                 if (hitObstacle != null)
                 {
                     attempts++;
-                    continue; // Putar dadu lagi dari awal
+                    continue;
                 }
 
-                // --- 2. CEK JARAK DENGAN CLUE LAIN ---
                 bool isTooClose = false;
                 for (int j = 0; j < spawnedPositions.Count; j++)
                 {
@@ -64,10 +73,10 @@ public class ClueSpawner : MonoBehaviour
                     }
                 }
 
-                // --- 3. JIKA AMAN, SPAWN CLUE! ---
                 if (!isTooClose)
                 {
                     GameObject spawnedClue = Instantiate(cluePrefab, randomPos, Quaternion.identity, transform);
+                    activeClues.Add(spawnedClue); // Simpan ke daftar absen
                     
                     if (clueImages.Length > 0)
                     {
@@ -82,7 +91,6 @@ public class ClueSpawner : MonoBehaviour
                     spawnedPositions.Add(randomPos);
                     spawned = true;
                 }
-
                 attempts++;
             }
         }

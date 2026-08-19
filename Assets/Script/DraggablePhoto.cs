@@ -1,52 +1,80 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-// Wajib menambahkan CanvasGroup agar foto tidak menghalangi deteksi slot saat ditarik
 [RequireComponent(typeof(CanvasGroup))]
 public class DraggablePhoto : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     [Header("Identitas Foto")]
-    [Tooltip("Isi 1 untuk Clue 1, 2 untuk Clue 2, dst. Hewan bisa isi 4.")]
     public int photoID; 
+    
+    [Tooltip("Masukkan SlotFoto yang benar untuk foto ini")]
+    public RectTransform targetSlot; 
 
     private CanvasGroup canvasGroup;
     private RectTransform rectTransform;
-    private Transform originalParent;
     private Vector2 originalPosition;
+    private bool isMatched = false; 
+    
+    // --- VARIABEL BARU UNTUK MENGAKALI BUG MELOMPAT ---
+    private Canvas parentCanvas; 
 
     private void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
         canvasGroup = GetComponent<CanvasGroup>();
+        
+        // Cari Canvas terdekat secara otomatis
+        parentCanvas = GetComponentInParent<Canvas>(); 
+    }
+
+    private void OnEnable()
+    {
+        originalPosition = rectTransform.anchoredPosition;
+        isMatched = false;
+        canvasGroup.alpha = 1f;
+        canvasGroup.blocksRaycasts = true;
     }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        // Simpan posisi awal kalau salah taruh
-        originalParent = transform.parent;
-        originalPosition = rectTransform.anchoredPosition;
+        if (isMatched) return; 
 
-        // Bikin agak transparan saat ditarik dan matikan raycast biar nembus ke slot
         canvasGroup.alpha = 0.6f;
         canvasGroup.blocksRaycasts = false;
-        
-        // Pindahkan ke paling depan agar tidak tertumpuk UI lain
         transform.SetAsLastSibling(); 
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-        // Ikuti posisi kursor/jari
-        transform.position = eventData.position;
+        if (isMatched) return;
+
+        // --- KODE PERBAIKAN BUG MELOMPAT ---
+        // Pergerakan mouse dibagi dengan skala Canvas agar posisi foto akurat!
+        if (parentCanvas != null)
+        {
+            rectTransform.anchoredPosition += eventData.delta / parentCanvas.scaleFactor;
+        }
+        else
+        {
+            rectTransform.anchoredPosition += eventData.delta;
+        }
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
+        if (isMatched) return;
+
         canvasGroup.alpha = 1f;
         canvasGroup.blocksRaycasts = true;
 
-        // Kalau dilepas BUKAN di dalam slot yang benar, kembalikan ke tempat asal
-        if (transform.parent == originalParent)
+        if (targetSlot != null && Vector2.Distance(rectTransform.anchoredPosition, targetSlot.anchoredPosition) <= 75f)
+        {
+            rectTransform.anchoredPosition = targetSlot.anchoredPosition; 
+            isMatched = true; 
+
+            if (GameManager.instance != null) GameManager.instance.AddMatchedPhoto();
+        }
+        else
         {
             rectTransform.anchoredPosition = originalPosition;
         }

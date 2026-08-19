@@ -64,6 +64,7 @@ public class ClueInteract : MonoBehaviour
         }
         if (sharedRadarUI == null) sharedRadarUI = GameObject.Find("RadarUI");
         
+        // Nama Canvas Joystick disesuaikan dengan milikmu
         if (sharedJoystickUI == null) sharedJoystickUI = GameObject.Find("Joystick_BG");
 
         foreach (Transform child in transform)
@@ -150,6 +151,7 @@ public class ClueInteract : MonoBehaviour
     {
         hasBeenPhotographed = true;
         
+        // 1. Sembunyikan UI dan Radar
         if (interactPrompt != null) interactPrompt.SetActive(false);
         if (radarBlip != null) radarBlip.SetActive(false);
         if (sharedJoystickUI != null) sharedJoystickUI.SetActive(false);
@@ -157,6 +159,7 @@ public class ClueInteract : MonoBehaviour
         CameraLensManager lensManager = GetComponentInChildren<CameraLensManager>();
         if (lensManager != null) lensManager.HideButtons();
 
+        // 2. Jepret Kamera!
         yield return new WaitForEndOfFrame();
 
         Texture2D snapshotTex = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);
@@ -165,11 +168,7 @@ public class ClueInteract : MonoBehaviour
 
         Sprite newSnapshot = Sprite.Create(snapshotTex, new Rect(0, 0, snapshotTex.width, snapshotTex.height), new Vector2(0.5f, 0.5f));
 
-        if (GameManager.instance != null)
-        {
-            GameManager.instance.RegisterSnapshot(newSnapshot, isFinalAnimal);
-        }
-
+        // 3. SELESAIKAN EFEK KILAT (FLASH) DULU
         if (sharedWhiteFlash != null)
         {
             Color flashColor = sharedWhiteFlash.color;
@@ -184,7 +183,14 @@ public class ClueInteract : MonoBehaviour
             }
         }
         
+        // 4. Keluar dari mode kamera dan kembalikan UI
         ExitCameraMode();
+
+        // 5. BARU LAPOR KE BOS (GameManager) DI PALING AKHIR!
+        if (GameManager.instance != null)
+        {
+            GameManager.instance.RegisterSnapshot(newSnapshot, isFinalAnimal);
+        }
     }
 
     // ==========================================

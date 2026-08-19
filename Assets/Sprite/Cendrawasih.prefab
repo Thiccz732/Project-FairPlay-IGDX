@@ -1977,7 +1977,7 @@ GameObject:
   - component: {fileID: 4215471729389205803}
   - component: {fileID: 2417967164541743716}
   m_Layer: 0
-  m_Name: Animal
+  m_Name: Cendrawasih
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

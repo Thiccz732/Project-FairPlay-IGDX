@@ -1,28 +1,37 @@
 using UnityEngine;
+using UnityEngine.UI; // TAMBAHAN: Agar script mengenali komponen Button
 using System.Collections; 
+
+[System.Serializable]
+public class AnimalStage
+{
+    public string namaHewan = "Hewan 1";
+    public GameObject animalPrefab;
+    [Tooltip("Berapa clue yang harus difoto untuk hewan ini?")]
+    public int requiredClues = 3;
+    [Tooltip("Titik teleportasi khusus untuk hewan ini")]
+    public Transform[] animalSpawnPoints;
+}
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
-    [Header("Pengaturan Hewan")]
-    public GameObject animalPrefab;      
-    public int requiredClues = 3;        
+    [Header("Sistem Urutan Hewan (Tahapan Level)")]
+    public AnimalStage[] animalStages; 
+    private int currentStageIndex = 0; 
 
-    [Header("Sistem Teleport Hewan")]
-    [Tooltip("Masukkan 4 titik lokasi (Empty GameObject) ke sini")]
-    public Transform[] animalSpawnPoints;
-    [Tooltip("Waktu tunggu sebelum hewan pindah (detik)")]
+    [Header("Pengaturan Hewan (Global)")]
     public float teleportInterval = 5f;
+    [HideInInspector] public bool isTeleportPaused = false; 
 
     [Header("UI Akhir Game")]
     public GameObject finalPanelUI;      
+    public Button nextButton;            // VARIABEL BARU: Referensi ke tombol "Lanjut"
     public int totalPhotosToMatch = 4;   
-
-    [Header("Sistem Jepretan Foto")]
-    public UnityEngine.UI.Image[] draggablePhotoUI; 
+    public Image[] draggablePhotoUI; 
     
-    private Sprite[] capturedSnapshots = new Sprite[5]; 
+    private Sprite[] capturedSnapshots = new Sprite[10]; 
     private int cluesFound = 0;
     private int matchedPhotos = 0; 
     private bool isAnimalSpawned = false;
@@ -30,9 +39,6 @@ public class GameManager : MonoBehaviour
 
     private GameObject spawnedAnimalInstance;
     private Coroutine teleportCoroutine;
-
-    // --- Variabel untuk Pause Teleport ---
-    [HideInInspector] public bool isTeleportPaused = false; 
 
     private void Awake()
     {
@@ -46,26 +52,51 @@ public class GameManager : MonoBehaviour
         if (player != null) playerTransform = player.transform;
 
         if (finalPanelUI != null) finalPanelUI.SetActive(false);
+
+        StartStage();
+    }
+
+    private void StartStage()
+    {
+        cluesFound = 0;
+        isAnimalSpawned = false;
+        matchedPhotos = 0; 
+        
+        System.Array.Clear(capturedSnapshots, 0, capturedSnapshots.Length);
+
+        if (ClueSpawner.instance != null && animalStages.Length > 0)
+        {
+            int amountToSpawn = animalStages[currentStageIndex].requiredClues + 2;
+            ClueSpawner.instance.SpawnClues(amountToSpawn);
+        }
+        
+        Debug.Log("== MULAI MENCARI: " + animalStages[currentStageIndex].namaHewan + " ==");
     }
 
     public void RegisterSnapshot(Sprite snapshot, bool isAnimal)
     {
         if (isAnimal)
         {
-            capturedSnapshots[4] = snapshot;
+            if (spawnedAnimalInstance != null) Destroy(spawnedAnimalInstance);
+            if (teleportCoroutine != null) StopCoroutine(teleportCoroutine);
+
+            capturedSnapshots[9] = snapshot; 
+            
+            Debug.Log(animalStages[currentStageIndex].namaHewan + " BERHASIL DITANGKAP!");
+
             ShowFinalPanel(); 
         }
         else
         {
             cluesFound++;
-            if (cluesFound <= 3) 
+            if (cluesFound < capturedSnapshots.Length) 
             {
                 capturedSnapshots[cluesFound] = snapshot;
             }
 
             Debug.Log("Clue " + cluesFound + " Berhasil Difoto!");
 
-            if (cluesFound >= requiredClues && !isAnimalSpawned) 
+            if (cluesFound >= animalStages[currentStageIndex].requiredClues && !isAnimalSpawned) 
             {
                 SpawnAnimal();
             }
@@ -75,74 +106,71 @@ public class GameManager : MonoBehaviour
     private void SpawnAnimal()
     {
         isAnimalSpawned = true;
+        AnimalStage currentStage = animalStages[currentStageIndex];
 
-        if (animalSpawnPoints == null || animalSpawnPoints.Length == 0)
+        if (currentStage.animalSpawnPoints == null || currentStage.animalSpawnPoints.Length == 0)
         {
-            Debug.LogError("Titik Spawn Hewan belum diisi di GameManager!");
+            Debug.LogError("Titik Spawn Hewan belum diisi di Level ini!");
             return;
         }
 
-        if (animalPrefab != null)
+        if (currentStage.animalPrefab != null)
         {
-            spawnedAnimalInstance = Instantiate(animalPrefab, animalSpawnPoints[0].position, Quaternion.identity);
-            Debug.Log("Hewan muncul di titik 1");
+            spawnedAnimalInstance = Instantiate(currentStage.animalPrefab, currentStage.animalSpawnPoints[0].position, Quaternion.identity);
+            Debug.Log(currentStage.namaHewan + " muncul!");
 
-            teleportCoroutine = StartCoroutine(AnimalTeleportRoutine());
+            teleportCoroutine = StartCoroutine(AnimalTeleportRoutine(currentStage.animalSpawnPoints));
         }
     }
 
-    // --- Sistem Timer Teleport dengan Pause ---
-    private IEnumerator AnimalTeleportRoutine()
+    private IEnumerator AnimalTeleportRoutine(Transform[] spawnPoints)
     {
         int currentIndex = 0;
-
         while (spawnedAnimalInstance != null)
         {
             float timer = 0f;
             while (timer < teleportInterval)
             {
-                // Timer hanya berjalan kalau tidak sedang di-pause
-                if (!isTeleportPaused) 
-                {
-                    timer += Time.deltaTime;
-                }
+                if (!isTeleportPaused) timer += Time.deltaTime;
                 yield return null; 
             }
 
             if (spawnedAnimalInstance == null) break; 
 
             currentIndex++;
-            if (currentIndex >= animalSpawnPoints.Length) currentIndex = 0;
+            if (currentIndex >= spawnPoints.Length) currentIndex = 0;
 
-            spawnedAnimalInstance.transform.position = animalSpawnPoints[currentIndex].position;
-            Debug.Log("Hewan teleport ke titik " + (currentIndex + 1));
+            spawnedAnimalInstance.transform.position = spawnPoints[currentIndex].position;
         }
     }
 
-    // --- Fungsi Pause yang dipanggil oleh Kamera ---
     public void PauseTeleport(bool isPaused)
     {
         isTeleportPaused = isPaused;
-        if (isPaused) Debug.Log("Teleport Hewan Di-pause (Player sedang membidik)!");
-        else Debug.Log("Teleport Hewan Dilanjutkan!");
     }
 
     private void ShowFinalPanel()
     {
-        if (teleportCoroutine != null) StopCoroutine(teleportCoroutine);
-
         if (finalPanelUI != null)
         {
             finalPanelUI.SetActive(true);
             if (playerTransform != null) playerTransform.GetComponent<PlayerController>().enabled = false;
             
+            // --- KODE BARU: Matikan/redupkan tombol Lanjut saat panel baru muncul! ---
+            if (nextButton != null) nextButton.interactable = false;
+            // -------------------------------------------------------------------------
+
             foreach (var photoImage in draggablePhotoUI)
             {
                 DraggablePhoto dragScript = photoImage.GetComponent<DraggablePhoto>();
                 if (dragScript != null)
                 {
                     int id = dragScript.photoID;
-                    if (id >= 1 && id <= 4 && capturedSnapshots[id] != null)
+                    if (id == 4 && capturedSnapshots[9] != null) 
+                    {
+                        photoImage.sprite = capturedSnapshots[9];
+                    }
+                    else if (id >= 1 && id <= 3 && capturedSnapshots[id] != null)
                     {
                         photoImage.sprite = capturedSnapshots[id];
                     }
@@ -151,12 +179,33 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void LanjutKeHewanBerikutnya()
+    {
+        if (finalPanelUI != null) finalPanelUI.SetActive(false);
+        if (playerTransform != null) playerTransform.GetComponent<PlayerController>().enabled = true;
+
+        currentStageIndex++;
+        
+        if (currentStageIndex < animalStages.Length)
+        {
+            StartStage(); 
+        }
+        else
+        {
+            Debug.Log("SELURUH HEWAN DI LEVEL INI SUDAH HABIS DITANGKAP! TAMAT!");
+        }
+    }
+
     public void AddMatchedPhoto()
     {
         matchedPhotos++;
         if (matchedPhotos >= totalPhotosToMatch)
         {
-            Debug.Log("SEMUA FOTO COCOK! GAME TAMAT!");
+            Debug.Log("SEMUA FOTO COCOK!");
+            
+            // --- KODE BARU: Nyalakan kembali tombolnya saat semua foto sudah beres! ---
+            if (nextButton != null) nextButton.interactable = true;
+            // --------------------------------------------------------------------------
         }
     }
 }
