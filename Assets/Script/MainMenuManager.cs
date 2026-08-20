@@ -3,6 +3,16 @@ using UnityEngine.SceneManagement; // Wajib ditambahkan untuk urusan pindah scen
 
 public class MainMenuManager : MonoBehaviour
 {
+    [Header("Lagu Main Menu")]
+    public AudioClip laguMenuUtama;
+    private void Start()
+    {
+        // Langsung putar lagu saat Main Menu terbuka
+        if (AudioManager.instance != null && laguMenuUtama != null)
+        {
+            AudioManager.instance.GantiBGM(laguMenuUtama);
+        }
+    }
     // Fungsi ini dipanggil saat tombol Mulai diklik
     public void PindahKeSampleScene()
     {
