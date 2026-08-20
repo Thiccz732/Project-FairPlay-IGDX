@@ -14,10 +14,10 @@ public class MainMenuManager : MonoBehaviour
         }
     }
     // Fungsi ini dipanggil saat tombol Mulai diklik
-    public void PindahKeSampleScene()
+    public void PindahKeMenuDistrikScene()
     {
         // Pastikan ejaan "SampleScene" sama persis dengan nama file scene lu
-        SceneManager.LoadScene("SampleScene"); 
+        SceneManager.LoadScene("MenuDistrikScene"); 
     }
 
     // Fungsi tambahan buat tombol Keluar sekalian
