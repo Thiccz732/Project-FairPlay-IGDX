@@ -168,7 +168,7 @@ CanvasGroup:
   m_Enabled: 1
   m_Alpha: 1
   m_Interactable: 1
-  m_BlocksRaycasts: 0
+  m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
 --- !u!114 &7737359
 MonoBehaviour:
@@ -183,6 +183,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DraggablePhoto
   photoID: 4
+  targetSlot: {fileID: 642138588}
 --- !u!114 &7737360
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -196,7 +197,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -488,8 +489,7 @@ Transform:
   m_LocalPosition: {x: 6.1, y: -6.3, z: 0}
   m_LocalScale: {x: 0.87272, y: 0.87272, z: 0.87272}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1244495250}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &335934640
@@ -534,6 +534,7 @@ GameObject:
   - component: {fileID: 338351052}
   - component: {fileID: 338351055}
   - component: {fileID: 338351054}
+  - component: {fileID: 338351053}
   m_Layer: 5
   m_Name: SlotFoto_1
   m_TagString: Untagged
@@ -560,6 +561,19 @@ RectTransform:
   m_AnchoredPosition: {x: 361, y: 168}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &338351053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 338351051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8351dd215b7aee94a9e36aa060db4425, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PhotoSlot
+  expectedPhotoID: 1
 --- !u!114 &338351054
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -574,7 +588,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 0
+  m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1270,8 +1284,9 @@ GameObject:
   - component: {fileID: 642138588}
   - component: {fileID: 642138591}
   - component: {fileID: 642138590}
+  - component: {fileID: 642138589}
   m_Layer: 5
-  m_Name: SlotFoto_3
+  m_Name: SlotFoto_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1296,6 +1311,19 @@ RectTransform:
   m_AnchoredPosition: {x: 361, y: -204}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &642138589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 642138587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8351dd215b7aee94a9e36aa060db4425, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PhotoSlot
+  expectedPhotoID: 4
 --- !u!114 &642138590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1310,7 +1338,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 0
+  m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1383,7 +1411,7 @@ CanvasGroup:
   m_Enabled: 1
   m_Alpha: 1
   m_Interactable: 1
-  m_BlocksRaycasts: 0
+  m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
 --- !u!114 &685442235
 MonoBehaviour:
@@ -1398,6 +1426,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DraggablePhoto
   photoID: 2
+  targetSlot: {fileID: 1761806863}
 --- !u!114 &685442236
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1411,7 +1440,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2135,13 +2164,13 @@ MonoBehaviour:
   teleportInterval: 5
   isTeleportPaused: 0
   finalPanelUI: {fileID: 1245040330}
+  nextButton: {fileID: 2021757766}
   totalPhotosToMatch: 4
   draggablePhotoUI:
   - {fileID: 1789738727}
   - {fileID: 685442236}
   - {fileID: 1509500663}
   - {fileID: 7737360}
-  nextSceneName: MainMenu
 --- !u!4 &1244495250
 Transform:
   m_ObjectHideFlags: 0
@@ -2150,12 +2179,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1244495248}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.4895959, y: 0, z: 0}
-  m_LocalScale: {x: 1.1458428, y: 0.26354384, z: 1.1458428}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.4, y: -6.3, z: 0}
+  m_LocalScale: {x: 1, y: 0.23, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 279987351}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1245040330
 GameObject:
@@ -2335,8 +2364,9 @@ GameObject:
   - component: {fileID: 1251113090}
   - component: {fileID: 1251113093}
   - component: {fileID: 1251113092}
+  - component: {fileID: 1251113091}
   m_Layer: 5
-  m_Name: SlotFoto_4
+  m_Name: SlotFoto_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2361,6 +2391,19 @@ RectTransform:
   m_AnchoredPosition: {x: 361, y: -86}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1251113091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1251113089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8351dd215b7aee94a9e36aa060db4425, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PhotoSlot
+  expectedPhotoID: 3
 --- !u!114 &1251113092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2375,7 +2418,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 0
+  m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -3148,7 +3191,7 @@ CanvasGroup:
   m_Enabled: 1
   m_Alpha: 1
   m_Interactable: 1
-  m_BlocksRaycasts: 0
+  m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
 --- !u!114 &1509500662
 MonoBehaviour:
@@ -3163,6 +3206,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DraggablePhoto
   photoID: 3
+  targetSlot: {fileID: 1251113090}
 --- !u!114 &1509500663
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3176,7 +3220,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -8073,8 +8117,8 @@ RectTransform:
   - {fileID: 7737357}
   - {fileID: 338351052}
   - {fileID: 1761806863}
-  - {fileID: 642138588}
   - {fileID: 1251113090}
+  - {fileID: 642138588}
   m_Father: {fileID: 1245040331}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -8386,6 +8430,7 @@ GameObject:
   - component: {fileID: 1761806863}
   - component: {fileID: 1761806866}
   - component: {fileID: 1761806865}
+  - component: {fileID: 1761806864}
   m_Layer: 5
   m_Name: SlotFoto_2
   m_TagString: Untagged
@@ -8412,6 +8457,19 @@ RectTransform:
   m_AnchoredPosition: {x: 361, y: 40}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1761806864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1761806862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8351dd215b7aee94a9e36aa060db4425, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PhotoSlot
+  expectedPhotoID: 2
 --- !u!114 &1761806865
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8426,7 +8484,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 0
+  m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -8491,51 +8549,6 @@ Transform:
   - {fileID: 1240614062}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1773693979
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1773693981}
-  - component: {fileID: 1773693980}
-  m_Layer: 0
-  m_Name: BGM_Manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1773693980
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1773693979}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a33e20b289d9784ea79bbd0bec90327, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LevelBGM
-  laguLevelIni: {fileID: 8300000, guid: 78ef6c1031e94324bb1b86dc41a4e538, type: 3}
---- !u!4 &1773693981
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1773693979}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.61, y: -1.46, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1789738723
 GameObject:
   m_ObjectHideFlags: 0
@@ -8585,7 +8598,7 @@ CanvasGroup:
   m_Enabled: 1
   m_Alpha: 1
   m_Interactable: 1
-  m_BlocksRaycasts: 0
+  m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
 --- !u!114 &1789738726
 MonoBehaviour:
@@ -8600,6 +8613,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DraggablePhoto
   photoID: 1
+  targetSlot: {fileID: 338351052}
 --- !u!114 &1789738727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8613,7 +8627,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -9543,6 +9557,7 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 508677910}
   - {fileID: 619394802}
+  - {fileID: 1244495250}
   - {fileID: 279987351}
   - {fileID: 1300907126}
   - {fileID: 413980751}
@@ -9550,4 +9565,3 @@ SceneRoots:
   - {fileID: 1666606943}
   - {fileID: 1773285329}
   - {fileID: 974271191}
-  - {fileID: 1773693981}

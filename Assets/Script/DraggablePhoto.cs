@@ -6,31 +6,27 @@ public class DraggablePhoto : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
 {
     [Header("Identitas Foto")]
     public int photoID; 
-    
-    [Tooltip("Masukkan SlotFoto yang benar untuk foto ini")]
-    public RectTransform targetSlot; 
 
     private CanvasGroup canvasGroup;
-    private RectTransform rectTransform;
-    private Vector2 originalPosition;
+    private RectTransform rectTransform; 
+    private Vector2 originalAnchoredPosition; 
     private bool isMatched = false; 
-    
-    // --- VARIABEL BARU UNTUK MENGAKALI BUG MELOMPAT ---
-    private Canvas parentCanvas; 
 
     private void Awake()
     {
-        rectTransform = GetComponent<RectTransform>();
         canvasGroup = GetComponent<CanvasGroup>();
+        rectTransform = GetComponent<RectTransform>();
         
-        // Cari Canvas terdekat secara otomatis
-        parentCanvas = GetComponentInParent<Canvas>(); 
+        // PERBAIKAN: Ingat posisi asli HANYA SEKALI saat game pertama kali dijalankan
+        originalAnchoredPosition = rectTransform.anchoredPosition; 
     }
 
     private void OnEnable()
     {
-        originalPosition = rectTransform.anchoredPosition;
-        isMatched = false;
+        // PERBAIKAN: Setiap kali buku dibuka (untuk hewan ke-2, ke-3, dst), paksa foto pulang ke posisi kiri!
+        rectTransform.anchoredPosition = originalAnchoredPosition; 
+        
+        isMatched = false; // Buka kuncian foto
         canvasGroup.alpha = 1f;
         canvasGroup.blocksRaycasts = true;
     }
@@ -47,17 +43,7 @@ public class DraggablePhoto : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
     public void OnDrag(PointerEventData eventData)
     {
         if (isMatched) return;
-
-        // --- KODE PERBAIKAN BUG MELOMPAT ---
-        // Pergerakan mouse dibagi dengan skala Canvas agar posisi foto akurat!
-        if (parentCanvas != null)
-        {
-            rectTransform.anchoredPosition += eventData.delta / parentCanvas.scaleFactor;
-        }
-        else
-        {
-            rectTransform.anchoredPosition += eventData.delta;
-        }
+        transform.position += (Vector3)eventData.delta;
     }
 
     public void OnEndDrag(PointerEventData eventData)
@@ -67,16 +53,22 @@ public class DraggablePhoto : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
         canvasGroup.alpha = 1f;
         canvasGroup.blocksRaycasts = true;
 
-        if (targetSlot != null && Vector2.Distance(rectTransform.anchoredPosition, targetSlot.anchoredPosition) <= 75f)
+        GameObject targetSlotObj = GameObject.Find("SlotFoto_" + photoID);
+        
+        if (targetSlotObj != null)
         {
-            rectTransform.anchoredPosition = targetSlot.anchoredPosition; 
-            isMatched = true; 
+            RectTransform targetSlot = targetSlotObj.GetComponent<RectTransform>();
 
-            if (GameManager.instance != null) GameManager.instance.AddMatchedPhoto();
+            if (targetSlot != null && Vector2.Distance(rectTransform.anchoredPosition, targetSlot.anchoredPosition) <= 75f)
+            {
+                rectTransform.anchoredPosition = targetSlot.anchoredPosition;
+                isMatched = true; 
+
+                if (GameManager.instance != null) GameManager.instance.AddMatchedPhoto();
+                return; 
+            }
         }
-        else
-        {
-            rectTransform.anchoredPosition = originalPosition;
-        }
+
+        rectTransform.anchoredPosition = originalAnchoredPosition;
     }
 }

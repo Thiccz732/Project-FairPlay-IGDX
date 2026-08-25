@@ -63,8 +63,6 @@ public class ClueInteract : MonoBehaviour
             if (playerObj != null) sharedPlayer = playerObj.GetComponent<PlayerController>(); 
         }
         if (sharedRadarUI == null) sharedRadarUI = GameObject.Find("RadarUI");
-        
-        // Nama Canvas Joystick disesuaikan dengan milikmu
         if (sharedJoystickUI == null) sharedJoystickUI = GameObject.Find("Joystick_BG");
 
         foreach (Transform child in transform)
@@ -129,7 +127,6 @@ public class ClueInteract : MonoBehaviour
         if (sharedPlayer != null) sharedPlayer.enabled = false; 
         if (clueCamera != null) clueCamera.SetActive(true); 
         if (sharedRadarUI != null) sharedRadarUI.SetActive(false);
-        
         if (sharedJoystickUI != null) sharedJoystickUI.SetActive(false);
         
         if (isFinalAnimal && GameManager.instance != null) GameManager.instance.PauseTeleport(true);
@@ -141,7 +138,6 @@ public class ClueInteract : MonoBehaviour
         if (sharedPlayer != null) sharedPlayer.enabled = true; 
         if (clueCamera != null) clueCamera.SetActive(false); 
         if (sharedRadarUI != null) sharedRadarUI.SetActive(true);
-        
         if (sharedJoystickUI != null) sharedJoystickUI.SetActive(true);
         
         if (isFinalAnimal && GameManager.instance != null) GameManager.instance.PauseTeleport(false);
@@ -151,7 +147,6 @@ public class ClueInteract : MonoBehaviour
     {
         hasBeenPhotographed = true;
         
-        // 1. Sembunyikan UI dan Radar
         if (interactPrompt != null) interactPrompt.SetActive(false);
         if (radarBlip != null) radarBlip.SetActive(false);
         if (sharedJoystickUI != null) sharedJoystickUI.SetActive(false);
@@ -159,16 +154,15 @@ public class ClueInteract : MonoBehaviour
         CameraLensManager lensManager = GetComponentInChildren<CameraLensManager>();
         if (lensManager != null) lensManager.HideButtons();
 
-        // 2. Jepret Kamera!
         yield return new WaitForEndOfFrame();
 
-        Texture2D snapshotTex = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);
+        // --- PERBAIKAN FORMAT GAMBAR RGBA32 AGAR TIDAK HILANG DI UI ---
+        Texture2D snapshotTex = new Texture2D(Screen.width, Screen.height, TextureFormat.RGBA32, false);
         snapshotTex.ReadPixels(new Rect(0, 0, Screen.width, Screen.height), 0, 0);
         snapshotTex.Apply(); 
 
         Sprite newSnapshot = Sprite.Create(snapshotTex, new Rect(0, 0, snapshotTex.width, snapshotTex.height), new Vector2(0.5f, 0.5f));
 
-        // 3. SELESAIKAN EFEK KILAT (FLASH) DULU
         if (sharedWhiteFlash != null)
         {
             Color flashColor = sharedWhiteFlash.color;
@@ -183,26 +177,17 @@ public class ClueInteract : MonoBehaviour
             }
         }
         
-        // 4. Keluar dari mode kamera dan kembalikan UI
         ExitCameraMode();
 
-        // 5. BARU LAPOR KE BOS (GameManager) DI PALING AKHIR!
         if (GameManager.instance != null)
         {
             GameManager.instance.RegisterSnapshot(newSnapshot, isFinalAnimal);
         }
     }
 
-    // ==========================================
-    // --- FITUR KONTROL MOBILE (LAYAR HP) ---
-    // ==========================================
-
     private void OnMouseDown()
     {
-        if (isPlayerNear && !isCameraMode && !hasBeenPhotographed)
-        {
-            TryInteract(); 
-        }
+        if (isPlayerNear && !isCameraMode && !hasBeenPhotographed) TryInteract(); 
     }
 
     public void TombolJepretMobile()
@@ -211,7 +196,6 @@ public class ClueInteract : MonoBehaviour
         {
             CameraLensManager lensManager = GetComponentInChildren<CameraLensManager>();
             if (lensManager != null && !lensManager.CanCapture()) return;
-
             StartCoroutine(TakePhotoRoutine());
         }
     }
