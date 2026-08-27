@@ -1456,7 +1456,7 @@ GameObject:
   - component: {fileID: 8286197217942639545}
   - component: {fileID: 5407775224525766386}
   m_Layer: 0
-  m_Name: Clue
+  m_Name: Clue Kasuari
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1527,7 +1527,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1553,13 +1553,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ClueInteract
   isFinalAnimal: 0
   pilihanSpriteClue:
-  - {fileID: 453858496621010673, guid: 4a5454ab21ae39148850817ab5cf8eee, type: 3}
-  - {fileID: 5325909555627967447, guid: 4a5454ab21ae39148850817ab5cf8eee, type: 3}
-  - {fileID: 6157868529206123464, guid: 4a5454ab21ae39148850817ab5cf8eee, type: 3}
-  - {fileID: 5901722272832177895, guid: 4a5454ab21ae39148850817ab5cf8eee, type: 3}
-  - {fileID: -639047290741014166, guid: 4a5454ab21ae39148850817ab5cf8eee, type: 3}
-  - {fileID: -3765649668214232058, guid: 4a5454ab21ae39148850817ab5cf8eee, type: 3}
-  - {fileID: -9032337035904278877, guid: 4a5454ab21ae39148850817ab5cf8eee, type: 3}
+  - {fileID: -469517197277182853, guid: 5228c6f942153384e90ca3d9ddb803d1, type: 3}
+  - {fileID: -6467354976091625785, guid: 5228c6f942153384e90ca3d9ddb803d1, type: 3}
+  - {fileID: 8069830994492556104, guid: 5228c6f942153384e90ca3d9ddb803d1, type: 3}
+  - {fileID: 1350128070082706223, guid: 5228c6f942153384e90ca3d9ddb803d1, type: 3}
+  - {fileID: 667285732379039772, guid: 5228c6f942153384e90ca3d9ddb803d1, type: 3}
   interactPrompt: {fileID: 4798848328388508688}
   clueCamera: {fileID: 4133668017798608160}
 --- !u!58 &5407775224525766386
