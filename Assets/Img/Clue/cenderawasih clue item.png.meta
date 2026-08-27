@@ -1,0 +1,494 @@
+fileFormatVersion: 2
+guid: 208fe937ca690e94dbb5f8822c371930
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 453858496621010673
+    second: cenderawasih clue item_0
+  - first:
+      213: 5325909555627967447
+    second: cenderawasih clue item_1
+  - first:
+      213: 6157868529206123464
+    second: cenderawasih clue item_2
+  - first:
+      213: 5901722272832177895
+    second: cenderawasih clue item_3
+  - first:
+      213: -1756361519536681895
+    second: cenderawasih clue item_4
+  - first:
+      213: -1224092754820846147
+    second: cenderawasih clue item_5
+  - first:
+      213: 8039653460946787353
+    second: cenderawasih clue item_6
+  - first:
+      213: -2892344129195247391
+    second: cenderawasih clue item_7
+  - first:
+      213: -639047290741014166
+    second: cenderawasih clue item_8
+  - first:
+      213: -3765649668214232058
+    second: cenderawasih clue item_9
+  - first:
+      213: -8176430386435716171
+    second: cenderawasih clue item_10
+  - first:
+      213: -9032337035904278877
+    second: cenderawasih clue item_11
+  - first:
+      213: 4937976991807119119
+    second: cenderawasih clue item_12
+  - first:
+      213: 4451679504371943918
+    second: cenderawasih clue item_13
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: cenderawasih clue item_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 481
+        width: 361
+        height: 387
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fe5365e5ed6c4600800000000000000
+      internalID: 453858496621010673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cenderawasih clue item_1
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 478
+        width: 354
+        height: 390
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d34011e58e69e940800000000000000
+      internalID: 5325909555627967447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cenderawasih clue item_2
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 483
+        width: 362
+        height: 381
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cb53e03dc4257550800000000000000
+      internalID: 6157868529206123464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cenderawasih clue item_3
+      rect:
+        serializedVersion: 2
+        x: 1265
+        y: 477
+        width: 290
+        height: 415
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e64c23732127e150800000000000000
+      internalID: 5901722272832177895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cenderawasih clue item_4
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 483
+        width: 277
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95cc9dae08620a7e0800000000000000
+      internalID: -1756361519536681895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cenderawasih clue item_5
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 484
+        width: 325
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbd26c00026230fe0800000000000000
+      internalID: -1224092754820846147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cenderawasih clue item_6
+      rect:
+        serializedVersion: 2
+        x: 853
+        y: 480
+        width: 324
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91c19f01a36929f60800000000000000
+      internalID: 8039653460946787353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cenderawasih clue item_7
+      rect:
+        serializedVersion: 2
+        x: 1272
+        y: 480
+        width: 252
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e8712bb6545cd7d0800000000000000
+      internalID: -2892344129195247391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cenderawasih clue item_8
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 4
+        width: 271
+        height: 391
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a61c4b8ffd5a127f0800000000000000
+      internalID: -639047290741014166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cenderawasih clue item_9
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 0
+        width: 284
+        height: 384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60ce589f399bdbbc0800000000000000
+      internalID: -3765649668214232058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cenderawasih clue item_10
+      rect:
+        serializedVersion: 2
+        x: 1076
+        y: 42
+        width: 159
+        height: 232
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bb0ac552eb778e80800000000000000
+      internalID: -8176430386435716171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cenderawasih clue item_11
+      rect:
+        serializedVersion: 2
+        x: 1078
+        y: 36
+        width: 351
+        height: 344
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ae125b3251b6a280800000000000000
+      internalID: -9032337035904278877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cenderawasih clue item_12
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 0
+        width: 251
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0f17b959e7378440800000000000000
+      internalID: 4937976991807119119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cenderawasih clue item_13
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 3
+        width: 252
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee90af75cea87cd30800000000000000
+      internalID: 4451679504371943918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: be9a51c47df783043af285f8cea0d8f3
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      cenderawasih clue item_0: 453858496621010673
+      cenderawasih clue item_1: 5325909555627967447
+      cenderawasih clue item_10: -8176430386435716171
+      cenderawasih clue item_11: -9032337035904278877
+      cenderawasih clue item_12: 4937976991807119119
+      cenderawasih clue item_13: 4451679504371943918
+      cenderawasih clue item_2: 6157868529206123464
+      cenderawasih clue item_3: 5901722272832177895
+      cenderawasih clue item_4: -1756361519536681895
+      cenderawasih clue item_5: -1224092754820846147
+      cenderawasih clue item_6: 8039653460946787353
+      cenderawasih clue item_7: -2892344129195247391
+      cenderawasih clue item_8: -639047290741014166
+      cenderawasih clue item_9: -3765649668214232058
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

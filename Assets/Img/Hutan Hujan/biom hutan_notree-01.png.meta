@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 88adaa4821e27da45854d57169e32a56
+guid: 707db3fda32c3394e936b990fb9ac1fb
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -710185478393105098
-    second: BIOM HUTAN-Border-01_0
+      213: 590460048512352823
+    second: biom hutan_notree-01_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BIOM HUTAN-Border-01_0
+      name: biom hutan_notree-01_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 635fcb3f11ae426f0800000000000000
-      internalID: -710185478393105098
+      spriteID: 73283a5294cb13800800000000000000
+      internalID: 590460048512352823
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      BIOM HUTAN-Border-01_0: -710185478393105098
+      biom hutan_notree-01_0: 590460048512352823
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
