@@ -6832,6 +6832,7 @@ MonoBehaviour:
     - {fileID: 335934641}
     - {fileID: 693263509}
     - {fileID: 955526628}
+    timeLimit: 60
   - namaHewan: 'Cendrawasih '
     animalPrefab: {fileID: 7718305887417924496, guid: 06c64d32dd243b046a370bfb9c699905, type: 3}
     requiredClues: 3
@@ -6840,6 +6841,7 @@ MonoBehaviour:
     - {fileID: 335934641}
     - {fileID: 693263509}
     - {fileID: 955526628}
+    timeLimit: 60
   teleportInterval: 5
   isTeleportPaused: 0
   finalPanelUI: {fileID: 1245040330}
@@ -6849,6 +6851,10 @@ MonoBehaviour:
   - {fileID: 685442236}
   - {fileID: 1509500663}
   - {fileID: 7737360}
+  teksSisaClue: {fileID: 0}
+  teksTimer: {fileID: 0}
+  gameOverPanel: {fileID: 0}
+  teksRestartCountdown: {fileID: 0}
   nextSceneName: MainMenu
 --- !u!4 &1244495250
 Transform:

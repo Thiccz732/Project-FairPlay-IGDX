@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement; 
 using System.Collections; 
+using TMPro;
 
 [System.Serializable]
 public class AnimalStage
@@ -10,6 +11,9 @@ public class AnimalStage
     public GameObject animalPrefab;
     public int requiredClues = 3;
     public Transform[] animalSpawnPoints;
+    
+    [Header("Waktu Berburu (Detik)")] 
+    public float timeLimit = 60f; 
 }
 
 public class GameManager : MonoBehaviour
@@ -24,10 +28,16 @@ public class GameManager : MonoBehaviour
     public float teleportInterval = 5f;
     [HideInInspector] public bool isTeleportPaused = false; 
 
-    [Header("UI Akhir Game")]
+    [Header("UI Akhir Game & Tracker")] 
     public GameObject finalPanelUI;      
     public int totalPhotosToMatch = 4;   
     public Image[] draggablePhotoUI; 
+    public TextMeshProUGUI teksSisaClue; 
+    public TextMeshProUGUI teksTimer; 
+
+    [Header("UI Game Over")]
+    public GameObject gameOverPanel; 
+    public TextMeshProUGUI teksRestartCountdown; // Teks untuk hitung mundur restart
     
     [Header("Pengaturan Pindah Scene")]
     public string nextSceneName = "MainMenu"; 
@@ -42,6 +52,10 @@ public class GameManager : MonoBehaviour
     private Coroutine teleportCoroutine;
     private bool isStageEnding = false; 
 
+    // Variabel Timer
+    private float currentTimeLeft;
+    private bool isTimerRunning = false;
+
     private void Awake()
     {
         if (instance == null) instance = this;
@@ -54,8 +68,79 @@ public class GameManager : MonoBehaviour
         if (player != null) playerTransform = player.transform;
 
         if (finalPanelUI != null) finalPanelUI.SetActive(false);
+        if (gameOverPanel != null) gameOverPanel.SetActive(false); 
 
         StartStage();
+    }
+
+    private void Update()
+    {
+        if (isTimerRunning && !isStageEnding)
+        {
+            currentTimeLeft -= Time.deltaTime;
+
+            if (currentTimeLeft <= 0)
+            {
+                currentTimeLeft = 0;
+                WaktuHabis();
+            }
+
+            UpdateUITimer();
+        }
+    }
+
+    private void UpdateUITimer()
+    {
+        if (teksTimer != null)
+        {
+            teksTimer.text = "Waktu: " + Mathf.CeilToInt(currentTimeLeft).ToString() + "s";
+            
+            if (currentTimeLeft <= 10f) teksTimer.color = Color.red;
+            else teksTimer.color = Color.white;
+        }
+    }
+
+    // ==========================================
+    // LOGIKA GAME OVER & HITUNG MUNDUR RESTART
+    // ==========================================
+    private void WaktuHabis()
+    {
+        isTimerRunning = false;
+        
+        // Hentikan pergerakan pemain
+        if (playerTransform != null) playerTransform.GetComponent<PlayerController>().enabled = false;
+        
+        // Munculkan panel Game Over dan mulai hitung mundur
+        if (gameOverPanel != null) 
+        {
+            gameOverPanel.SetActive(true);
+            StartCoroutine(RestartLevelRoutine());
+        }
+        else 
+        {
+            // Jaga-jaga kalau panel belum dimasukkan di Inspector
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name); 
+        }
+    }
+
+    private IEnumerator RestartLevelRoutine()
+    {
+        int countdown = 5;
+        
+        while (countdown > 0)
+        {
+            if (teksRestartCountdown != null)
+            {
+                teksRestartCountdown.text = "Mengulang level dalam " + countdown + " detik...";
+            }
+            
+            // Tunggu 1 detik nyata
+            yield return new WaitForSeconds(1f);
+            countdown--;
+        }
+        
+        // Setelah 5 detik, restart layar saat ini
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     private void StartStage()
@@ -72,6 +157,14 @@ public class GameManager : MonoBehaviour
             int amountToSpawn = animalStages[currentStageIndex].requiredClues + 2;
             ClueSpawner.instance.SpawnClues(amountToSpawn);
         }
+
+        if (animalStages.Length > 0)
+        {
+            currentTimeLeft = animalStages[currentStageIndex].timeLimit;
+            isTimerRunning = true;
+        }
+
+        UpdateUISisaClue(); 
     }
 
     public void RegisterSnapshot(Sprite snapshot, bool isAnimal)
@@ -81,17 +174,38 @@ public class GameManager : MonoBehaviour
             if (spawnedAnimalInstance != null) Destroy(spawnedAnimalInstance);
             if (teleportCoroutine != null) StopCoroutine(teleportCoroutine);
 
+            isTimerRunning = false; 
             capturedSnapshots[9] = snapshot; 
             ShowFinalPanel(); 
         }
         else
         {
             cluesFound++;
+            UpdateUISisaClue(); 
+
             if (cluesFound < capturedSnapshots.Length) capturedSnapshots[cluesFound] = snapshot;
 
             if (cluesFound >= animalStages[currentStageIndex].requiredClues && !isAnimalSpawned) 
             {
                 SpawnAnimal();
+            }
+        }
+    }
+
+    private void UpdateUISisaClue()
+    {
+        if (teksSisaClue != null && animalStages.Length > 0)
+        {
+            int targetClue = animalStages[currentStageIndex].requiredClues;
+            int sisa = targetClue - cluesFound;
+
+            if (sisa > 0)
+            {
+                teksSisaClue.text = "Sisa Clue: " + sisa;
+            }
+            else
+            {
+                teksSisaClue.text = "Hewan Muncul!";
             }
         }
     }
@@ -103,14 +217,39 @@ public class GameManager : MonoBehaviour
 
         if (currentStage.animalSpawnPoints != null && currentStage.animalSpawnPoints.Length > 0)
         {
-            spawnedAnimalInstance = Instantiate(currentStage.animalPrefab, currentStage.animalSpawnPoints[0].position, Quaternion.identity);
-            teleportCoroutine = StartCoroutine(AnimalTeleportRoutine(currentStage.animalSpawnPoints));
+            Transform chosenSpawnPoint = currentStage.animalSpawnPoints[0];
+            
+            float chance = Random.Range(1f, 100f);
+
+            if (chance <= 45f && playerTransform != null) 
+            {
+                float closestDistance = Mathf.Infinity;
+                foreach (Transform sp in currentStage.animalSpawnPoints)
+                {
+                    float distance = Vector2.Distance(playerTransform.position, sp.position);
+                    if (distance < closestDistance)
+                    {
+                        closestDistance = distance;
+                        chosenSpawnPoint = sp;
+                    }
+                }
+            }
+            else
+            {
+                int randomIndex = Random.Range(0, currentStage.animalSpawnPoints.Length);
+                chosenSpawnPoint = currentStage.animalSpawnPoints[randomIndex];
+            }
+
+            spawnedAnimalInstance = Instantiate(currentStage.animalPrefab, chosenSpawnPoint.position, Quaternion.identity);
+            teleportCoroutine = StartCoroutine(AnimalTeleportRoutine(currentStage.animalSpawnPoints, chosenSpawnPoint));
         }
     }
 
-    private IEnumerator AnimalTeleportRoutine(Transform[] spawnPoints)
+    private IEnumerator AnimalTeleportRoutine(Transform[] spawnPoints, Transform startingPoint)
     {
-        int currentIndex = 0;
+        int currentIndex = System.Array.IndexOf(spawnPoints, startingPoint);
+        if (currentIndex == -1) currentIndex = 0;
+
         while (spawnedAnimalInstance != null)
         {
             float timer = 0f;
@@ -159,12 +298,9 @@ public class GameManager : MonoBehaviour
         if (isStageEnding) return; 
 
         matchedPhotos++;
-        Debug.Log("FOTO MASUK SLOT! Skor saat ini: " + matchedPhotos + " / " + totalPhotosToMatch);
-
         if (matchedPhotos >= totalPhotosToMatch)
         {
             isStageEnding = true; 
-            Debug.Log("Semua foto pas! Menunggu 3 detik sebelum lanjut...");
             StartCoroutine(NextStageRoutine());
         }
     }
@@ -189,7 +325,6 @@ public class GameManager : MonoBehaviour
         else
         {
             if (!string.IsNullOrEmpty(nextSceneName)) SceneManager.LoadScene(nextSceneName);
-            else Debug.LogWarning("Nama Scene selanjutnya belum diisi!");
         }
     }
 }
