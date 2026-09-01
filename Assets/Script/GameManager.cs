@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement; 
 using System.Collections; 
-using TMPro;
+using TMPro; 
 
 [System.Serializable]
 public class AnimalStage
@@ -28,16 +28,18 @@ public class GameManager : MonoBehaviour
     public float teleportInterval = 5f;
     [HideInInspector] public bool isTeleportPaused = false; 
 
-    [Header("UI Akhir Game & Tracker")] 
-    public GameObject finalPanelUI;      
-    public int totalPhotosToMatch = 4;   
-    public Image[] draggablePhotoUI; 
+    [Header("UI Tracker (Teks yang Selalu Muncul)")] 
     public TextMeshProUGUI teksSisaClue; 
     public TextMeshProUGUI teksTimer; 
 
+    [Header("UI Akhir Game (Susun Foto)")] 
+    public GameObject finalPanelUI;      
+    public int totalPhotosToMatch = 4;   
+    public Image[] draggablePhotoUI; 
+
     [Header("UI Game Over")]
     public GameObject gameOverPanel; 
-    public TextMeshProUGUI teksRestartCountdown; // Teks untuk hitung mundur restart
+    public TextMeshProUGUI teksRestartCountdown; 
     
     [Header("Pengaturan Pindah Scene")]
     public string nextSceneName = "MainMenu"; 
@@ -54,7 +56,7 @@ public class GameManager : MonoBehaviour
 
     // Variabel Timer
     private float currentTimeLeft;
-    private bool isTimerRunning = false;
+    [HideInInspector] public bool isTimerRunning = false; 
 
     private void Awake()
     {
@@ -93,24 +95,24 @@ public class GameManager : MonoBehaviour
     {
         if (teksTimer != null)
         {
-            teksTimer.text = "Waktu: " + Mathf.CeilToInt(currentTimeLeft).ToString() + "s";
+            // Format waktu menjadi menit dan detik (00:00)
+            int menit = Mathf.FloorToInt(currentTimeLeft / 60);
+            int detik = Mathf.FloorToInt(currentTimeLeft % 60);
             
+            teksTimer.text = string.Format("Waktu: {0:00}:{1:00}", menit, detik);
+            
+            // Berubah warna jadi merah saat sisa 10 detik
             if (currentTimeLeft <= 10f) teksTimer.color = Color.red;
             else teksTimer.color = Color.white;
         }
     }
 
-    // ==========================================
-    // LOGIKA GAME OVER & HITUNG MUNDUR RESTART
-    // ==========================================
     private void WaktuHabis()
     {
         isTimerRunning = false;
         
-        // Hentikan pergerakan pemain
         if (playerTransform != null) playerTransform.GetComponent<PlayerController>().enabled = false;
         
-        // Munculkan panel Game Over dan mulai hitung mundur
         if (gameOverPanel != null) 
         {
             gameOverPanel.SetActive(true);
@@ -118,7 +120,6 @@ public class GameManager : MonoBehaviour
         }
         else 
         {
-            // Jaga-jaga kalau panel belum dimasukkan di Inspector
             SceneManager.LoadScene(SceneManager.GetActiveScene().name); 
         }
     }
@@ -134,12 +135,11 @@ public class GameManager : MonoBehaviour
                 teksRestartCountdown.text = "Mengulang level dalam " + countdown + " detik...";
             }
             
-            // Tunggu 1 detik nyata
-            yield return new WaitForSeconds(1f);
+            // Gunakan WaitForSecondsRealtime agar countdown 5 detik kebal terhadap efek Pause/Freeze di game
+            yield return new WaitForSecondsRealtime(1f);
             countdown--;
         }
         
-        // Setelah 5 detik, restart layar saat ini
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
@@ -165,6 +165,7 @@ public class GameManager : MonoBehaviour
         }
 
         UpdateUISisaClue(); 
+        SetTrackerUIVisible(true); 
     }
 
     public void RegisterSnapshot(Sprite snapshot, bool isAnimal)
@@ -275,6 +276,8 @@ public class GameManager : MonoBehaviour
 
     private void ShowFinalPanel()
     {
+        SetTrackerUIVisible(false); 
+
         if (finalPanelUI != null)
         {
             finalPanelUI.SetActive(true);
@@ -326,5 +329,22 @@ public class GameManager : MonoBehaviour
         {
             if (!string.IsNullOrEmpty(nextSceneName)) SceneManager.LoadScene(nextSceneName);
         }
+    }
+
+    // ==========================================
+    // FUNGSI UNTUK MENGONTROL VISIBILITAS UI
+    // ==========================================
+    public void SetTrackerUIVisible(bool isVisible)
+    {
+        if (teksSisaClue != null) teksSisaClue.gameObject.SetActive(isVisible);
+        if (teksTimer != null) teksTimer.gameObject.SetActive(isVisible);
+    }
+
+    // ==========================================
+    // FUNGSI UNTUK MODE FOTO (HARDCORE MODE)
+    // ==========================================
+    public void ToggleModeFoto(bool isKameraAktif)
+    {
+        SetTrackerUIVisible(!isKameraAktif);
     }
 }

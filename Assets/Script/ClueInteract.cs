@@ -15,7 +15,8 @@ public class ClueInteract : MonoBehaviour
     private SpriteRenderer sr;
 
     [Header("Komponen Bawaan Prefab")]
-    public GameObject interactPrompt;   
+    public GameObject interactPrompt;   // (Opsional) Tombol E lama
+    public GameObject interactButton;   // (BARU) Tombol UI Melayang untuk sentuhan jari
     public GameObject clueCamera;       
 
     private static Image sharedWhiteFlash;       
@@ -50,6 +51,7 @@ public class ClueInteract : MonoBehaviour
         }
 
         if (interactPrompt != null) interactPrompt.SetActive(false);
+        if (interactButton != null) interactButton.SetActive(false); // Sembunyikan tombol UI di awal
         if (clueCamera != null) clueCamera.SetActive(false);
 
         if (sharedWhiteFlash == null)
@@ -80,7 +82,11 @@ public class ClueInteract : MonoBehaviour
         if (!hasBeenPhotographed && collision.CompareTag("Player"))
         {
             isPlayerNear = true;
-            if (!isCameraMode && interactPrompt != null) interactPrompt.SetActive(true);
+            if (!isCameraMode) 
+            {
+                if (interactPrompt != null) interactPrompt.SetActive(true);
+                if (interactButton != null) interactButton.SetActive(true); // Munculkan tombol UI melayang
+            }
         }
     }
 
@@ -90,7 +96,21 @@ public class ClueInteract : MonoBehaviour
         {
             isPlayerNear = false;
             if (interactPrompt != null) interactPrompt.SetActive(false);
+            if (interactButton != null) interactButton.SetActive(false); // Sembunyikan tombol UI melayang
             if (isCameraMode) ExitCameraMode();
+        }
+    }
+
+    // ==========================================
+    // FUNGSI BARU: BUKA KAMERA LEWAT TOMBOL UI
+    // ==========================================
+    public void BukaKameraLewatTombolUI()
+    {
+        if (!isPlayerNear || hasBeenPhotographed) return;
+
+        if (!isCameraMode) 
+        {
+            EnterCameraMode();
         }
     }
 
@@ -117,6 +137,7 @@ public class ClueInteract : MonoBehaviour
         {
             ExitCameraMode();
             if (interactPrompt != null) interactPrompt.SetActive(true); 
+            if (interactButton != null) interactButton.SetActive(true); 
         }
     }
 
@@ -124,12 +145,17 @@ public class ClueInteract : MonoBehaviour
     {
         isCameraMode = true;
         if (interactPrompt != null) interactPrompt.SetActive(false); 
+        if (interactButton != null) interactButton.SetActive(false); // Hilangkan tombol agar layar bersih
+        
         if (sharedPlayer != null) sharedPlayer.enabled = false; 
         if (clueCamera != null) clueCamera.SetActive(true); 
         if (sharedRadarUI != null) sharedRadarUI.SetActive(false);
         if (sharedJoystickUI != null) sharedJoystickUI.SetActive(false);
         
         if (isFinalAnimal && GameManager.instance != null) GameManager.instance.PauseTeleport(true);
+
+        // --- HARDCORE MODE: Hilangkan UI Timer dari layar ---
+        if (GameManager.instance != null) GameManager.instance.ToggleModeFoto(true);
     }
 
     private void ExitCameraMode()
@@ -141,6 +167,9 @@ public class ClueInteract : MonoBehaviour
         if (sharedJoystickUI != null) sharedJoystickUI.SetActive(true);
         
         if (isFinalAnimal && GameManager.instance != null) GameManager.instance.PauseTeleport(false);
+
+        // --- HARDCORE MODE: Munculkan UI Timer kembali ---
+        if (GameManager.instance != null) GameManager.instance.ToggleModeFoto(false);
     }
 
     private IEnumerator TakePhotoRoutine()
@@ -148,6 +177,7 @@ public class ClueInteract : MonoBehaviour
         hasBeenPhotographed = true;
         
         if (interactPrompt != null) interactPrompt.SetActive(false);
+        if (interactButton != null) interactButton.SetActive(false);
         if (radarBlip != null) radarBlip.SetActive(false);
         if (sharedJoystickUI != null) sharedJoystickUI.SetActive(false);
 
@@ -156,7 +186,6 @@ public class ClueInteract : MonoBehaviour
 
         yield return new WaitForEndOfFrame();
 
-        // --- PERBAIKAN FORMAT GAMBAR RGBA32 AGAR TIDAK HILANG DI UI ---
         Texture2D snapshotTex = new Texture2D(Screen.width, Screen.height, TextureFormat.RGBA32, false);
         snapshotTex.ReadPixels(new Rect(0, 0, Screen.width, Screen.height), 0, 0);
         snapshotTex.Apply(); 
