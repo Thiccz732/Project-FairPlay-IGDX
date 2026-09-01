@@ -9,11 +9,17 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: e4a8d4b5b5a961749851dfb88c36692b
   - enabled: 1
+    path: Assets/Scenes/AlbumScene.unity
+    guid: c072ce4a9cbbae2428b690b2fd895f69
+  - enabled: 1
     path: Assets/Scenes/MenuDistrikScene.unity
     guid: a6ffaf1d19c1de74880467a7fbb2b565
   - enabled: 1
     path: Assets/Scenes/HutanHujan1.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/HutanHujan2.unity
+    guid: 703d9d6d57d2e2c46a24831409e0b411
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
