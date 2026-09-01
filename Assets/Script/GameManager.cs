@@ -323,10 +323,16 @@ public class GameManager : MonoBehaviour
         
         if (currentStageIndex < animalStages.Length)
         {
-            StartStage(); 
+            StartStage();
         }
         else
         {
+            // --- SIMPAN PROGRESS UNLOCK LEVEL ---
+            // Simpan data bahwa Level 2 (atau level selanjutnya) sudah kebuka!
+            PlayerPrefs.SetInt("LevelUnlocked", 2); 
+            PlayerPrefs.Save();
+            // ------------------------------------
+
             if (!string.IsNullOrEmpty(nextSceneName)) SceneManager.LoadScene(nextSceneName);
         }
     }

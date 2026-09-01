@@ -1,49 +1,52 @@
 fileFormatVersion: 2
-guid: b68477a1a722738449b39badb4de79a9
+guid: 687e5d3689935bf44b53efa48925fd4e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5244402364898062200
-    second: Untitled59_20260802175721_0
+      213: 6521142630684592418
+    second: kangguru pohon sprite 1_0
   - first:
-      213: 8737663604610806985
-    second: Untitled59_20260802175721_1
+      213: -5763936122450681788
+    second: kangguru pohon sprite 1_1
   - first:
-      213: 1736275141803304609
-    second: Untitled59_20260802175721_2
+      213: 2539939487069992654
+    second: kangguru pohon sprite 1_2
   - first:
-      213: -2462039833712994314
-    second: Untitled59_20260802175721_3
+      213: -5234892261674888612
+    second: kangguru pohon sprite 1_3
   - first:
-      213: 7500328910506821155
-    second: Untitled59_20260802175721_4
+      213: 1268304504165572244
+    second: kangguru pohon sprite 1_4
   - first:
-      213: -9200931147508432188
-    second: Untitled59_20260802175721_5
+      213: -1519663723970749031
+    second: kangguru pohon sprite 1_5
   - first:
-      213: -5804846447353812815
-    second: Untitled59_20260802175721_6
+      213: 7152821317332675362
+    second: kangguru pohon sprite 1_6
   - first:
-      213: -5340683379615542066
-    second: Untitled59_20260802175721_7
+      213: -3267681320258245419
+    second: kangguru pohon sprite 1_7
   - first:
-      213: -2210460473951087215
-    second: Untitled59_20260802175721_8
+      213: 38074406267211439
+    second: kangguru pohon sprite 1_8
   - first:
-      213: 8619943930529709612
-    second: Untitled59_20260802175721_9
+      213: 6751979862733604025
+    second: kangguru pohon sprite 1_9
   - first:
-      213: -936345736202476226
-    second: Untitled59_20260802175721_10
+      213: 5848302884494258692
+    second: kangguru pohon sprite 1_10
   - first:
-      213: -3830493714615965246
-    second: Untitled59_20260802175721_11
+      213: 1784517726650063808
+    second: kangguru pohon sprite 1_11
   - first:
-      213: 8118187579052060474
-    second: Untitled59_20260802175721_12
+      213: -3066442715281564553
+    second: kangguru pohon sprite 1_12
   - first:
-      213: 7792967025657888320
-    second: Untitled59_20260802175721_13
+      213: -8808078406682942990
+    second: kangguru pohon sprite 1_13
+  - first:
+      213: -4528733590277735464
+    second: kangguru pohon sprite 1_14
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -152,12 +155,122 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Untitled59_20260802175721_0
+      name: kangguru pohon sprite 1_0
       rect:
         serializedVersion: 2
-        x: 146
-        y: 1970
-        width: 8
+        x: 0
+        y: 18
+        width: 299
+        height: 447
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2298c9f0ca0cf7a50800000000000000
+      internalID: 6521142630684592418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kangguru pohon sprite 1_1
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 58
+        width: 290
+        height: 386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 440e841a2a26200b0800000000000000
+      internalID: -5763936122450681788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kangguru pohon sprite 1_2
+      rect:
+        serializedVersion: 2
+        x: 1207
+        y: 7
+        width: 291
+        height: 454
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec67bcd918daf3320800000000000000
+      internalID: 2539939487069992654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kangguru pohon sprite 1_3
+      rect:
+        serializedVersion: 2
+        x: 1767
+        y: 23
+        width: 374
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c525d61493de957b0800000000000000
+      internalID: -5234892261674888612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kangguru pohon sprite 1_4
+      rect:
+        serializedVersion: 2
+        x: 2336
+        y: 79
+        width: 422
+        height: 383
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49e11dd0a3ce99110800000000000000
+      internalID: 1268304504165572244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kangguru pohon sprite 1_5
+      rect:
+        serializedVersion: 2
+        x: 2387
+        y: 69
+        width: 50
         height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -167,20 +280,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 880580dc5d32837b0800000000000000
-      internalID: -5244402364898062200
+      spriteID: 99d1da205e119eae0800000000000000
+      internalID: -1519663723970749031
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Untitled59_20260802175721_1
+      name: kangguru pohon sprite 1_6
       rect:
         serializedVersion: 2
-        x: 196
-        y: 1744
-        width: 630
-        height: 262
+        x: 3063
+        y: 75
+        width: 46
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -189,20 +302,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9c4bfa711ca624970800000000000000
-      internalID: 8737663604610806985
+      spriteID: 22ba471471de34360800000000000000
+      internalID: 7152821317332675362
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Untitled59_20260802175721_2
+      name: kangguru pohon sprite 1_7
       rect:
         serializedVersion: 2
-        x: 1677
-        y: 1779
-        width: 364
-        height: 199
+        x: 3081
+        y: 23
+        width: 374
+        height: 442
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -211,20 +324,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1a6e683da0d781810800000000000000
-      internalID: 1736275141803304609
+      spriteID: 5dce3d2f62dd6a2d0800000000000000
+      internalID: -3267681320258245419
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Untitled59_20260802175721_3
+      name: kangguru pohon sprite 1_8
       rect:
         serializedVersion: 2
-        x: 2461
-        y: 1706
-        width: 446
-        height: 287
+        x: 3807
+        y: 7
+        width: 289
+        height: 454
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -233,20 +346,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6f7dca0d0d315ddd0800000000000000
-      internalID: -2462039833712994314
+      spriteID: fae47948874478000800000000000000
+      internalID: 38074406267211439
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Untitled59_20260802175721_4
+      name: kangguru pohon sprite 1_9
       rect:
         serializedVersion: 2
-        x: 3247
-        y: 1705
-        width: 276
-        height: 314
+        x: 703
+        y: 37
+        width: 60
+        height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -255,20 +368,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3260a59d765861860800000000000000
-      internalID: 7500328910506821155
+      spriteID: 9b4c3d069e9d3bd50800000000000000
+      internalID: 6751979862733604025
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Untitled59_20260802175721_5
+      name: kangguru pohon sprite 1_10
       rect:
         serializedVersion: 2
-        x: 1099
-        y: 1778
-        width: 245
-        height: 130
+        x: 767
+        y: 29
+        width: 34
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -277,20 +390,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4c2cee5bed9bf4080800000000000000
-      internalID: -9200931147508432188
+      spriteID: 4023c21ec78592150800000000000000
+      internalID: 5848302884494258692
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Untitled59_20260802175721_6
+      name: kangguru pohon sprite 1_11
       rect:
         serializedVersion: 2
-        x: 86
-        y: 1012
-        width: 246
-        height: 178
+        x: 802
+        y: 22
+        width: 39
+        height: 46
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -299,20 +412,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1b8a9c959ea017fa0800000000000000
-      internalID: -5804846447353812815
+      spriteID: 0cb5d58ea61e3c810800000000000000
+      internalID: 1784517726650063808
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Untitled59_20260802175721_7
+      name: kangguru pohon sprite 1_12
       rect:
         serializedVersion: 2
-        x: 579
-        y: 992
-        width: 200
-        height: 125
+        x: 3017
+        y: 44
+        width: 51
+        height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -321,20 +434,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ec4de2c23c412e5b0800000000000000
-      internalID: -5340683379615542066
+      spriteID: 77cde8fd89ec175d0800000000000000
+      internalID: -3066442715281564553
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Untitled59_20260802175721_8
+      name: kangguru pohon sprite 1_13
       rect:
         serializedVersion: 2
-        x: 1080
-        y: 845
-        width: 408
-        height: 485
+        x: 1818
+        y: 16
+        width: 58
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -343,20 +456,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1959a1419edd251e0800000000000000
-      internalID: -2210460473951087215
+      spriteID: 2f1efd73b5b63c580800000000000000
+      internalID: -8808078406682942990
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Untitled59_20260802175721_9
+      name: kangguru pohon sprite 1_14
       rect:
         serializedVersion: 2
-        x: 1791
-        y: 906
-        width: 379
-        height: 503
+        x: 1284
+        y: 0
+        width: 58
+        height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -365,96 +478,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c2ef10b955130a770800000000000000
-      internalID: 8619943930529709612
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Untitled59_20260802175721_10
-      rect:
-        serializedVersion: 2
-        x: 2493
-        y: 956
-        width: 379
-        height: 422
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e3523be838e6103f0800000000000000
-      internalID: -936345736202476226
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Untitled59_20260802175721_11
-      rect:
-        serializedVersion: 2
-        x: 3282
-        y: 976
-        width: 389
-        height: 395
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2c9e2f9e24a57dac0800000000000000
-      internalID: -3830493714615965246
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Untitled59_20260802175721_12
-      rect:
-        serializedVersion: 2
-        x: 261
-        y: 204
-        width: 790
-        height: 532
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a3fe265579899a070800000000000000
-      internalID: 8118187579052060474
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Untitled59_20260802175721_13
-      rect:
-        serializedVersion: 2
-        x: 3153
-        y: 264
-        width: 615
-        height: 346
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 04ebbae883e262c60800000000000000
-      internalID: 7792967025657888320
+      spriteID: 8dbbd1d3bc4b621c0800000000000000
+      internalID: -4528733590277735464
       vertices: []
       indices: 
       edges: []
@@ -473,20 +498,21 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Untitled59_20260802175721_0: -5244402364898062200
-      Untitled59_20260802175721_1: 8737663604610806985
-      Untitled59_20260802175721_10: -936345736202476226
-      Untitled59_20260802175721_11: -3830493714615965246
-      Untitled59_20260802175721_12: 8118187579052060474
-      Untitled59_20260802175721_13: 7792967025657888320
-      Untitled59_20260802175721_2: 1736275141803304609
-      Untitled59_20260802175721_3: -2462039833712994314
-      Untitled59_20260802175721_4: 7500328910506821155
-      Untitled59_20260802175721_5: -9200931147508432188
-      Untitled59_20260802175721_6: -5804846447353812815
-      Untitled59_20260802175721_7: -5340683379615542066
-      Untitled59_20260802175721_8: -2210460473951087215
-      Untitled59_20260802175721_9: 8619943930529709612
+      kangguru pohon sprite 1_0: 6521142630684592418
+      kangguru pohon sprite 1_1: -5763936122450681788
+      kangguru pohon sprite 1_10: 5848302884494258692
+      kangguru pohon sprite 1_11: 1784517726650063808
+      kangguru pohon sprite 1_12: -3066442715281564553
+      kangguru pohon sprite 1_13: -8808078406682942990
+      kangguru pohon sprite 1_14: -4528733590277735464
+      kangguru pohon sprite 1_2: 2539939487069992654
+      kangguru pohon sprite 1_3: -5234892261674888612
+      kangguru pohon sprite 1_4: 1268304504165572244
+      kangguru pohon sprite 1_5: -1519663723970749031
+      kangguru pohon sprite 1_6: 7152821317332675362
+      kangguru pohon sprite 1_7: -3267681320258245419
+      kangguru pohon sprite 1_8: 38074406267211439
+      kangguru pohon sprite 1_9: 6751979862733604025
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
