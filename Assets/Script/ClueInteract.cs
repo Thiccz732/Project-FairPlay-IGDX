@@ -15,8 +15,8 @@ public class ClueInteract : MonoBehaviour
     private SpriteRenderer sr;
 
     [Header("Komponen Bawaan Prefab")]
-    public GameObject interactPrompt;   // (Opsional) Tombol E lama
-    public GameObject interactButton;   // (BARU) Tombol UI Melayang untuk sentuhan jari
+    public GameObject interactPrompt;   
+    public GameObject interactButton;   
     public GameObject clueCamera;       
 
     private static Image sharedWhiteFlash;       
@@ -51,7 +51,7 @@ public class ClueInteract : MonoBehaviour
         }
 
         if (interactPrompt != null) interactPrompt.SetActive(false);
-        if (interactButton != null) interactButton.SetActive(false); // Sembunyikan tombol UI di awal
+        if (interactButton != null) interactButton.SetActive(false); 
         if (clueCamera != null) clueCamera.SetActive(false);
 
         if (sharedWhiteFlash == null)
@@ -85,7 +85,7 @@ public class ClueInteract : MonoBehaviour
             if (!isCameraMode) 
             {
                 if (interactPrompt != null) interactPrompt.SetActive(true);
-                if (interactButton != null) interactButton.SetActive(true); // Munculkan tombol UI melayang
+                if (interactButton != null) interactButton.SetActive(true); 
             }
         }
     }
@@ -96,14 +96,11 @@ public class ClueInteract : MonoBehaviour
         {
             isPlayerNear = false;
             if (interactPrompt != null) interactPrompt.SetActive(false);
-            if (interactButton != null) interactButton.SetActive(false); // Sembunyikan tombol UI melayang
+            if (interactButton != null) interactButton.SetActive(false); 
             if (isCameraMode) ExitCameraMode();
         }
     }
 
-    // ==========================================
-    // FUNGSI BARU: BUKA KAMERA LEWAT TOMBOL UI
-    // ==========================================
     public void BukaKameraLewatTombolUI()
     {
         if (!isPlayerNear || hasBeenPhotographed) return;
@@ -145,7 +142,7 @@ public class ClueInteract : MonoBehaviour
     {
         isCameraMode = true;
         if (interactPrompt != null) interactPrompt.SetActive(false); 
-        if (interactButton != null) interactButton.SetActive(false); // Hilangkan tombol agar layar bersih
+        if (interactButton != null) interactButton.SetActive(false); 
         
         if (sharedPlayer != null) sharedPlayer.enabled = false; 
         if (clueCamera != null) clueCamera.SetActive(true); 
@@ -154,7 +151,7 @@ public class ClueInteract : MonoBehaviour
         
         if (isFinalAnimal && GameManager.instance != null) GameManager.instance.PauseTeleport(true);
 
-        // --- HARDCORE MODE: Hilangkan UI Timer dari layar ---
+        // HARDCORE MODE
         if (GameManager.instance != null) GameManager.instance.ToggleModeFoto(true);
     }
 
@@ -168,7 +165,7 @@ public class ClueInteract : MonoBehaviour
         
         if (isFinalAnimal && GameManager.instance != null) GameManager.instance.PauseTeleport(false);
 
-        // --- HARDCORE MODE: Munculkan UI Timer kembali ---
+        // HARDCORE MODE
         if (GameManager.instance != null) GameManager.instance.ToggleModeFoto(false);
     }
 
@@ -184,6 +181,14 @@ public class ClueInteract : MonoBehaviour
         CameraLensManager lensManager = GetComponentInChildren<CameraLensManager>();
         if (lensManager != null) lensManager.HideButtons();
 
+        // --- MATIKAN FILTER HIJAU SEMENTARA SEBELUM DIJEPRET ---
+        GameObject activeNVG = null;
+        if (lensManager != null && lensManager.nightVisionEffect != null)
+        {
+            activeNVG = lensManager.nightVisionEffect;
+            activeNVG.SetActive(false); 
+        }
+
         yield return new WaitForEndOfFrame();
 
         Texture2D snapshotTex = new Texture2D(Screen.width, Screen.height, TextureFormat.RGBA32, false);
@@ -191,6 +196,12 @@ public class ClueInteract : MonoBehaviour
         snapshotTex.Apply(); 
 
         Sprite newSnapshot = Sprite.Create(snapshotTex, new Rect(0, 0, snapshotTex.width, snapshotTex.height), new Vector2(0.5f, 0.5f));
+
+        // --- NYALAKAN KEMBALI FILTER HIJAU SETELAH FOTO SELESAI ---
+        if (activeNVG != null)
+        {
+            activeNVG.SetActive(true);
+        }
 
         if (sharedWhiteFlash != null)
         {

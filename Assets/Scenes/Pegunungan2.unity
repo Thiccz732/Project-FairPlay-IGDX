@@ -640,7 +640,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!199 &179982077
 ParticleSystemRenderer:
   serializedVersion: 7
@@ -7429,7 +7429,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 7.5729814
+  orthographic size: 3.12
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -7454,7 +7454,7 @@ Transform:
   m_GameObject: {fileID: 1010607379}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.1500006, y: -1.23, z: -10}
+  m_LocalPosition: {x: -6.79977, y: 1.4232, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8944,7 +8944,7 @@ MonoBehaviour:
   m_LightType: 4
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0, g: 0.1347144, b: 0.2981131, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
@@ -9040,7 +9040,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a29ca4a3c5e4299409c38e98ab2f0229, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  cluePrefab: {fileID: 5645975296016794199, guid: 78fced277a4100b40b4e019c43b621b7, type: 3}
+  cluePrefab: {fileID: 5645975296016794199, guid: b9ca830137988c0488fdbf8a04982dec, type: 3}
   clueImages:
   - {fileID: 667285732379039772, guid: 5228c6f942153384e90ca3d9ddb803d1, type: 3}
   - {fileID: 8069830994492556104, guid: 5228c6f942153384e90ca3d9ddb803d1, type: 3}
@@ -9295,9 +9295,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   animalStages:
-  - namaHewan: Walabi Semak
-    animalPrefab: {fileID: 7718305887417924496, guid: 42ffc725c847669428a344a59f915167, type: 3}
-    requiredClues: 1
+  - namaHewan: Kangguru Pohon
+    animalPrefab: {fileID: 5645975296016794199, guid: fa2b699447606d1469615481b2538e88, type: 3}
+    requiredClues: 4
     animalSpawnPoints:
     - {fileID: 30647910}
     - {fileID: 1049293451}

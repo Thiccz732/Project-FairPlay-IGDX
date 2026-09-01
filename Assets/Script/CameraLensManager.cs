@@ -14,14 +14,13 @@ public class CameraLensManager : MonoBehaviour
     public Camera clueCamera;
     private float normalZoom = 5f; 
 
-    // --- SISTEM STATUS LENSA & LEVEL 1 ---
     public enum LensType { Normal, NightVision, Macro }
     [HideInInspector] public LensType currentLens = LensType.Normal;
 
-    [Header("Aturan Level")]
-    [Tooltip("Centang jika level ini wajib pakai lensa Normal (Level 1)")]
-    public bool mustUseNormalLens = true; 
-    // ----------------------------------------------------
+    [Header("Aturan Lensa (Centang Salah Satu)")]
+    public bool wajibNormal = false; 
+    public bool wajibNightVision = false;
+    public bool wajibMakro = false;
 
     private void Start()
     {
@@ -58,12 +57,22 @@ public class CameraLensManager : MonoBehaviour
         if (clueCamera != null) clueCamera.orthographicSize = normalZoom / 3f; 
     }
 
-    // INI DIA FUNGSI YANG DICARI OLEH UNITY:
+    // --- SISTEM VALIDASI YANG BARU ---
     public bool CanCapture()
     {
-        if (mustUseNormalLens && currentLens != LensType.Normal)
+        if (wajibNormal && currentLens != LensType.Normal)
         {
-            Debug.Log("Gagal Menjepret! Level ini mewajibkan Lensa Normal.");
+            Debug.Log("Gagal! Wajib Lensa Normal.");
+            return false; 
+        }
+        if (wajibNightVision && currentLens != LensType.NightVision)
+        {
+            Debug.Log("Gagal! Wajib Lensa Night Vision.");
+            return false; 
+        }
+        if (wajibMakro && currentLens != LensType.Macro)
+        {
+            Debug.Log("Gagal! Wajib Lensa Makro.");
             return false; 
         }
         return true; 
