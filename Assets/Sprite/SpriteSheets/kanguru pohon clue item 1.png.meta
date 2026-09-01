@@ -1,0 +1,409 @@
+fileFormatVersion: 2
+guid: 22ca0eb7454fc764ebefcee1ff82e5ea
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6794042228483339295
+    second: kanguru pohon clue item_0
+  - first:
+      213: 322965540291318691
+    second: kanguru pohon clue item_1
+  - first:
+      213: 2240841736713519490
+    second: kanguru pohon clue item_2
+  - first:
+      213: 8120378500081733368
+    second: kanguru pohon clue item_3
+  - first:
+      213: 7985211841999889112
+    second: kanguru pohon clue item_4
+  - first:
+      213: -2806883256176552004
+    second: kanguru pohon clue item_5
+  - first:
+      213: -4788612534482864348
+    second: kanguru pohon clue item_6
+  - first:
+      213: -8934918867183891317
+    second: kanguru pohon clue item_7
+  - first:
+      213: 5843917574189506169
+    second: kanguru pohon clue item_8
+  - first:
+      213: 7845527660657313751
+    second: kanguru pohon clue item_9
+  - first:
+      213: 4519340833342706182
+    second: kanguru pohon clue item_10
+  - first:
+      213: 3333792894673197185
+    second: kanguru pohon clue item_11
+  - first:
+      213: 2971509618597214601
+    second: kanguru pohon clue item_12
+  - first:
+      213: -7224218902949251785
+    second: kanguru pohon clue item_13
+  - first:
+      213: 6623381760632676335
+    second: kanguru pohon clue item_14
+  - first:
+      213: -3188358491050823704
+    second: kanguru pohon clue item_15
+  - first:
+      213: -636757519991995978
+    second: kanguru pohon clue item_16
+  - first:
+      213: -5298247900549549530
+    second: kanguru pohon clue item_17
+  - first:
+      213: 4296329859368357078
+    second: kanguru pohon clue item_18
+  - first:
+      213: -4711544300521141772
+    second: kanguru pohon clue item_19
+  - first:
+      213: -6658143074891222608
+    second: kanguru pohon clue item_20
+  - first:
+      213: 8330784582825831964
+    second: kanguru pohon clue item_21
+  - first:
+      213: 4677258948199782128
+    second: kanguru pohon clue item_22
+  - first:
+      213: 6815194205074715064
+    second: kanguru pohon clue item_23
+  - first:
+      213: 6016669146275887537
+    second: kanguru pohon clue item_24
+  - first:
+      213: -8705903866655950142
+    second: kanguru pohon clue item_25
+  - first:
+      213: -553787350325038212
+    second: kanguru pohon clue item_26
+  - first:
+      213: 5832713517289043689
+    second: kanguru pohon clue item_27
+  - first:
+      213: 2007563566501252485
+    second: kanguru pohon clue item_28
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: kanguru pohon clue item_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 476
+        width: 305
+        height: 339
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1eb4f3ee696b6b1a0800000000000000
+      internalID: -6794042228483339295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kanguru pohon clue item_1
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 475
+        width: 298
+        height: 290
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a391cf92776b7400800000000000000
+      internalID: 322965540291318691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kanguru pohon clue item_2
+      rect:
+        serializedVersion: 2
+        x: 938
+        y: 527
+        width: 257
+        height: 282
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 281cda2efa1191f10800000000000000
+      internalID: 2240841736713519490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kanguru pohon clue item_3
+      rect:
+        serializedVersion: 2
+        x: 1354
+        y: 474
+        width: 253
+        height: 276
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fe4713e83161b070800000000000000
+      internalID: 8120378500081733368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kanguru pohon clue item_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 289
+        height: 364
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 989b42f114cec3920800000000000000
+      internalID: 2971509618597214601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kanguru pohon clue item_13
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 0
+        width: 244
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7353c0eee2b6ebb90800000000000000
+      internalID: -7224218902949251785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kanguru pohon clue item_19
+      rect:
+        serializedVersion: 2
+        x: 1332
+        y: 0
+        width: 349
+        height: 265
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f9cbe7eb6b3d9eb0800000000000000
+      internalID: -4711544300521141772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kanguru pohon clue item_22
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 82
+        width: 282
+        height: 253
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f617f17b36f8e040800000000000000
+      internalID: 4677258948199782128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: b0e7edfebf629a5419de55f642f84f58
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      kanguru pohon clue item_0: -6794042228483339295
+      kanguru pohon clue item_1: 322965540291318691
+      kanguru pohon clue item_10: 4519340833342706182
+      kanguru pohon clue item_11: 3333792894673197185
+      kanguru pohon clue item_12: 2971509618597214601
+      kanguru pohon clue item_13: -7224218902949251785
+      kanguru pohon clue item_14: 6623381760632676335
+      kanguru pohon clue item_15: -3188358491050823704
+      kanguru pohon clue item_16: -636757519991995978
+      kanguru pohon clue item_17: -5298247900549549530
+      kanguru pohon clue item_18: 4296329859368357078
+      kanguru pohon clue item_19: -4711544300521141772
+      kanguru pohon clue item_2: 2240841736713519490
+      kanguru pohon clue item_20: -6658143074891222608
+      kanguru pohon clue item_21: 8330784582825831964
+      kanguru pohon clue item_22: 4677258948199782128
+      kanguru pohon clue item_23: 6815194205074715064
+      kanguru pohon clue item_24: 6016669146275887537
+      kanguru pohon clue item_25: -8705903866655950142
+      kanguru pohon clue item_26: -553787350325038212
+      kanguru pohon clue item_27: 5832713517289043689
+      kanguru pohon clue item_28: 2007563566501252485
+      kanguru pohon clue item_3: 8120378500081733368
+      kanguru pohon clue item_4: 7985211841999889112
+      kanguru pohon clue item_5: -2806883256176552004
+      kanguru pohon clue item_6: -4788612534482864348
+      kanguru pohon clue item_7: -8934918867183891317
+      kanguru pohon clue item_8: 5843917574189506169
+      kanguru pohon clue item_9: 7845527660657313751
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
