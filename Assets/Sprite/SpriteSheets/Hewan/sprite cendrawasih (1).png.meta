@@ -128,13 +128,13 @@ TextureImporter:
       name: sprite cendrawasih (1)_0
       rect:
         serializedVersion: 2
-        x: 34
-        y: 14
-        width: 2751
-        height: 1981
+        x: 0
+        y: 0
+        width: 2786
+        height: 2348
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 32, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
@@ -151,18 +151,18 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 3384
-        y: 280
+        y: 0
         width: 2750
-        height: 1746
+        height: 2529
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 6bc3fb18c1898e120800000000000000
+      spriteID: 928df0a54bb4062419cc0e676bdbb3f1
       internalID: 2443370046051794102
       vertices: []
       indices: 
@@ -173,18 +173,18 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 6430
-        y: 19
-        width: 2751
-        height: 2367
+        y: 0
+        width: 2753
+        height: 2418
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 3, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e2faedaed6641c0b0800000000000000
+      spriteID: 369435bf570f67a4da28c8e944bf4460
       internalID: -5710205414623236306
       vertices: []
       indices: 
@@ -194,19 +194,19 @@ TextureImporter:
       name: sprite cendrawasih (1)_3
       rect:
         serializedVersion: 2
-        x: 9786
-        y: 280
-        width: 2750
-        height: 1746
+        x: 9783
+        y: 236
+        width: 2756
+        height: 2369
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 8f014a428e1b7fb90800000000000000
+      spriteID: 303f59af9ecb1014bb869e875aca2a64
       internalID: -7208097067977928456
       vertices: []
       indices: 
@@ -216,19 +216,19 @@ TextureImporter:
       name: sprite cendrawasih (1)_4
       rect:
         serializedVersion: 2
-        x: 13038
+        x: 13036
         y: 0
-        width: 2787
-        height: 2343
+        width: 2759
+        height: 2605
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: aa74b99d4378ebbc0800000000000000
+      spriteID: e6adcad810f3890439923c03552cf5ef
       internalID: -3765423577376274518
       vertices: []
       indices: 
@@ -238,7 +238,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: f492ba6f7d724954782302f659814368
     internalID: 0
     vertices: []
     indices: 
@@ -246,7 +246,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":5.0,"y":1.0},"gridSpriteSize":{"x":3196.0,"y":2605.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       sprite cendrawasih (1)_0: -6522387821067590141
       sprite cendrawasih (1)_1: 2443370046051794102
