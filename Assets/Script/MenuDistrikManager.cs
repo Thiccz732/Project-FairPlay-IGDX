@@ -52,6 +52,12 @@ public class MenuDistrikManager : MonoBehaviour
 
     public void KembaliKeMainMenu()
     {
-        SceneManager.LoadScene("MainMenuScene"); 
+        SceneManager.LoadScene("MainMenu"); 
+    }
+
+    public void PindahKeMenuKoleksi()
+    {
+        // Pastikan ejaan "SampleScene" sama persis dengan nama file scene lu
+        SceneManager.LoadScene("AlbumScene"); 
     }
 }

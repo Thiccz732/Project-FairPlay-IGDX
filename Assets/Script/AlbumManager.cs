@@ -149,6 +149,6 @@ public class AlbumManager : MonoBehaviour
 
     public void KembaliKeMenu()
     {
-        SceneManager.LoadScene("MenuDistrikScene");
+        SceneManager.LoadScene("MainMenu");
     }
 }

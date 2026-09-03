@@ -19,6 +19,11 @@ public class MainMenuManager : MonoBehaviour
         // Pastikan ejaan "SampleScene" sama persis dengan nama file scene lu
         SceneManager.LoadScene("MenuDistrikScene"); 
     }
+    public void PindahKeMenuKoleksi()
+    {
+        // Pastikan ejaan "SampleScene" sama persis dengan nama file scene lu
+        SceneManager.LoadScene("AlbumScene"); 
+    }
 
     // Fungsi tambahan buat tombol Keluar sekalian
     public void KeluarGame()
