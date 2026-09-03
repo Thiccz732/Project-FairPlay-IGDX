@@ -75,6 +75,29 @@ public class ClueInteract : MonoBehaviour
                 break;
             }
         }
+
+        // Pengecekan otomatis saat objek / hewan baru saja di-spawn
+        StartCoroutine(CheckInitialSpawnOverlap());
+    }
+
+    private IEnumerator CheckInitialSpawnOverlap()
+    {
+        yield return null; 
+
+        Collider2D col = GetComponent<Collider2D>();
+        if (col != null && sharedPlayer != null)
+        {
+            Collider2D playerCol = sharedPlayer.GetComponent<Collider2D>();
+            if (playerCol != null && col.IsTouching(playerCol))
+            {
+                isPlayerNear = true;
+                if (!hasBeenPhotographed)
+                {
+                    if (interactPrompt != null) interactPrompt.SetActive(true);
+                    if (interactButton != null) interactButton.SetActive(true);
+                }
+            }
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -151,7 +174,6 @@ public class ClueInteract : MonoBehaviour
         
         if (isFinalAnimal && GameManager.instance != null) GameManager.instance.PauseTeleport(true);
 
-        // HARDCORE MODE
         if (GameManager.instance != null) GameManager.instance.ToggleModeFoto(true);
     }
 
@@ -165,7 +187,6 @@ public class ClueInteract : MonoBehaviour
         
         if (isFinalAnimal && GameManager.instance != null) GameManager.instance.PauseTeleport(false);
 
-        // HARDCORE MODE
         if (GameManager.instance != null) GameManager.instance.ToggleModeFoto(false);
     }
 
@@ -181,7 +202,6 @@ public class ClueInteract : MonoBehaviour
         CameraLensManager lensManager = GetComponentInChildren<CameraLensManager>();
         if (lensManager != null) lensManager.HideButtons();
 
-        // --- MATIKAN FILTER HIJAU SEMENTARA SEBELUM DIJEPRET ---
         GameObject activeNVG = null;
         if (lensManager != null && lensManager.nightVisionEffect != null)
         {
@@ -197,7 +217,6 @@ public class ClueInteract : MonoBehaviour
 
         Sprite newSnapshot = Sprite.Create(snapshotTex, new Rect(0, 0, snapshotTex.width, snapshotTex.height), new Vector2(0.5f, 0.5f));
 
-        // --- NYALAKAN KEMBALI FILTER HIJAU SETELAH FOTO SELESAI ---
         if (activeNVG != null)
         {
             activeNVG.SetActive(true);

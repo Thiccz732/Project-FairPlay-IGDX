@@ -1824,14 +1824,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClueInteract
   isFinalAnimal: 0
-  wajibNightVision: 1
-  lensaNightVision: {fileID: 7183182332058076612}
   pilihanSpriteClue:
-  - {fileID: -469517197277182853, guid: 5228c6f942153384e90ca3d9ddb803d1, type: 3}
-  - {fileID: -6467354976091625785, guid: 5228c6f942153384e90ca3d9ddb803d1, type: 3}
-  - {fileID: 8069830994492556104, guid: 5228c6f942153384e90ca3d9ddb803d1, type: 3}
-  - {fileID: 1350128070082706223, guid: 5228c6f942153384e90ca3d9ddb803d1, type: 3}
-  - {fileID: 667285732379039772, guid: 5228c6f942153384e90ca3d9ddb803d1, type: 3}
+  - {fileID: -1909467888593190853, guid: cf9dff45b5571304487bcb6cc1cd6ba3, type: 3}
+  - {fileID: -6727690070703844663, guid: cf9dff45b5571304487bcb6cc1cd6ba3, type: 3}
+  - {fileID: -5341438082226076058, guid: cf9dff45b5571304487bcb6cc1cd6ba3, type: 3}
+  - {fileID: 8399128799381960020, guid: cf9dff45b5571304487bcb6cc1cd6ba3, type: 3}
+  - {fileID: 1048021641511476131, guid: cf9dff45b5571304487bcb6cc1cd6ba3, type: 3}
   interactPrompt: {fileID: 4798848328388508688}
   interactButton: {fileID: 583083489079267652}
   clueCamera: {fileID: 4133668017798608160}
