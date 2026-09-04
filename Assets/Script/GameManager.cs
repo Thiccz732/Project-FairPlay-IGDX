@@ -319,6 +319,18 @@ public class GameManager : MonoBehaviour
         if (finalPanelUI != null) finalPanelUI.SetActive(false);
         if (playerTransform != null) playerTransform.GetComponent<PlayerController>().enabled = true;
 
+        if (animalStages.Length > 0 && currentStageIndex < animalStages.Length)
+    {
+        string namaHewanSaatIni = animalStages[currentStageIndex].namaHewan;
+        
+        // Membentuk key PlayerPrefs otomatis, misal: "Koleksi_Cendrawasih"
+        string keyKoleksi = "Koleksi_" + namaHewanSaatIni; 
+        
+        PlayerPrefs.SetInt(keyKoleksi, 1);
+        PlayerPrefs.Save();
+        Debug.Log("Berhasil menyimpan koleksi: " + keyKoleksi);
+    }
+
         currentStageIndex++;
         
         if (currentStageIndex < animalStages.Length)

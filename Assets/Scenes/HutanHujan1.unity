@@ -7296,7 +7296,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   animalStages:
-  - namaHewan: 'Cendrawasih '
+  - namaHewan: Cendrawasih
     animalPrefab: {fileID: 7718305887417924496, guid: 3fbb0f1e2237d3444ad660139cca7310, type: 3}
     requiredClues: 3
     animalSpawnPoints:

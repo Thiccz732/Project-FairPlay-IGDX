@@ -187,8 +187,8 @@ Canvas:
   m_GameObject: {fileID: 48385489}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 311844343}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -215,13 +215,13 @@ RectTransform:
   m_Children:
   - {fileID: 889284517}
   - {fileID: 533449352}
-  - {fileID: 1050868416}
   - {fileID: 579444352}
   - {fileID: 473675712}
   - {fileID: 1623905330}
   - {fileID: 1498662385}
   - {fileID: 921886838}
   - {fileID: 1428639017}
+  - {fileID: 1050868416}
   - {fileID: 684480204}
   - {fileID: 213299922}
   m_Father: {fileID: 0}
@@ -263,7 +263,7 @@ MonoBehaviour:
   daftarHewan:
   - namaHewan: Cendrawasih
     keyPlayerPrefs: Koleksi_Cendrawasih
-    prefabAnimasiHewan: {fileID: 7718305887417924496, guid: 3fbb0f1e2237d3444ad660139cca7310, type: 3}
+    prefabAnimasiHewan: {fileID: 1806791846295891589, guid: f10b199f18669e44798c3c29ca03dbec, type: 3}
     teksCiriCiri: Cendrawasih adalah hewan yang asoy deh Lorem ipsum dolor sit amet,
       consectetur adipiscing elit. Cras egestas in dui at pulvinar. Aliquam erat
       volutpat. Integer fermentum interdum magna ac vehicula. Phasellus mollis ex
@@ -437,6 +437,7 @@ GameObject:
   - component: {fileID: 311844344}
   - component: {fileID: 311844343}
   - component: {fileID: 311844342}
+  - component: {fileID: 311844345}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -518,6 +519,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &311844345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 311844341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.UniversalAdditionalCameraData
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_TaaSettings:
+    m_Quality: 3
+    m_FrameInfluence: 0.1
+    m_JitterScale: 1
+    m_MipBias: 0
+    m_VarianceClampScale: 0.9
+    m_ContrastAdaptiveSharpening: 0
+  m_Version: 2
 --- !u!1 &473675711
 GameObject:
   m_ObjectHideFlags: 0
@@ -856,7 +901,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Cenderawasih
+  m_text: Hewan
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1363,7 +1408,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1050868416}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: AnimalContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1379,9 +1424,9 @@ Transform:
   m_GameObject: {fileID: 1050868415}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -444, y: 49, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: -444, y: 95.7, z: 0}
+  m_LocalScale: {x: 15.930001, y: 15.930001, z: 15.930001}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 48385493}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -7,11 +7,11 @@ using TMPro;
 public class DataKoleksiHewan
 {
     public string namaHewan;
-    public string keyPlayerPrefs;          // Misal: "Koleksi_Cendrawasih"
-    public GameObject prefabAnimasiHewan;  // Prefab Hewan ber-Animator buat di Bingkai Kiri
+    public string keyPlayerPrefs;          // Harus SAMA PRESISI dengan GameManager (Misal: "Koleksi_Cendrawasih")
+    public GameObject prefabAnimasiHewan;  // Prefab Hewan ber-Animator
     [TextArea(3, 5)]
-    public string teksCiriCiri;            // Deskripsi/Ciri-ciri hewan
-    public Sprite spriteFotoStatis;        // Foto kecil buat slot kanan
+    public string teksCiriCiri;            // Deskripsi/Ciri-ciri
+    public Sprite spriteFotoStatis;        // Foto kecil slot kanan
 }
 
 public class AlbumManager : MonoBehaviour
@@ -21,16 +21,16 @@ public class AlbumManager : MonoBehaviour
     private int indexHewanAktif = 0;
 
     [Header("UI Sisi Kiri (Display Utama)")]
-    public Transform containerPrefabHewan; // Tempat menampung Spawn Prefab Animasi
+    public Transform containerPrefabHewan; 
     public TextMeshProUGUI teksNamaHewan;
     public TextMeshProUGUI teksCiriCiri;
-    public GameObject overlayLocked;       // Siluet / Gembok jika belum unlocked
+    public GameObject overlayLocked;       
 
     [Header("UI Sisi Kanan (Slot Foto Statis)")]
-    public Image[] slotFotoSamping;        // Array 4 slot foto kecil di kanan
+    public Image[] slotFotoSamping;        
 
     [Header("UI Navigasi")]
-    public TextMeshProUGUI teksIndikatorHalaman; // Teks "1/5"
+    public TextMeshProUGUI teksIndikatorHalaman; 
 
     private GameObject prefabHewanTerpasang;
 
@@ -45,46 +45,57 @@ public class AlbumManager : MonoBehaviour
 
         DataKoleksiHewan data = daftarHewan[indexHewanAktif];
 
-        // 1. Update Indikator Halaman (Misal: 1/5)
+        // 1. Update Indikator Halaman
         if (teksIndikatorHalaman != null)
         {
             teksIndikatorHalaman.text = (indexHewanAktif + 1) + "/" + daftarHewan.Length;
         }
 
-        // 2. Bersihkan Prefab Animasi Lama jika ada
+        // 2. Bersihkan Prefab Lama
         if (prefabHewanTerpasang != null)
         {
             Destroy(prefabHewanTerpasang);
         }
 
-        // 3. Cek Status Unlock di PlayerPrefs
-        bool isUnlocked = PlayerPrefs.GetInt(data.keyPlayerPrefs, 0) == 1;
+        // 3. Cek Status Unlock & Print Debug Log
+        int statusSaved = PlayerPrefs.GetInt(data.keyPlayerPrefs, 0);
+        bool isUnlocked = statusSaved == 1;
+
+        Debug.Log($"[ALBUM CHECK] Mencek Key: '{data.keyPlayerPrefs}' | Hasil PlayerPrefs: {statusSaved} | Unlocked: {isUnlocked}");
 
         if (isUnlocked)
         {
             if (overlayLocked != null) overlayLocked.SetActive(false);
 
-            // Tampilkan Teks Nama & Ciri-ciri
             if (teksNamaHewan != null) teksNamaHewan.text = data.namaHewan;
             if (teksCiriCiri != null) teksCiriCiri.text = data.teksCiriCiri;
 
-            // Spawn Prefab Animasi Hewan ke dalam Container Bingkai Kiri
+            // Spawn Prefab Animasi
             if (data.prefabAnimasiHewan != null && containerPrefabHewan != null)
             {
                 prefabHewanTerpasang = Instantiate(data.prefabAnimasiHewan, containerPrefabHewan);
-                prefabHewanTerpasang.transform.localPosition = Vector3.zero;
-                prefabHewanTerpasang.transform.localScale = Vector3.one;
+                
+                // Pastikan transform di-reset agar pas di tengah UI Container
+                RectTransform rect = prefabHewanTerpasang.GetComponent<RectTransform>();
+                if (rect != null)
+                {
+                    rect.anchoredPosition = Vector2.zero;
+                    rect.localScale = Vector3.one;
+                }
+                else
+                {
+                    prefabHewanTerpasang.transform.localPosition = Vector3.zero;
+                    prefabHewanTerpasang.transform.localScale = Vector3.one;
+                }
             }
         }
         else
         {
-            // Jika belum di-unlock
             if (overlayLocked != null) overlayLocked.SetActive(true);
             if (teksNamaHewan != null) teksNamaHewan.text = "???";
             if (teksCiriCiri != null) teksCiriCiri.text = "Temukan hewan ini di dalam game untuk membuka koleksi!";
         }
 
-        // 4. Update Slot Foto Statis di Kanan
         UpdateSlotSamping();
     }
 
@@ -93,22 +104,20 @@ public class AlbumManager : MonoBehaviour
         int slotIndex = 0;
         for (int i = 0; i < daftarHewan.Length; i++)
         {
-            if (i == indexHewanAktif) continue; // Skip hewan yang sedang tampil di kiri
+            if (i == indexHewanAktif) continue; 
 
             if (slotIndex < slotFotoSamping.Length && slotFotoSamping[slotIndex] != null)
             {
                 slotFotoSamping[slotIndex].sprite = daftarHewan[i].spriteFotoStatis;
                 
-                // Set transparansi jika hewan sampingan belum unlocked
                 bool sideUnlocked = PlayerPrefs.GetInt(daftarHewan[i].keyPlayerPrefs, 0) == 1;
-                slotFotoSamping[slotIndex].color = sideUnlocked ? Color.white : Color.black;
+                slotFotoSamping[slotIndex].color = sideUnlocked ? Color.white : new Color(0.2f, 0.2f, 0.2f, 1f);
                 
                 slotIndex++;
             }
         }
     }
 
-    // Dipanggil saat klik foto slot kanan secara langsung
     public void PilihHewanDariSlot(int indexSamping)
     {
         int targetIndex = 0;
