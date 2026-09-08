@@ -23,6 +23,7 @@ public class ClueInteract : MonoBehaviour
     private static PlayerController sharedPlayer; 
     private static GameObject sharedRadarUI; 
     private static GameObject sharedJoystickUI; 
+    private static GameObject sharedBackgroundUI; // Diubah untuk menampung objek Background
     private GameObject radarBlip;
 
     private PlayerControls inputActions;
@@ -66,6 +67,9 @@ public class ClueInteract : MonoBehaviour
         }
         if (sharedRadarUI == null) sharedRadarUI = GameObject.Find("RadarUI");
         if (sharedJoystickUI == null) sharedJoystickUI = GameObject.Find("Joystick_BG");
+        
+        // --- Mencari objek Background saat game dimulai ---
+        if (sharedBackgroundUI == null) sharedBackgroundUI = GameObject.Find("Background"); 
 
         foreach (Transform child in transform)
         {
@@ -73,29 +77,6 @@ public class ClueInteract : MonoBehaviour
             {
                 radarBlip = child.gameObject;
                 break;
-            }
-        }
-
-        // Pengecekan otomatis saat objek / hewan baru saja di-spawn
-        StartCoroutine(CheckInitialSpawnOverlap());
-    }
-
-    private IEnumerator CheckInitialSpawnOverlap()
-    {
-        yield return null; 
-
-        Collider2D col = GetComponent<Collider2D>();
-        if (col != null && sharedPlayer != null)
-        {
-            Collider2D playerCol = sharedPlayer.GetComponent<Collider2D>();
-            if (playerCol != null && col.IsTouching(playerCol))
-            {
-                isPlayerNear = true;
-                if (!hasBeenPhotographed)
-                {
-                    if (interactPrompt != null) interactPrompt.SetActive(true);
-                    if (interactButton != null) interactButton.SetActive(true);
-                }
             }
         }
     }
@@ -172,6 +153,9 @@ public class ClueInteract : MonoBehaviour
         if (sharedRadarUI != null) sharedRadarUI.SetActive(false);
         if (sharedJoystickUI != null) sharedJoystickUI.SetActive(false);
         
+        // Sembunyikan objek Background saat kamera terbuka
+        if (sharedBackgroundUI != null) sharedBackgroundUI.SetActive(false); 
+        
         if (isFinalAnimal && GameManager.instance != null) GameManager.instance.PauseTeleport(true);
 
         if (GameManager.instance != null) GameManager.instance.ToggleModeFoto(true);
@@ -185,6 +169,9 @@ public class ClueInteract : MonoBehaviour
         if (sharedRadarUI != null) sharedRadarUI.SetActive(true);
         if (sharedJoystickUI != null) sharedJoystickUI.SetActive(true);
         
+        // Munculkan kembali objek Background setelah keluar dari kamera
+        if (sharedBackgroundUI != null) sharedBackgroundUI.SetActive(true); 
+        
         if (isFinalAnimal && GameManager.instance != null) GameManager.instance.PauseTeleport(false);
 
         if (GameManager.instance != null) GameManager.instance.ToggleModeFoto(false);
@@ -197,7 +184,9 @@ public class ClueInteract : MonoBehaviour
         if (interactPrompt != null) interactPrompt.SetActive(false);
         if (interactButton != null) interactButton.SetActive(false);
         if (radarBlip != null) radarBlip.SetActive(false);
+        
         if (sharedJoystickUI != null) sharedJoystickUI.SetActive(false);
+        if (sharedBackgroundUI != null) sharedBackgroundUI.SetActive(false); // Pastikan disembunyikan saat jepret
 
         CameraLensManager lensManager = GetComponentInChildren<CameraLensManager>();
         if (lensManager != null) lensManager.HideButtons();
