@@ -502,7 +502,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!199 &179982077
 ParticleSystemRenderer:
   serializedVersion: 7
@@ -8552,7 +8552,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.392}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -8846,10 +8846,10 @@ RectTransform:
   - {fileID: 1924547531}
   - {fileID: 1054711552}
   - {fileID: 1651684331}
-  - {fileID: 1343127686}
   - {fileID: 203045520}
   - {fileID: 617231960}
   - {fileID: 1041893383}
+  - {fileID: 1343127686}
   - {fileID: 904919089}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9449,15 +9449,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   animalStages:
   - namaHewan: Kangguru Pohon
-    animalPrefab: {fileID: 5645975296016794199, guid: fa2b699447606d1469615481b2538e88, type: 3}
+    animalPrefab: {fileID: 7718305887417924496, guid: 588f490d8afbf0243ab57ed17b65493b, type: 3}
     requiredClues: 1
     animalSpawnPoints:
     - {fileID: 30647910}
     - {fileID: 30647910}
     - {fileID: 30647910}
     - {fileID: 30647910}
-    timeLimit: 75
-  teleportInterval: 10
+    timeLimit: 300
+  teleportInterval: 300
   isTeleportPaused: 0
   teksSisaClue: {fileID: 1041893384}
   teksTimer: {fileID: 617231961}

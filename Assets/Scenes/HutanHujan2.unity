@@ -1205,15 +1205,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   animalStages:
   - namaHewan: Kasuari
-    animalPrefab: {fileID: 5645975296016794199, guid: b9ca830137988c0488fdbf8a04982dec, type: 3}
-    requiredClues: 4
+    animalPrefab: {fileID: 7718305887417924496, guid: b2a7d61388ddb3f438f0cd49cc728e56, type: 3}
+    requiredClues: 1
     animalSpawnPoints:
     - {fileID: 1489888799}
     - {fileID: 1373222698}
     - {fileID: 387029806}
     - {fileID: 1714879520}
-    timeLimit: 60
-  teleportInterval: 10
+    timeLimit: 120
+  teleportInterval: 120
   isTeleportPaused: 0
   teksSisaClue: {fileID: 1852924699}
   teksTimer: {fileID: 1383025800}
@@ -8273,10 +8273,10 @@ RectTransform:
   - {fileID: 1376862005}
   - {fileID: 174053334}
   - {fileID: 899757710}
-  - {fileID: 1839881931}
   - {fileID: 659312814}
   - {fileID: 1383025799}
   - {fileID: 1852924698}
+  - {fileID: 1839881931}
   - {fileID: 119264383}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8978,7 +8978,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1839881931
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9013,7 +9013,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.392}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

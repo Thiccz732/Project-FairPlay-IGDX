@@ -1229,7 +1229,7 @@ MonoBehaviour:
   - {fileID: -3765649668214232058, guid: 4a5454ab21ae39148850817ab5cf8eee, type: 3}
   - {fileID: -9032337035904278877, guid: 4a5454ab21ae39148850817ab5cf8eee, type: 3}
   interactPrompt: {fileID: 4798848328388508688}
-  interactButton: {fileID: 0}
+  interactButton: {fileID: 7514151036980610955}
   clueCamera: {fileID: 4133668017798608160}
 --- !u!58 &5407775224525766386
 CircleCollider2D:

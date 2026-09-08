@@ -19,11 +19,13 @@ public class ClueInteract : MonoBehaviour
     public GameObject interactButton;   
     public GameObject clueCamera;       
 
-    private static Image sharedWhiteFlash;       
-    private static PlayerController sharedPlayer; 
-    private static GameObject sharedRadarUI; 
-    private static GameObject sharedJoystickUI; 
-    private static GameObject sharedBackgroundUI; // Diubah untuk menampung objek Background
+    // --- KATA "static" DIHAPUS AGAR TIDAK ERROR SAAT PINDAH LEVEL ---
+    private Image whiteFlash;       
+    private PlayerController player; 
+    private GameObject radarUI; 
+    private GameObject joystickUI; 
+    private GameObject backgroundUI; 
+    private GameObject finalPanelUI; 
     private GameObject radarBlip;
 
     private PlayerControls inputActions;
@@ -55,21 +57,17 @@ public class ClueInteract : MonoBehaviour
         if (interactButton != null) interactButton.SetActive(false); 
         if (clueCamera != null) clueCamera.SetActive(false);
 
-        if (sharedWhiteFlash == null)
-        {
-            GameObject flashObj = GameObject.Find("WhiteFlash");
-            if (flashObj != null) sharedWhiteFlash = flashObj.GetComponent<Image>();
-        }
-        if (sharedPlayer == null)
-        {
-            GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
-            if (playerObj != null) sharedPlayer = playerObj.GetComponent<PlayerController>(); 
-        }
-        if (sharedRadarUI == null) sharedRadarUI = GameObject.Find("RadarUI");
-        if (sharedJoystickUI == null) sharedJoystickUI = GameObject.Find("Joystick_BG");
+        // Cari ulang UI segar di setiap Scene/Level yang sedang aktif
+        GameObject flashObj = GameObject.Find("WhiteFlash");
+        if (flashObj != null) whiteFlash = flashObj.GetComponent<Image>();
         
-        // --- Mencari objek Background saat game dimulai ---
-        if (sharedBackgroundUI == null) sharedBackgroundUI = GameObject.Find("Background"); 
+        GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
+        if (playerObj != null) player = playerObj.GetComponent<PlayerController>(); 
+        
+        radarUI = GameObject.Find("RadarUI");
+        joystickUI = GameObject.Find("Joystick_BG");
+        backgroundUI = GameObject.Find("Background"); 
+        finalPanelUI = GameObject.Find("FinalPanel"); // Berjaga-jaga agar teks clue/waktu ikut hilang
 
         foreach (Transform child in transform)
         {
@@ -148,32 +146,51 @@ public class ClueInteract : MonoBehaviour
         if (interactPrompt != null) interactPrompt.SetActive(false); 
         if (interactButton != null) interactButton.SetActive(false); 
         
-        if (sharedPlayer != null) sharedPlayer.enabled = false; 
+        if (player != null) 
+        {
+            player.enabled = false; 
+            
+            Renderer[] playerRenderers = player.GetComponentsInChildren<Renderer>();
+            foreach (Renderer r in playerRenderers) r.enabled = false;
+            Canvas[] playerCanvases = player.GetComponentsInChildren<Canvas>();
+            foreach (Canvas c in playerCanvases) c.enabled = false;
+        }
+
         if (clueCamera != null) clueCamera.SetActive(true); 
-        if (sharedRadarUI != null) sharedRadarUI.SetActive(false);
-        if (sharedJoystickUI != null) sharedJoystickUI.SetActive(false);
         
-        // Sembunyikan objek Background saat kamera terbuka
-        if (sharedBackgroundUI != null) sharedBackgroundUI.SetActive(false); 
+        // Sembunyikan UI di level saat ini
+        if (radarUI != null) radarUI.SetActive(false);
+        if (joystickUI != null) joystickUI.SetActive(false);
+        if (backgroundUI != null) backgroundUI.SetActive(false); 
+        if (finalPanelUI != null) finalPanelUI.SetActive(false); 
         
         if (isFinalAnimal && GameManager.instance != null) GameManager.instance.PauseTeleport(true);
-
         if (GameManager.instance != null) GameManager.instance.ToggleModeFoto(true);
     }
 
     private void ExitCameraMode()
     {
         isCameraMode = false;
-        if (sharedPlayer != null) sharedPlayer.enabled = true; 
-        if (clueCamera != null) clueCamera.SetActive(false); 
-        if (sharedRadarUI != null) sharedRadarUI.SetActive(true);
-        if (sharedJoystickUI != null) sharedJoystickUI.SetActive(true);
         
-        // Munculkan kembali objek Background setelah keluar dari kamera
-        if (sharedBackgroundUI != null) sharedBackgroundUI.SetActive(true); 
+        if (player != null) 
+        {
+            player.enabled = true; 
+            
+            Renderer[] playerRenderers = player.GetComponentsInChildren<Renderer>();
+            foreach (Renderer r in playerRenderers) r.enabled = true;
+            Canvas[] playerCanvases = player.GetComponentsInChildren<Canvas>();
+            foreach (Canvas c in playerCanvases) c.enabled = true;
+        }
+
+        if (clueCamera != null) clueCamera.SetActive(false); 
+        
+        // Nyalakan UI kembali
+        if (radarUI != null) radarUI.SetActive(true);
+        if (joystickUI != null) joystickUI.SetActive(true);
+        if (backgroundUI != null) backgroundUI.SetActive(true); 
+        if (finalPanelUI != null) finalPanelUI.SetActive(true); 
         
         if (isFinalAnimal && GameManager.instance != null) GameManager.instance.PauseTeleport(false);
-
         if (GameManager.instance != null) GameManager.instance.ToggleModeFoto(false);
     }
 
@@ -185,8 +202,9 @@ public class ClueInteract : MonoBehaviour
         if (interactButton != null) interactButton.SetActive(false);
         if (radarBlip != null) radarBlip.SetActive(false);
         
-        if (sharedJoystickUI != null) sharedJoystickUI.SetActive(false);
-        if (sharedBackgroundUI != null) sharedBackgroundUI.SetActive(false); // Pastikan disembunyikan saat jepret
+        if (joystickUI != null) joystickUI.SetActive(false);
+        if (backgroundUI != null) backgroundUI.SetActive(false); 
+        if (finalPanelUI != null) finalPanelUI.SetActive(false); 
 
         CameraLensManager lensManager = GetComponentInChildren<CameraLensManager>();
         if (lensManager != null) lensManager.HideButtons();
@@ -211,16 +229,16 @@ public class ClueInteract : MonoBehaviour
             activeNVG.SetActive(true);
         }
 
-        if (sharedWhiteFlash != null)
+        if (whiteFlash != null)
         {
-            Color flashColor = sharedWhiteFlash.color;
+            Color flashColor = whiteFlash.color;
             flashColor.a = 1f; 
-            sharedWhiteFlash.color = flashColor;
+            whiteFlash.color = flashColor;
 
-            while (sharedWhiteFlash.color.a > 0)
+            while (whiteFlash.color.a > 0)
             {
                 flashColor.a -= Time.deltaTime * 2.5f; 
-                sharedWhiteFlash.color = flashColor;
+                whiteFlash.color = flashColor;
                 yield return null; 
             }
         }
