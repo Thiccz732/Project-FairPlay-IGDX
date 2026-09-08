@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro; // 1. Tambahkan namespace TMPro ini
 
 [System.Serializable]
 public class LevelButtonData
@@ -15,10 +16,25 @@ public class MenuDistrikManager : MonoBehaviour
     [Header("Daftar Data Tombol Level")]
     public LevelButtonData[] levelDataList;
 
+    [Header("UI Indikator Distrik")]
+    public TextMeshProUGUI teksIndikatorDistrik; // 2. Variabel baru untuk teks indikator
+
     private void Start()
     {
         // Cek data level berapa yang sudah terbuka (Default: Level 1)
         int levelUnlocked = PlayerPrefs.GetInt("LevelUnlocked", 1);
+
+        // Batasi levelUnlocked agar tidak melebihi total level yang ada
+        if (levelUnlocked > levelDataList.Length)
+        {
+            levelUnlocked = levelDataList.Length;
+        }
+
+        // 3. Update Teks Indikator Distrik (Hasilnya misal: "1/4")
+        if (teksIndikatorDistrik != null)
+        {
+            teksIndikatorDistrik.text = levelUnlocked + "/" + levelDataList.Length;
+        }
 
         for (int i = 0; i < levelDataList.Length; i++)
         {
@@ -57,7 +73,6 @@ public class MenuDistrikManager : MonoBehaviour
 
     public void PindahKeMenuKoleksi()
     {
-        // Pastikan ejaan "SampleScene" sama persis dengan nama file scene lu
         SceneManager.LoadScene("AlbumScene"); 
     }
 }

@@ -45,10 +45,11 @@ public class AlbumManager : MonoBehaviour
 
         DataKoleksiHewan data = daftarHewan[indexHewanAktif];
 
-        // 1. Update Indikator Halaman
+        // 1. Update Indikator Total Hewan Terkumpul (Misal: 1/5)
         if (teksIndikatorHalaman != null)
         {
-            teksIndikatorHalaman.text = (indexHewanAktif + 1) + "/" + daftarHewan.Length;
+            int totalUnlocked = HitungTotalUnlocked();
+            teksIndikatorHalaman.text = totalUnlocked + "/" + daftarHewan.Length;
         }
 
         // 2. Bersihkan Prefab Lama
@@ -57,11 +58,8 @@ public class AlbumManager : MonoBehaviour
             Destroy(prefabHewanTerpasang);
         }
 
-        // 3. Cek Status Unlock & Print Debug Log
-        int statusSaved = PlayerPrefs.GetInt(data.keyPlayerPrefs, 0);
-        bool isUnlocked = statusSaved == 1;
-
-        Debug.Log($"[ALBUM CHECK] Mencek Key: '{data.keyPlayerPrefs}' | Hasil PlayerPrefs: {statusSaved} | Unlocked: {isUnlocked}");
+        // 3. Cek Status Unlock Hewan Aktif
+        bool isUnlocked = PlayerPrefs.GetInt(data.keyPlayerPrefs, 0) == 1;
 
         if (isUnlocked)
         {
@@ -70,12 +68,10 @@ public class AlbumManager : MonoBehaviour
             if (teksNamaHewan != null) teksNamaHewan.text = data.namaHewan;
             if (teksCiriCiri != null) teksCiriCiri.text = data.teksCiriCiri;
 
-            // Spawn Prefab Animasi
             if (data.prefabAnimasiHewan != null && containerPrefabHewan != null)
             {
                 prefabHewanTerpasang = Instantiate(data.prefabAnimasiHewan, containerPrefabHewan);
                 
-                // Pastikan transform di-reset agar pas di tengah UI Container
                 RectTransform rect = prefabHewanTerpasang.GetComponent<RectTransform>();
                 if (rect != null)
                 {
@@ -97,6 +93,20 @@ public class AlbumManager : MonoBehaviour
         }
 
         UpdateSlotSamping();
+    }
+
+// Fungsi Tambahan: Menghitung berapa banyak hewan yang sudah unlocked
+    private int HitungTotalUnlocked()
+    {
+        int jumlah = 0;
+        foreach (var hewan in daftarHewan)
+        {
+            if (PlayerPrefs.GetInt(hewan.keyPlayerPrefs, 0) == 1)
+            {
+                jumlah++;
+            }
+        }
+        return jumlah;
     }
 
     private void UpdateSlotSamping()
