@@ -162,11 +162,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 9
-        y: 602
-        width: 303
-        height: 281
+        y: 518
+        width: 320
+        height: 365
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -184,11 +184,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 475
-        y: 605
+        y: 525
         width: 292
-        height: 263
+        height: 343
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -206,11 +206,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1063
-        y: 571
+        y: 504
         width: 144
-        height: 321
+        height: 388
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -228,11 +228,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1429
-        y: 582
+        y: 504
         width: 319
-        height: 295
+        height: 373
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -246,103 +246,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cenderawasih botak clue item_4
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 536
-        width: 302
-        height: 46
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 31306e19afb78a8a0800000000000000
-      internalID: -6293644163130457325
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cenderawasih botak clue item_5
-      rect:
-        serializedVersion: 2
-        x: 507
-        y: 536
-        width: 225
-        height: 46
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0cbd0b017301fe550800000000000000
-      internalID: 6192185841346993088
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cenderawasih botak clue item_6
-      rect:
-        serializedVersion: 2
-        x: 1066
-        y: 515
-        width: 138
-        height: 45
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: eb3e5fcc067842910800000000000000
-      internalID: 1811721799935058878
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cenderawasih botak clue item_7
-      rect:
-        serializedVersion: 2
-        x: 1473
-        y: 515
-        width: 230
-        height: 45
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5037bcdbbf0d8b250800000000000000
-      internalID: 5960743886464447237
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: cenderawasih botak clue item_8
       rect:
         serializedVersion: 2
         x: 0
-        y: 81
+        y: 0
         width: 328
-        height: 299
+        height: 380
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -359,12 +271,12 @@ TextureImporter:
       name: cenderawasih botak clue item_9
       rect:
         serializedVersion: 2
-        x: 483
-        y: 89
-        width: 263
-        height: 278
+        x: 451
+        y: 22
+        width: 325
+        height: 345
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -381,12 +293,12 @@ TextureImporter:
       name: cenderawasih botak clue item_10
       rect:
         serializedVersion: 2
-        x: 973
-        y: 105
-        width: 334
-        height: 253
+        x: 953
+        y: 16
+        width: 367
+        height: 342
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -403,12 +315,12 @@ TextureImporter:
       name: cenderawasih botak clue item_11
       rect:
         serializedVersion: 2
-        x: 1451
-        y: 111
-        width: 275
-        height: 233
+        x: 1431
+        y: 14
+        width: 315
+        height: 330
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -421,99 +333,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: cenderawasih botak clue item_12
-      rect:
-        serializedVersion: 2
-        x: 2
-        y: 0
-        width: 302
-        height: 74
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 11735bf8f65cfd4b0800000000000000
-      internalID: -5413391144132987119
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cenderawasih botak clue item_13
-      rect:
-        serializedVersion: 2
-        x: 465
-        y: 29
-        width: 302
-        height: 45
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: edfcafadb7e0f4bf0800000000000000
-      internalID: -338035521911861282
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cenderawasih botak clue item_14
-      rect:
-        serializedVersion: 2
-        x: 961
-        y: 29
-        width: 353
-        height: 45
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f5b133cd770b75690800000000000000
-      internalID: -7613422616204600481
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cenderawasih botak clue item_15
-      rect:
-        serializedVersion: 2
-        x: 1443
-        y: 29
-        width: 294
-        height: 45
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ed1e1eace3ca0bca0800000000000000
-      internalID: -6003108917593120290
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 82c0ae3cff2672548b5aa5de943ee27c
     internalID: 0
     vertices: []
     indices: 
