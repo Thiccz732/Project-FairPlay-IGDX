@@ -9445,7 +9445,7 @@ MonoBehaviour:
   animalStages:
   - namaHewan: Kangguru Pohon
     animalPrefab: {fileID: 7718305887417924496, guid: 588f490d8afbf0243ab57ed17b65493b, type: 3}
-    requiredClues: 1
+    requiredClues: 4
     animalSpawnPoints:
     - {fileID: 30647910}
     - {fileID: 30647910}

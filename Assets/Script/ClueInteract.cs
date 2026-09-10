@@ -19,7 +19,6 @@ public class ClueInteract : MonoBehaviour
     public GameObject interactButton;   
     public GameObject clueCamera;       
 
-    // --- KATA "static" DIHAPUS AGAR TIDAK ERROR SAAT PINDAH LEVEL ---
     private Image whiteFlash;       
     private PlayerController player; 
     private GameObject radarUI; 
@@ -31,7 +30,7 @@ public class ClueInteract : MonoBehaviour
     private PlayerControls inputActions;
     private bool isPlayerNear = false;
     private bool isCameraMode = false;
-    private bool hasBeenPhotographed = false;
+    private bool hasBeenPhotographed = false; // Status foto
 
     private void Awake()
     {
@@ -45,6 +44,9 @@ public class ClueInteract : MonoBehaviour
 
     private void Start()
     {
+        // --- WAJIB: RESET STATUS FOTO TIAP KALI MASUK SCENE BARU ---
+        hasBeenPhotographed = false;
+
         sr = GetComponent<SpriteRenderer>();
 
         if (!isFinalAnimal && pilihanSpriteClue != null && pilihanSpriteClue.Length > 0 && sr != null)
@@ -57,7 +59,6 @@ public class ClueInteract : MonoBehaviour
         if (interactButton != null) interactButton.SetActive(false); 
         if (clueCamera != null) clueCamera.SetActive(false);
 
-        // Cari ulang UI segar di setiap Scene/Level yang sedang aktif
         GameObject flashObj = GameObject.Find("WhiteFlash");
         if (flashObj != null) whiteFlash = flashObj.GetComponent<Image>();
         
@@ -67,7 +68,7 @@ public class ClueInteract : MonoBehaviour
         radarUI = GameObject.Find("RadarUI");
         joystickUI = GameObject.Find("Joystick_BG");
         backgroundUI = GameObject.Find("Background"); 
-        finalPanelUI = GameObject.Find("FinalPanel"); // Berjaga-jaga agar teks clue/waktu ikut hilang
+        finalPanelUI = GameObject.Find("FinalPanel"); 
 
         foreach (Transform child in transform)
         {
@@ -158,7 +159,6 @@ public class ClueInteract : MonoBehaviour
 
         if (clueCamera != null) clueCamera.SetActive(true); 
         
-        // Sembunyikan UI di level saat ini
         if (radarUI != null) radarUI.SetActive(false);
         if (joystickUI != null) joystickUI.SetActive(false);
         if (backgroundUI != null) backgroundUI.SetActive(false); 
@@ -184,11 +184,15 @@ public class ClueInteract : MonoBehaviour
 
         if (clueCamera != null) clueCamera.SetActive(false); 
         
-        // Nyalakan UI kembali
-        if (radarUI != null) radarUI.SetActive(true);
-        if (joystickUI != null) joystickUI.SetActive(true);
-        if (backgroundUI != null) backgroundUI.SetActive(true); 
-        if (finalPanelUI != null) finalPanelUI.SetActive(true); 
+        bool isGameEnding = isFinalAnimal && hasBeenPhotographed;
+        
+        if (!isGameEnding) 
+        {
+            if (radarUI != null) radarUI.SetActive(true);
+            if (joystickUI != null) joystickUI.SetActive(true);
+            if (backgroundUI != null) backgroundUI.SetActive(true); 
+            if (finalPanelUI != null) finalPanelUI.SetActive(true); 
+        }
         
         if (isFinalAnimal && GameManager.instance != null) GameManager.instance.PauseTeleport(false);
         if (GameManager.instance != null) GameManager.instance.ToggleModeFoto(false);

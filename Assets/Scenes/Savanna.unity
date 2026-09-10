@@ -9450,7 +9450,7 @@ MonoBehaviour:
   animalStages:
   - namaHewan: Cendrawasih Botak
     animalPrefab: {fileID: 7718305887417924496, guid: 41f5f368888481544aacf5657c8f6e48, type: 3}
-    requiredClues: 1
+    requiredClues: 4
     animalSpawnPoints:
     - {fileID: 30647910}
     - {fileID: 30647910}

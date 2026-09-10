@@ -54,14 +54,14 @@ public class GameManager : MonoBehaviour
     private Coroutine teleportCoroutine;
     private bool isStageEnding = false; 
 
-    // Variabel Timer
     private float currentTimeLeft;
     [HideInInspector] public bool isTimerRunning = false; 
 
     private void Awake()
     {
-        if (instance == null) instance = this;
-        else Destroy(gameObject);
+        // FASE INISIALISASI 1: Pengambilalihan Paksa
+        // Hapus logika "else Destroy" agar GameManager di scene baru selalu menimpa memori lama
+        instance = this;
     }
 
     private void Start()
@@ -72,7 +72,9 @@ public class GameManager : MonoBehaviour
         if (finalPanelUI != null) finalPanelUI.SetActive(false);
         if (gameOverPanel != null) gameOverPanel.SetActive(false); 
 
-        StartStage();
+        // FASE INISIALISASI 2: Penundaan Sekuensial
+        // Beri jeda 0.1 detik agar seluruh script di scene baru (termasuk ClueSpawner) siap 100%
+        Invoke(nameof(StartStage), 0.1f);
     }
 
     private void Update()
@@ -95,13 +97,11 @@ public class GameManager : MonoBehaviour
     {
         if (teksTimer != null)
         {
-            // Format waktu menjadi menit dan detik (00:00)
             int menit = Mathf.FloorToInt(currentTimeLeft / 60);
             int detik = Mathf.FloorToInt(currentTimeLeft % 60);
             
             teksTimer.text = string.Format("Waktu: {0:00}:{1:00}", menit, detik);
             
-            // Berubah warna jadi merah saat sisa 10 detik
             if (currentTimeLeft <= 10f) teksTimer.color = Color.red;
             else teksTimer.color = Color.white;
         }
@@ -135,7 +135,6 @@ public class GameManager : MonoBehaviour
                 teksRestartCountdown.text = "Mengulang level dalam " + countdown + " detik...";
             }
             
-            // Gunakan WaitForSecondsRealtime agar countdown 5 detik kebal terhadap efek Pause/Freeze di game
             yield return new WaitForSecondsRealtime(1f);
             countdown--;
         }
@@ -145,6 +144,7 @@ public class GameManager : MonoBehaviour
 
     private void StartStage()
     {
+        // FASE 3: Pembersihan Status
         cluesFound = 0;
         isAnimalSpawned = false;
         matchedPhotos = 0; 
@@ -156,6 +156,10 @@ public class GameManager : MonoBehaviour
         {
             int amountToSpawn = animalStages[currentStageIndex].requiredClues + 2;
             ClueSpawner.instance.SpawnClues(amountToSpawn);
+        }
+        else
+        {
+            Debug.LogError("Gagal memuat ClueSpawner atau AnimalStages kosong!");
         }
 
         if (animalStages.Length > 0)
@@ -186,6 +190,7 @@ public class GameManager : MonoBehaviour
 
             if (cluesFound < capturedSnapshots.Length) capturedSnapshots[cluesFound] = snapshot;
 
+            // FASE 4: Validasi Kemunculan
             if (cluesFound >= animalStages[currentStageIndex].requiredClues && !isAnimalSpawned) 
             {
                 SpawnAnimal();
@@ -320,16 +325,15 @@ public class GameManager : MonoBehaviour
         if (playerTransform != null) playerTransform.GetComponent<PlayerController>().enabled = true;
 
         if (animalStages.Length > 0 && currentStageIndex < animalStages.Length)
-    {
-        string namaHewanSaatIni = animalStages[currentStageIndex].namaHewan;
-        
-        // Membentuk key PlayerPrefs otomatis, misal: "Koleksi_Cendrawasih"
-        string keyKoleksi = "Koleksi_" + namaHewanSaatIni; 
-        
-        PlayerPrefs.SetInt(keyKoleksi, 1);
-        PlayerPrefs.Save();
-        Debug.Log("Berhasil menyimpan koleksi: " + keyKoleksi);
-    }
+        {
+            string namaHewanSaatIni = animalStages[currentStageIndex].namaHewan;
+            
+            string keyKoleksi = "Koleksi_" + namaHewanSaatIni; 
+            
+            PlayerPrefs.SetInt(keyKoleksi, 1);
+            PlayerPrefs.Save();
+            Debug.Log("Berhasil menyimpan koleksi: " + keyKoleksi);
+        }
 
         currentStageIndex++;
         
@@ -339,28 +343,19 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            // --- SIMPAN PROGRESS UNLOCK LEVEL ---
-            // Simpan data bahwa Level 2 (atau level selanjutnya) sudah kebuka!
             PlayerPrefs.SetInt("LevelUnlocked", 2); 
             PlayerPrefs.Save();
-            // ------------------------------------
 
             if (!string.IsNullOrEmpty(nextSceneName)) SceneManager.LoadScene(nextSceneName);
         }
     }
 
-    // ==========================================
-    // FUNGSI UNTUK MENGONTROL VISIBILITAS UI
-    // ==========================================
     public void SetTrackerUIVisible(bool isVisible)
     {
         if (teksSisaClue != null) teksSisaClue.gameObject.SetActive(isVisible);
         if (teksTimer != null) teksTimer.gameObject.SetActive(isVisible);
     }
 
-    // ==========================================
-    // FUNGSI UNTUK MODE FOTO (HARDCORE MODE)
-    // ==========================================
     public void ToggleModeFoto(bool isKameraAktif)
     {
         SetTrackerUIVisible(!isKameraAktif);
