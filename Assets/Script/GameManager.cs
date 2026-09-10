@@ -152,6 +152,7 @@ public class GameManager : MonoBehaviour
         
         System.Array.Clear(capturedSnapshots, 0, capturedSnapshots.Length);
 
+        // Panggil sistem spawner
         if (ClueSpawner.instance != null && animalStages.Length > 0)
         {
             int amountToSpawn = animalStages[currentStageIndex].requiredClues + 2;
@@ -162,6 +163,7 @@ public class GameManager : MonoBehaviour
             Debug.LogError("Gagal memuat ClueSpawner atau AnimalStages kosong!");
         }
 
+        // Atur waktu
         if (animalStages.Length > 0)
         {
             currentTimeLeft = animalStages[currentStageIndex].timeLimit;
@@ -294,8 +296,22 @@ public class GameManager : MonoBehaviour
                 if (dragScript != null)
                 {
                     int id = dragScript.photoID;
-                    if (id == 4 && capturedSnapshots[9] != null) photoImage.sprite = capturedSnapshots[9];
-                    else if (id >= 1 && id <= 3 && capturedSnapshots[id] != null) photoImage.sprite = capturedSnapshots[id];
+                    
+                    // --- LOGIKA BARU: Pasang foto ke dalam kotak frame ---
+                    Image targetImage = photoImage; 
+                    Transform areaDalam = photoImage.transform.Find("IsiFoto"); // Mencari child bernama IsiFoto
+                    if (areaDalam != null)
+                    {
+                        targetImage = areaDalam.GetComponent<Image>();
+                    }
+                    else 
+                    {
+                        Debug.LogWarning("Objek IsiFoto tidak ditemukan di dalam " + photoImage.name + ". Foto akan dipasang di bingkai utama.");
+                    }
+                    // -----------------------------------------------------
+
+                    if (id == 4 && capturedSnapshots[9] != null) targetImage.sprite = capturedSnapshots[9];
+                    else if (id >= 1 && id <= 3 && capturedSnapshots[id] != null) targetImage.sprite = capturedSnapshots[id];
                 }
             }
         }
