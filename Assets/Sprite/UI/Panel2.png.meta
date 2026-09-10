@@ -1,14 +1,10 @@
 fileFormatVersion: 2
-<<<<<<< Updated upstream
-guid: df3140d8a3cd8b54f88dcd454b6c3b04
-=======
-guid: cbe87e49a354e7149900e8d0dd330086
->>>>>>> Stashed changes
+guid: cb8137e2d2298c842ad037f963398399
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3657977810962879330
-    second: panel1_0
+      213: 3189960467041063848
+    second: Panel2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,27 +96,11 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-<<<<<<< Updated upstream
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-=======
->>>>>>> Stashed changes
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: panel1_0
+      name: Panel2_0
       rect:
         serializedVersion: 2
         x: 0
@@ -135,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e9ceb4dcf804c3dc0800000000000000
-      internalID: -3657977810962879330
+      spriteID: 8a39585c424054c20800000000000000
+      internalID: 3189960467041063848
       vertices: []
       indices: 
       edges: []
@@ -155,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      panel1_0: -3657977810962879330
+      Panel2_0: 3189960467041063848
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
