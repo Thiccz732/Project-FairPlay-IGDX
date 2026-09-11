@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 5aef6b2e4b5d86f48922421850abe9d5
+guid: 5d32bdbd40c484e46900d05890a76e48
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5008294482684803111
-    second: cendrawasih botak_0
+      213: 2657873045037984327
+    second: kamera1 1_0
+  - first:
+      213: 2687305095471916912
+    second: kamera1 1_1
+  - first:
+      213: 3949495414765605735
+    second: kamera1 1_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +119,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: cendrawasih botak_0
+      name: kamera1 1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 3083
-        height: 4984
+        width: 2616
+        height: 906
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +134,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9d7060df3b6fe7ab0800000000000000
-      internalID: -5008294482684803111
+      spriteID: 74a2393d379a2e420800000000000000
+      internalID: 2657873045037984327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kamera1 1_1
+      rect:
+        serializedVersion: 2
+        x: 2912
+        y: 183
+        width: 509
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07763b21fb93b4520800000000000000
+      internalID: 2687305095471916912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kamera1 1_2
+      rect:
+        serializedVersion: 2
+        x: 3589
+        y: 184
+        width: 507
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7635327872d6fc630800000000000000
+      internalID: 3949495414765605735
       vertices: []
       indices: 
       edges: []
@@ -148,7 +198,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      cendrawasih botak_0: -5008294482684803111
+      kamera1 1_0: 2657873045037984327
+      kamera1 1_1: 2687305095471916912
+      kamera1 1_2: 3949495414765605735
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

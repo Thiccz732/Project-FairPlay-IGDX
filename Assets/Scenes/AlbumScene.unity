@@ -294,6 +294,14 @@ MonoBehaviour:
       Papua dan Australia,
       berhelm khas dan berperan sebagai penyebar biji.'
     spriteFotoStatis: {fileID: 7603395522799856639, guid: 8da8e99dc35fc794d87bffa72905398b, type: 3}
+  - namaHewan: Cendrawasih Botak
+    keyPlayerPrefs: Koleksi_Cendrawasih Botak
+    prefabAnimasiHewan: {fileID: 7718305887417924496, guid: 41f5f368888481544aacf5657c8f6e48, type: 3}
+    teksCiriCiri: 'Burung raksasa yang tak bisa terbang, dari
+
+      Papua dan Australia,
+      berhelm khas dan berperan sebagai penyebar biji.'
+    spriteFotoStatis: {fileID: -5008294482684803111, guid: 5aef6b2e4b5d86f48922421850abe9d5, type: 3}
   containerPrefabHewan: {fileID: 1050868416}
   teksNamaHewan: {fileID: 579444353}
   teksCiriCiri: {fileID: 473675713}

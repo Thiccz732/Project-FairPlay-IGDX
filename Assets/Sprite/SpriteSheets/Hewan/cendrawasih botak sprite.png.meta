@@ -1,10 +1,25 @@
 fileFormatVersion: 2
-guid: 5aef6b2e4b5d86f48922421850abe9d5
+guid: 4da1e14eea4b1494cbbfef12edf8e31a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5008294482684803111
-    second: cendrawasih botak_0
+      213: -5244448854410577329
+    second: cendrawasih botak sprite_0
+  - first:
+      213: 6572865663115344695
+    second: cendrawasih botak sprite_1
+  - first:
+      213: 8250836993853736591
+    second: cendrawasih botak sprite_2
+  - first:
+      213: -8941326036776457308
+    second: cendrawasih botak sprite_3
+  - first:
+      213: 3545537299335615781
+    second: cendrawasih botak sprite_4
+  - first:
+      213: 4441934631510006170
+    second: cendrawasih botak sprite_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,23 +128,111 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: cendrawasih botak_0
+      name: cendrawasih botak sprite_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 3083
-        height: 4984
+        width: 3084
+        height: 4986
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9d7060df3b6fe7ab0800000000000000
-      internalID: -5008294482684803111
+      spriteID: f4a372e9d89f737b0800000000000000
+      internalID: -5244448854410577329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cendrawasih botak sprite_1
+      rect:
+        serializedVersion: 2
+        x: 3991
+        y: 0
+        width: 3793
+        height: 4955
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73b3a5efe72873b50800000000000000
+      internalID: 6572865663115344695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cendrawasih botak sprite_2
+      rect:
+        serializedVersion: 2
+        x: 8521
+        y: 0
+        width: 6428
+        height: 4946
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f86cd46f78cd08270800000000000000
+      internalID: 8250836993853736591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cendrawasih botak sprite_4
+      rect:
+        serializedVersion: 2
+        x: 15538
+        y: 0
+        width: 3793
+        height: 4948
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5251cc08367443130800000000000000
+      internalID: 3545537299335615781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cendrawasih botak sprite_5
+      rect:
+        serializedVersion: 2
+        x: 19924
+        y: 0
+        width: 2843
+        height: 4992
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a99d8a2530ce4ad30800000000000000
+      internalID: 4441934631510006170
       vertices: []
       indices: 
       edges: []
@@ -138,7 +241,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: fd8f0cb806c2e4c45a4416750cef5360
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +251,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      cendrawasih botak_0: -5008294482684803111
+      cendrawasih botak sprite_0: -5244448854410577329
+      cendrawasih botak sprite_1: 6572865663115344695
+      cendrawasih botak sprite_2: 8250836993853736591
+      cendrawasih botak sprite_3: -8941326036776457308
+      cendrawasih botak sprite_4: 3545537299335615781
+      cendrawasih botak sprite_5: 4441934631510006170
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
