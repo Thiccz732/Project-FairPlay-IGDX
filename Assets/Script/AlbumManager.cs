@@ -114,6 +114,7 @@ public class AlbumManager : MonoBehaviour
         int slotIndex = 0;
         for (int i = 0; i < daftarHewan.Length; i++)
         {
+            // Skip hewan yang lagi aktif di kiri
             if (i == indexHewanAktif) continue; 
 
             if (slotIndex < slotFotoSamping.Length && slotFotoSamping[slotIndex] != null)
@@ -130,22 +131,20 @@ public class AlbumManager : MonoBehaviour
 
     public void PilihHewanDariSlot(int indexSamping)
     {
-        int targetIndex = 0;
-        int count = 0;
-
+        // Cek urutan hewan sisa tanpa pakai 'count++' yang rawan ketuker
+        int slotHitung = 0;
         for (int i = 0; i < daftarHewan.Length; i++)
         {
-            if (i == indexHewanAktif) continue;
-            if (count == indexSamping)
-            {
-                targetIndex = i;
-                break;
-            }
-            count++;
-        }
+            if (i == indexHewanAktif) continue; // Skip hewan aktif di kiri
 
-        indexHewanAktif = targetIndex;
-        UpdateTampilanAlbum();
+            if (slotHitung == indexSamping)
+            {
+                indexHewanAktif = i; // Langsung dapet index asli hewan tersebut!
+                UpdateTampilanAlbum();
+                return;
+            }
+            slotHitung++;
+        }
     }
 
     public void NextHalaman()
