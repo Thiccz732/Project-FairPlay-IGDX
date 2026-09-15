@@ -72,17 +72,17 @@ public class AlbumManager : MonoBehaviour
             {
                 prefabHewanTerpasang = Instantiate(data.prefabAnimasiHewan, containerPrefabHewan);
                 
-                RectTransform rect = prefabHewanTerpasang.GetComponent<RectTransform>();
-                if (rect != null)
-                {
-                    rect.anchoredPosition = Vector2.zero;
-                    rect.localScale = Vector3.one;
-                }
-                else
-                {
-                    prefabHewanTerpasang.transform.localPosition = Vector3.zero;
-                    prefabHewanTerpasang.transform.localScale = Vector3.one;
-                }
+                // RectTransform rect = prefabHewanTerpasang.GetComponent<RectTransform>();
+                // if (rect != null)
+                // {
+                //     rect.anchoredPosition = Vector2.zero;
+                //     // rect.localScale = Vector3.one;
+                // }
+                // else
+                // {
+                //     prefabHewanTerpasang.transform.localPosition = Vector3.zero;
+                //     // prefabHewanTerpasang.transform.localScale = Vector3.one;
+                // }
             }
         }
         else

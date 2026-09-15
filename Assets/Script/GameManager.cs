@@ -359,8 +359,16 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            PlayerPrefs.SetInt("LevelUnlocked", 2); 
-            PlayerPrefs.Save();
+            int currentLevelUnlocked = PlayerPrefs.GetInt("LevelUnlocked", 1);
+        
+            int targetNextLevel = currentLevelUnlocked + 1;
+
+            if (targetNextLevel > currentLevelUnlocked)
+            {
+                PlayerPrefs.SetInt("LevelUnlocked", targetNextLevel);
+                PlayerPrefs.Save();
+                Debug.Log("Level Terbuka Naik Menjadi: " + targetNextLevel);
+            }
 
             if (!string.IsNullOrEmpty(nextSceneName)) SceneManager.LoadScene(nextSceneName);
         }

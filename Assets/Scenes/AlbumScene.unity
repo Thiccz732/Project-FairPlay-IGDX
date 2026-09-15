@@ -287,11 +287,11 @@ MonoBehaviour:
       Papua dan Australia,
       berhelm khas dan berperan sebagai penyebar biji.'
     spriteFotoStatis: {fileID: -4104340362508445918, guid: 33212a034b87a37418b4927d49064c19, type: 3}
-  - namaHewan: Walabi
-    keyPlayerPrefs: Koleksi_Walabi
+  - namaHewan: Walabi Semak
+    keyPlayerPrefs: Koleksi_Walabi Semak
     prefabAnimasiHewan: {fileID: 341478913122007553, guid: 3eb4c90b3e0c42b4f902c8129dbf8f4e, type: 3}
-    teksCiriCiri: Marsupial kecil mirip kangguru yang hidup di lantai hutan Papua
-      dan Australia
+    teksCiriCiri: Burung langka endemik Waigeo dan Batanta dengan kulit kepala biru
+      cerah pada pejantannya.
     spriteFotoStatis: {fileID: 7603395522799856639, guid: 8da8e99dc35fc794d87bffa72905398b, type: 3}
   - namaHewan: Cendrawasih Botak
     keyPlayerPrefs: Koleksi_Cendrawasih Botak
@@ -1345,7 +1345,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1455,7 +1455,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -444, y: 95.7, z: 0}
-  m_LocalScale: {x: 15.930001, y: 15.930001, z: 15.930001}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 48385493}
@@ -1724,7 +1724,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 4
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
