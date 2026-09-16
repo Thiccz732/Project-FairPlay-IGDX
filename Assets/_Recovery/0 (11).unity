@@ -295,7 +295,7 @@ MonoBehaviour:
     spriteFotoStatis: {fileID: 7603395522799856639, guid: 8da8e99dc35fc794d87bffa72905398b, type: 3}
   - namaHewan: Cendrawasih Botak
     keyPlayerPrefs: Koleksi_Cendrawasih Botak
-    prefabAnimasiHewan: {fileID: 4837405490331856862, guid: 7a5b78f017d876c43a48b5c45519122f, type: 3}
+    prefabAnimasiHewan: {fileID: 7718305887417924496, guid: 41f5f368888481544aacf5657c8f6e48, type: 3}
     teksCiriCiri: Burung langka endemik Waigeo dan Batanta dengan kulit kepala biru
       cerah pada pejantannya.
     spriteFotoStatis: {fileID: -5008294482684803111, guid: 5aef6b2e4b5d86f48922421850abe9d5, type: 3}
@@ -684,7 +684,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 8
+  m_HorizontalAlignment: 16
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -997,7 +997,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -114.38987, y: 0, z: -195.76328, w: 0}
+  m_margin: {x: 0, y: 0, z: -88.16882, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1286,7 +1286,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: -5668518402485374812, guid: 9d5c7dea51bef6b40b9065155904afb2, type: 3}
   m_Type: 0
-  m_PreserveAspect: 1
+  m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -1638,7 +1638,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: -5668518402485374812, guid: 9d5c7dea51bef6b40b9065155904afb2, type: 3}
   m_Type: 0
-  m_PreserveAspect: 1
+  m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -1797,7 +1797,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: -5668518402485374812, guid: 9d5c7dea51bef6b40b9065155904afb2, type: 3}
   m_Type: 0
-  m_PreserveAspect: 1
+  m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -2004,7 +2004,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: -5668518402485374812, guid: 9d5c7dea51bef6b40b9065155904afb2, type: 3}
   m_Type: 0
-  m_PreserveAspect: 1
+  m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
