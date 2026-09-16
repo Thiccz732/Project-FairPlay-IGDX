@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 8681872286953657798}
   - component: {fileID: 4688179618016005170}
   - component: {fileID: 2184565761540019349}
-  - component: {fileID: 7076903529974257067}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -145,101 +144,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
   sfxSource: {fileID: 4688179618016005170}
   clickSound: {fileID: 8300000, guid: c59edfafcf9271244a17c2d8724b1d2e, type: 3}
-  bgmSource: {fileID: 7076903529974257067}
---- !u!82 &7076903529974257067
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8579630200293416200}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
-  m_PlayOnAwake: 0
-  m_Volume: 0.3
-  m_Pitch: 1
-  Loop: 1
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
+  animalFoundSound: {fileID: 8300000, guid: 64e2308550b9fe443a8cfc47d90bb815, type: 3}
+  balikKertasSound: {fileID: 8300000, guid: 2f864d77414bf834099ac51b00fca6b6, type: 3}
+  cameraShutterSound: {fileID: 8300000, guid: e233fd2ade8d0084893d3e824fb96e19, type: 3}
+  confirmFotoSound: {fileID: 8300000, guid: 455234dc3b8164c40affdbaa86f147a7, type: 3}
+  dragFotoSound: {fileID: 8300000, guid: e72ac0a7ce222534fbae9b67165940c5, type: 3}
+  itemFoundSound: {fileID: 8300000, guid: ec6bb41606e71274ab1e3170d5560017, type: 3}
+  snapFotoSound: {fileID: 8300000, guid: 64d4cfbf70040a74c87a535d8ecf8014, type: 3}
+  stepsSound: {fileID: 8300000, guid: 13e049376bd91cb49bd0f53aa14de946, type: 3}
+  bgmSource: {fileID: 0}

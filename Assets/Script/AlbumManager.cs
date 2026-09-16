@@ -12,6 +12,7 @@ public class DataKoleksiHewan
     [TextArea(3, 5)]
     public string teksCiriCiri;            // Deskripsi/Ciri-ciri
     public Sprite spriteFotoStatis;        // Foto kecil slot kanan
+    public AudioClip suaraHewan;
 }
 
 public class AlbumManager : MonoBehaviour
@@ -31,6 +32,9 @@ public class AlbumManager : MonoBehaviour
 
     [Header("UI Navigasi")]
     public TextMeshProUGUI teksIndikatorHalaman; 
+
+    [Header("Audio Settings")]
+    public AudioSource audioSourceAlbum;
 
     private GameObject prefabHewanTerpasang;
 
@@ -169,4 +173,21 @@ public class AlbumManager : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenu");
     }
+
+    public void PlaySuaraHewanSaatIni()
+{
+    // Pastikan index valid dan hewan sedang terbaca
+    if (daftarHewan != null && indexHewanAktif < daftarHewan.Length)
+    {
+        AudioClip clip = daftarHewan[indexHewanAktif].suaraHewan;
+        if (clip != null && audioSourceAlbum != null)
+        {
+            audioSourceAlbum.PlayOneShot(clip);
+        }
+        else
+        {
+            Debug.LogWarning("AudioClip suara hewan atau AudioSource belum dipasang!");
+        }
+    }
+}
 }
