@@ -226,6 +226,7 @@ RectTransform:
   - {fileID: 213299922}
   - {fileID: 1275555837}
   - {fileID: 1537889348}
+  - {fileID: 1936384393}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -243,6 +244,7 @@ GameObject:
   m_Component:
   - component: {fileID: 185695658}
   - component: {fileID: 185695657}
+  - component: {fileID: 185695659}
   m_Layer: 0
   m_Name: AlbumManager
   m_TagString: Untagged
@@ -269,6 +271,7 @@ MonoBehaviour:
     teksCiriCiri: Burung endemik Papua berjuluk "Burung Surga" yang dilindungi karena
       terancam punah.
     spriteFotoStatis: {fileID: -5710205414623236306, guid: af1940a1f47a1ff4e882da9176f6c557, type: 3}
+    suaraHewan: {fileID: 8300000, guid: 775e035dd914a8a46a8785035911c3bc, type: 3}
   - namaHewan: Kangguru Pohon
     keyPlayerPrefs: Koleksi_Kangguru Pohon
     prefabAnimasiHewan: {fileID: 502446112264613733, guid: c67afad593811764992df9cf80fa33fe, type: 3}
@@ -279,6 +282,7 @@ MonoBehaviour:
 
       akibat perburuan serta deforestasi.'
     spriteFotoStatis: {fileID: 6521142630684592418, guid: 687e5d3689935bf44b53efa48925fd4e, type: 3}
+    suaraHewan: {fileID: 8300000, guid: 086a6022125bcc9468bfafce53510409, type: 3}
   - namaHewan: Kasuari
     keyPlayerPrefs: Koleksi_Kasuari
     prefabAnimasiHewan: {fileID: 3019668930738692764, guid: cc4308bf887cb4e419016526122c5e63, type: 3}
@@ -287,18 +291,21 @@ MonoBehaviour:
       Papua dan Australia,
       berhelm khas dan berperan sebagai penyebar biji.'
     spriteFotoStatis: {fileID: -4104340362508445918, guid: 33212a034b87a37418b4927d49064c19, type: 3}
+    suaraHewan: {fileID: 8300000, guid: 602f3ebff119c004f8b51a392b60d8b1, type: 3}
   - namaHewan: Walabi Semak
     keyPlayerPrefs: Koleksi_Walabi Semak
     prefabAnimasiHewan: {fileID: 341478913122007553, guid: 3eb4c90b3e0c42b4f902c8129dbf8f4e, type: 3}
     teksCiriCiri: Burung langka endemik Waigeo dan Batanta dengan kulit kepala biru
       cerah pada pejantannya.
     spriteFotoStatis: {fileID: 7603395522799856639, guid: 8da8e99dc35fc794d87bffa72905398b, type: 3}
+    suaraHewan: {fileID: 8300000, guid: 252b7033fcc44374e82683880a128587, type: 3}
   - namaHewan: Cendrawasih Botak
     keyPlayerPrefs: Koleksi_Cendrawasih Botak
     prefabAnimasiHewan: {fileID: 4837405490331856862, guid: 7a5b78f017d876c43a48b5c45519122f, type: 3}
     teksCiriCiri: Burung langka endemik Waigeo dan Batanta dengan kulit kepala biru
       cerah pada pejantannya.
     spriteFotoStatis: {fileID: -5008294482684803111, guid: 5aef6b2e4b5d86f48922421850abe9d5, type: 3}
+    suaraHewan: {fileID: 8300000, guid: 04c9f911564e5cf4a9a0ab0149ecf494, type: 3}
   containerPrefabHewan: {fileID: 1050868416}
   teksNamaHewan: {fileID: 579444353}
   teksCiriCiri: {fileID: 473675713}
@@ -309,6 +316,7 @@ MonoBehaviour:
   - {fileID: 921886840}
   - {fileID: 1428639015}
   teksIndikatorHalaman: {fileID: 1275555835}
+  audioSourceAlbum: {fileID: 185695659}
 --- !u!4 &185695658
 Transform:
   m_ObjectHideFlags: 0
@@ -324,6 +332,103 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &185695659
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 185695656}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &213299921
 GameObject:
   m_ObjectHideFlags: 0
@@ -409,6 +514,18 @@ MonoBehaviour:
       - m_Target: {fileID: 185695657}
         m_TargetAssemblyTypeName: AlbumManager, Assembly-CSharp
         m_MethodName: NextHalaman
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2184565761540019349, guid: c09dabed64f0aed46bbda89d83828334, type: 3}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlayBalikKertasSFX
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1096,6 +1213,18 @@ MonoBehaviour:
       - m_Target: {fileID: 185695657}
         m_TargetAssemblyTypeName: AlbumManager, Assembly-CSharp
         m_MethodName: PrevHalaman
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2184565761540019349, guid: c09dabed64f0aed46bbda89d83828334, type: 3}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlayBalikKertasSFX
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2068,6 +2197,138 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!1 &1936384392
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1936384393}
+  - component: {fileID: 1936384396}
+  - component: {fileID: 1936384395}
+  - component: {fileID: 1936384394}
+  m_Layer: 5
+  m_Name: Sound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1936384393
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1936384392}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 48385493}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -457}
+  m_SizeDelta: {x: 122.57, y: 122.57}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1936384394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1936384392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1936384395}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 185695657}
+        m_TargetAssemblyTypeName: AlbumManager, Assembly-CSharp
+        m_MethodName: PlaySuaraHewanSaatIni
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1936384395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1936384392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: -6032194418689728446, guid: 5e3f126343915b34f85d015697cc7b06, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1936384396
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1936384392}
+  m_CullTransparentMesh: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

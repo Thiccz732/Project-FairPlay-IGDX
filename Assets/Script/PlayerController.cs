@@ -12,6 +12,10 @@ public class PlayerController : MonoBehaviour
     [Header("Effects")]
     public ParticleSystem walkParticle; // Slot Particle System di Inspector
 
+    [Header("Audio Settings")]
+    public float stepInterval = 0.35f; // Jeda waktu antarlangkah (semakin kecil semakin cepat suaranya)
+    private float stepTimer;
+
     private Rigidbody2D rb;
     private Vector2 moveInput;
     private PlayerControls inputActions; 
@@ -59,11 +63,33 @@ public class PlayerController : MonoBehaviour
 
         // 3. Pemicu Partikel Jalan (DITAMBAHKAN DI SINI)
         SetWalkParticle(isMoving);
+        HandleFootstepSound(isMoving);
 
         // 4. Otomatis balik badan (Flip) sesuai arah horizontal
         if (spriteRenderer != null && moveInput.x != 0)
         {
             spriteRenderer.flipX = (moveInput.x > 0);
+        }
+    }
+
+    private void HandleFootstepSound(bool isMoving)
+    {
+        if (isMoving)
+        {
+            stepTimer -= Time.deltaTime;
+            if (stepTimer <= 0f)
+            {
+                if (AudioManager.instance != null)
+                {
+                    AudioManager.instance.PlayStepSFX(AudioManager.instance.stepsSound, 0.2f);
+                }
+
+                stepTimer = stepInterval;
+            }
+        }
+        else
+        {
+            stepTimer = 0f;
         }
     }
 
