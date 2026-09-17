@@ -6179,12 +6179,10 @@ RectTransform:
   - {fileID: 1030739444}
   - {fileID: 2115448854}
   - {fileID: 1210077355}
-  - {fileID: 920861620}
-  - {fileID: 906055550}
+  - {fileID: 1002363019}
   - {fileID: 1245040331}
   - {fileID: 1440424833}
   - {fileID: 1351917714}
-  - {fileID: 1002363019}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -6806,11 +6804,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 572843505}
+  m_Father: {fileID: 1210077355}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 676, y: 396}
+  m_AnchoredPosition: {x: 137.06909, y: 85.599976}
   m_SizeDelta: {x: 398.9033, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &906055551
@@ -6943,11 +6941,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 572843505}
+  m_Father: {fileID: 1210077355}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 538.93, y: 289}
+  m_AnchoredPosition: {x: -0.00091552734, y: -21.400024}
   m_SizeDelta: {x: 298.9, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &920861621
@@ -7636,14 +7634,16 @@ RectTransform:
   m_GameObject: {fileID: 1210077354}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.64649, y: 0.64649, z: 0.64649}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 920861620}
+  - {fileID: 906055550}
   m_Father: {fileID: 572843505}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 538.9309, y: 310.40002}
+  m_AnchoredPosition: {x: 761, y: 310.40002}
   m_SizeDelta: {x: 596.7341, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1210077356
@@ -7808,7 +7808,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1245040331
 RectTransform:
   m_ObjectHideFlags: 0
