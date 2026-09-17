@@ -183,12 +183,23 @@ public class GameManager : MonoBehaviour
 
             isTimerRunning = false; 
             capturedSnapshots[9] = snapshot; 
+
+            if (AudioManager.instance != null)
+            {
+                AudioManager.instance.PlaySFX(AudioManager.instance.animalFoundSound);
+            }
+
             ShowFinalPanel(); 
         }
         else
         {
             cluesFound++;
             UpdateUISisaClue(); 
+
+            if (AudioManager.instance != null)
+            {
+                AudioManager.instance.PlaySFX(AudioManager.instance.itemFoundSound);
+            }
 
             if (cluesFound < capturedSnapshots.Length) capturedSnapshots[cluesFound] = snapshot;
 
@@ -359,6 +370,11 @@ public class GameManager : MonoBehaviour
         }
         else
         {
+            if (AudioManager.instance != null)
+            {
+                AudioManager.instance.PlaySFX(AudioManager.instance.confirmFotoSound); 
+            }
+
             int currentLevelUnlocked = PlayerPrefs.GetInt("LevelUnlocked", 1);
         
             int targetNextLevel = currentLevelUnlocked + 1;

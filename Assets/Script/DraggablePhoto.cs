@@ -35,6 +35,11 @@ public class DraggablePhoto : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
     {
         if (isMatched) return; 
 
+        if (AudioManager.instance != null)
+        {
+            AudioManager.instance.PlaySFX(AudioManager.instance.dragFotoSound);
+        }
+
         canvasGroup.alpha = 0.6f;
         canvasGroup.blocksRaycasts = false;
         transform.SetAsLastSibling(); 
@@ -63,6 +68,11 @@ public class DraggablePhoto : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
             {
                 rectTransform.anchoredPosition = targetSlot.anchoredPosition;
                 isMatched = true; 
+
+                if (AudioManager.instance != null)
+                {
+                    AudioManager.instance.PlaySFX(AudioManager.instance.snapFotoSound);
+                }
 
                 if (GameManager.instance != null) GameManager.instance.AddMatchedPhoto();
                 return; 

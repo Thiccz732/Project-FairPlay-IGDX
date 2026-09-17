@@ -29,16 +29,23 @@ public class CameraLensManager : MonoBehaviour
 
     private void OnEnable()
     {
-        SetNormalLens();
+        // Set lensa tanpa memutar SFX
+        ApplyNormalLens();
         if (lensButtonPanel != null) lensButtonPanel.SetActive(true);
     }
 
-    public void SetNormalLens()
+    private void ApplyNormalLens()
     {
         currentLens = LensType.Normal; 
         if (nightVisionEffect != null) nightVisionEffect.SetActive(false);
         if (macroEffect != null) macroEffect.SetActive(false);
         if (clueCamera != null) clueCamera.orthographicSize = normalZoom;
+    }
+
+    public void SetNormalLens()
+    {
+        ApplyNormalLens();
+        if (AudioManager.instance != null) AudioManager.instance.PlaySFX(AudioManager.instance.cameraShutterSound);
     }
 
     public void SetNightVisionLens()
@@ -47,9 +54,11 @@ public class CameraLensManager : MonoBehaviour
         if (nightVisionEffect != null) nightVisionEffect.SetActive(true);
         if (macroEffect != null) macroEffect.SetActive(false);
         if (clueCamera != null) clueCamera.orthographicSize = normalZoom;
+
+        if (AudioManager.instance != null) AudioManager.instance.PlaySFX(AudioManager.instance.cameraShutterSound);
     }
 
-    public void SetMacroLens()
+    public void SetMacroLens()  
     {
         currentLens = LensType.Macro; 
         if (nightVisionEffect != null) nightVisionEffect.SetActive(false);
@@ -74,6 +83,11 @@ public class CameraLensManager : MonoBehaviour
         {
             Debug.Log("Gagal! Wajib Lensa Makro.");
             return false; 
+        }
+
+        if (AudioManager.instance != null)
+        {
+            AudioManager.instance.PlaySFX(AudioManager.instance.confirmFotoSound);
         }
         return true; 
     }
