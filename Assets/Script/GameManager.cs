@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
 
     [Header("UI Game Over")]
     public GameObject gameOverPanel; 
-    public TextMeshProUGUI teksRestartCountdown; 
+    // Variabel teks countdown sudah dihapus sepenuhnya
     
     [Header("Pengaturan Pindah Scene")]
     public string nextSceneName = "MainMenu"; 
@@ -59,8 +59,6 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        // FASE INISIALISASI 1: Pengambilalihan Paksa
-        // Hapus logika "else Destroy" agar GameManager di scene baru selalu menimpa memori lama
         instance = this;
     }
 
@@ -72,8 +70,6 @@ public class GameManager : MonoBehaviour
         if (finalPanelUI != null) finalPanelUI.SetActive(false);
         if (gameOverPanel != null) gameOverPanel.SetActive(false); 
 
-        // FASE INISIALISASI 2: Penundaan Sekuensial
-        // Beri jeda 0.1 detik agar seluruh script di scene baru (termasuk ClueSpawner) siap 100%
         Invoke(nameof(StartStage), 0.1f);
     }
 
@@ -115,36 +111,13 @@ public class GameManager : MonoBehaviour
         
         if (gameOverPanel != null) 
         {
+            // Cukup munculkan panel saja, tunggu tombol Restart dari PauseManager diklik
             gameOverPanel.SetActive(true);
-            StartCoroutine(RestartLevelRoutine());
         }
-        else 
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name); 
-        }
-    }
-
-    private IEnumerator RestartLevelRoutine()
-    {
-        int countdown = 5;
-        
-        while (countdown > 0)
-        {
-            if (teksRestartCountdown != null)
-            {
-                teksRestartCountdown.text = "Mengulang level dalam " + countdown + " detik...";
-            }
-            
-            yield return new WaitForSecondsRealtime(1f);
-            countdown--;
-        }
-        
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     private void StartStage()
     {
-        // FASE 3: Pembersihan Status
         cluesFound = 0;
         isAnimalSpawned = false;
         matchedPhotos = 0; 
@@ -152,7 +125,6 @@ public class GameManager : MonoBehaviour
         
         System.Array.Clear(capturedSnapshots, 0, capturedSnapshots.Length);
 
-        // Panggil sistem spawner
         if (ClueSpawner.instance != null && animalStages.Length > 0)
         {
             int amountToSpawn = animalStages[currentStageIndex].requiredClues + 2;
@@ -163,7 +135,6 @@ public class GameManager : MonoBehaviour
             Debug.LogError("Gagal memuat ClueSpawner atau AnimalStages kosong!");
         }
 
-        // Atur waktu
         if (animalStages.Length > 0)
         {
             currentTimeLeft = animalStages[currentStageIndex].timeLimit;
@@ -183,12 +154,6 @@ public class GameManager : MonoBehaviour
 
             isTimerRunning = false; 
             capturedSnapshots[9] = snapshot; 
-
-            if (AudioManager.instance != null)
-            {
-                AudioManager.instance.PlaySFX(AudioManager.instance.animalFoundSound);
-            }
-
             ShowFinalPanel(); 
         }
         else
@@ -196,14 +161,8 @@ public class GameManager : MonoBehaviour
             cluesFound++;
             UpdateUISisaClue(); 
 
-            if (AudioManager.instance != null)
-            {
-                AudioManager.instance.PlaySFX(AudioManager.instance.itemFoundSound);
-            }
-
             if (cluesFound < capturedSnapshots.Length) capturedSnapshots[cluesFound] = snapshot;
 
-            // FASE 4: Validasi Kemunculan
             if (cluesFound >= animalStages[currentStageIndex].requiredClues && !isAnimalSpawned) 
             {
                 SpawnAnimal();
@@ -308,18 +267,12 @@ public class GameManager : MonoBehaviour
                 {
                     int id = dragScript.photoID;
                     
-                    // --- LOGIKA BARU: Pasang foto ke dalam kotak frame ---
                     Image targetImage = photoImage; 
-                    Transform areaDalam = photoImage.transform.Find("IsiFoto"); // Mencari child bernama IsiFoto
+                    Transform areaDalam = photoImage.transform.Find("IsiFoto"); 
                     if (areaDalam != null)
                     {
                         targetImage = areaDalam.GetComponent<Image>();
                     }
-                    else 
-                    {
-                        Debug.LogWarning("Objek IsiFoto tidak ditemukan di dalam " + photoImage.name + ". Foto akan dipasang di bingkai utama.");
-                    }
-                    // -----------------------------------------------------
 
                     if (id == 4 && capturedSnapshots[9] != null) targetImage.sprite = capturedSnapshots[9];
                     else if (id >= 1 && id <= 3 && capturedSnapshots[id] != null) targetImage.sprite = capturedSnapshots[id];
@@ -370,21 +323,8 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            if (AudioManager.instance != null)
-            {
-                AudioManager.instance.PlaySFX(AudioManager.instance.confirmFotoSound); 
-            }
-
-            int currentLevelUnlocked = PlayerPrefs.GetInt("LevelUnlocked", 1);
-        
-            int targetNextLevel = currentLevelUnlocked + 1;
-
-            if (targetNextLevel > currentLevelUnlocked)
-            {
-                PlayerPrefs.SetInt("LevelUnlocked", targetNextLevel);
-                PlayerPrefs.Save();
-                Debug.Log("Level Terbuka Naik Menjadi: " + targetNextLevel);
-            }
+            PlayerPrefs.SetInt("LevelUnlocked", 2); 
+            PlayerPrefs.Save();
 
             if (!string.IsNullOrEmpty(nextSceneName)) SceneManager.LoadScene(nextSceneName);
         }

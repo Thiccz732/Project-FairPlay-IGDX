@@ -21,7 +21,8 @@ public class ClueInteract : MonoBehaviour
 
     private Image whiteFlash;       
     private PlayerController player; 
-    private GameObject radarUI; 
+    
+    private GameObject radarUtama; 
     private GameObject joystickUI; 
     private GameObject backgroundUI; 
     private GameObject finalPanelUI; 
@@ -30,7 +31,7 @@ public class ClueInteract : MonoBehaviour
     private PlayerControls inputActions;
     private bool isPlayerNear = false;
     private bool isCameraMode = false;
-    private bool hasBeenPhotographed = false; // Status foto
+    private bool hasBeenPhotographed = false; 
 
     private void Awake()
     {
@@ -44,7 +45,6 @@ public class ClueInteract : MonoBehaviour
 
     private void Start()
     {
-        // --- WAJIB: RESET STATUS FOTO TIAP KALI MASUK SCENE BARU ---
         hasBeenPhotographed = false;
 
         sr = GetComponent<SpriteRenderer>();
@@ -65,7 +65,15 @@ public class ClueInteract : MonoBehaviour
         GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
         if (playerObj != null) player = playerObj.GetComponent<PlayerController>(); 
         
-        radarUI = GameObject.Find("RadarUI");
+        GameObject canvasObj = GameObject.Find("Canvas");
+        if (canvasObj != null)
+        {
+            Transform radarTransform = canvasObj.transform.Find("Radar");
+            if (radarTransform != null) radarUtama = radarTransform.gameObject;
+        }
+        
+        if (radarUtama == null) radarUtama = GameObject.Find("RadarUI");
+
         joystickUI = GameObject.Find("Joystick_BG");
         backgroundUI = GameObject.Find("Background"); 
         finalPanelUI = GameObject.Find("FinalPanel"); 
@@ -159,7 +167,7 @@ public class ClueInteract : MonoBehaviour
 
         if (clueCamera != null) clueCamera.SetActive(true); 
         
-        if (radarUI != null) radarUI.SetActive(false);
+        if (radarUtama != null) radarUtama.SetActive(false);
         if (joystickUI != null) joystickUI.SetActive(false);
         if (backgroundUI != null) backgroundUI.SetActive(false); 
         if (finalPanelUI != null) finalPanelUI.SetActive(false); 
@@ -188,7 +196,7 @@ public class ClueInteract : MonoBehaviour
         
         if (!isGameEnding) 
         {
-            if (radarUI != null) radarUI.SetActive(true);
+            if (radarUtama != null) radarUtama.SetActive(true);
             if (joystickUI != null) joystickUI.SetActive(true);
             if (backgroundUI != null) backgroundUI.SetActive(true); 
             if (finalPanelUI != null) finalPanelUI.SetActive(true); 
@@ -210,16 +218,15 @@ public class ClueInteract : MonoBehaviour
         if (backgroundUI != null) backgroundUI.SetActive(false); 
         if (finalPanelUI != null) finalPanelUI.SetActive(false); 
 
-        CameraLensManager lensManager = GetComponentInChildren<CameraLensManager>();
-        if (lensManager != null) lensManager.HideButtons();
-
-        GameObject activeNVG = null;
-        if (lensManager != null && lensManager.nightVisionEffect != null)
+        // 1. Matikan clueCamera agar UI kayu & NVG hilang dari jepretan DAN dari layar flash
+        if (clueCamera != null) clueCamera.SetActive(false); 
+        
+        if (PauseManager.instance != null && PauseManager.instance.iconTombolPause != null)
         {
-            activeNVG = lensManager.nightVisionEffect;
-            activeNVG.SetActive(false); 
+            PauseManager.instance.iconTombolPause.gameObject.SetActive(false);
         }
 
+        // 2. Tunggu 1 frame lalu jepret foto yang 100% bersih
         yield return new WaitForEndOfFrame();
 
         Texture2D snapshotTex = new Texture2D(Screen.width, Screen.height, TextureFormat.RGBA32, false);
@@ -228,11 +235,15 @@ public class ClueInteract : MonoBehaviour
 
         Sprite newSnapshot = Sprite.Create(snapshotTex, new Rect(0, 0, snapshotTex.width, snapshotTex.height), new Vector2(0.5f, 0.5f));
 
-        if (activeNVG != null)
+        // 3. KHUSUS: Nyalakan Canvas milik Player saja agar WhiteFlash bisa tayang
+        // ClueCamera dibiarkan tetap MATI agar layar bersih tanpa bingkai kamera.
+        if (player != null) 
         {
-            activeNVG.SetActive(true);
+            Canvas[] playerCanvases = player.GetComponentsInChildren<Canvas>(true);
+            foreach (Canvas c in playerCanvases) c.enabled = true;
         }
 
+        // 4. Mainkan efek kilatan cahaya (Kondisi Joystick, Radar, & Bingkai Kamera tersembunyi!)
         if (whiteFlash != null)
         {
             Color flashColor = whiteFlash.color;
@@ -247,8 +258,16 @@ public class ClueInteract : MonoBehaviour
             }
         }
         
+        // 5. Nyalakan kembali tombol pause
+        if (PauseManager.instance != null && PauseManager.instance.iconTombolPause != null)
+        {
+            PauseManager.instance.iconTombolPause.gameObject.SetActive(true);
+        }
+
+        // 6. BARU SEKARANG kita memunculkan semua UI Gameplay
         ExitCameraMode();
 
+        // 7. Daftarkan snapshot ke album
         if (GameManager.instance != null)
         {
             GameManager.instance.RegisterSnapshot(newSnapshot, isFinalAnimal);
