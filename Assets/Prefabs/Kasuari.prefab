@@ -376,7 +376,7 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!1 &3494187873012845732
+--- !u!1 &3993268743868925294
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -384,50 +384,50 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3805217238160749451}
-  - component: {fileID: 1416976273588535060}
-  - component: {fileID: 1201656510327984719}
+  - component: {fileID: 7472415165927425892}
+  - component: {fileID: 6617076638666287877}
+  - component: {fileID: 2207694246406752559}
   m_Layer: 5
-  m_Name: Kamera (1)
+  m_Name: Kamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &3805217238160749451
+--- !u!224 &7472415165927425892
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3494187873012845732}
+  m_GameObject: {fileID: 3993268743868925294}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.121259995, y: 0.121259995, z: 0.121259995}
+  m_LocalScale: {x: 1.48, y: 1.48, z: 1.48}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 7989764410671064856}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.2388916, y: 37.321533}
-  m_SizeDelta: {x: 15764, y: 8291.035}
+  m_AnchoredPosition: {x: 0, y: -0}
+  m_SizeDelta: {x: 1297.3, y: 445.2583}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &1416976273588535060
+--- !u!222 &6617076638666287877
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3494187873012845732}
+  m_GameObject: {fileID: 3993268743868925294}
   m_CullTransparentMesh: 1
---- !u!114 &1201656510327984719
+--- !u!114 &2207694246406752559
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3494187873012845732}
+  m_GameObject: {fileID: 3993268743868925294}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -441,7 +441,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 3271278756644949376, guid: 84c0007043e4e5949b6836d93c496652, type: 3}
+  m_Sprite: {fileID: -9204957565779188351, guid: 033dd9bfb275cef47beb8a379a409b3b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1094,7 +1094,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -683, y: -55}
+  m_AnchoredPosition: {x: -683, y: -2.369995}
   m_SizeDelta: {x: 160, y: 160}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4831445271723414490
@@ -1526,7 +1526,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 670, y: -55}
+  m_AnchoredPosition: {x: 670, y: -2.369995}
   m_SizeDelta: {x: 160, y: 160}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9145557833790912987
@@ -1689,7 +1689,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 8097320236610130188, guid: a610ba50da071f54ab1c93c22154358b, type: 3}
+  m_Sprite: {fileID: -2263737645027842855, guid: b0b842d78fa4fd24ebf818e3d0ae08cd, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2013,7 +2013,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 3805217238160749451}
+  - {fileID: 7472415165927425892}
   - {fileID: 1467765592118397639}
   - {fileID: 7031126760180917125}
   - {fileID: 4013480800357638004}

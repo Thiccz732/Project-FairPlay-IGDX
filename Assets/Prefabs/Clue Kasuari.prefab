@@ -30,7 +30,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 314226868818657840}
+  - {fileID: 7162795502502780356}
   - {fileID: 6518980342712770200}
   - {fileID: 3214296885211440623}
   - {fileID: 5146210394650734613}
@@ -115,7 +115,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 670, y: -53.00003}
+  m_AnchoredPosition: {x: 670, y: 11.630066}
   m_SizeDelta: {x: 160, y: 160}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3145365977352264800
@@ -969,7 +969,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 8097320236610130188, guid: a610ba50da071f54ab1c93c22154358b, type: 3}
+  m_Sprite: {fileID: -2263737645027842855, guid: b0b842d78fa4fd24ebf818e3d0ae08cd, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1264,7 +1264,7 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: -0.08437824, y: -0.08114147}
   m_Radius: 4.686826
---- !u!1 &6189195136105168559
+--- !u!1 &5705827617810933156
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1272,9 +1272,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 314226868818657840}
-  - component: {fileID: 7548785924728458684}
-  - component: {fileID: 5660780875690781077}
+  - component: {fileID: 7162795502502780356}
+  - component: {fileID: 231689489790792538}
+  - component: {fileID: 5796508566191304099}
   m_Layer: 5
   m_Name: Kamera (1)
   m_TagString: Untagged
@@ -1282,40 +1282,40 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &314226868818657840
+--- !u!224 &7162795502502780356
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6189195136105168559}
+  m_GameObject: {fileID: 5705827617810933156}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.121259995, y: 0.121259995, z: 0.121259995}
+  m_LocalScale: {x: 1.48, y: 1.48, z: 1.48}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 8330048046133439910}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.2388916, y: 37.321655}
-  m_SizeDelta: {x: 15764, y: 8291.035}
+  m_AnchoredPosition: {x: 0, y: 14}
+  m_SizeDelta: {x: 1297.3, y: 445.2583}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &7548785924728458684
+--- !u!222 &231689489790792538
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6189195136105168559}
+  m_GameObject: {fileID: 5705827617810933156}
   m_CullTransparentMesh: 1
---- !u!114 &5660780875690781077
+--- !u!114 &5796508566191304099
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6189195136105168559}
+  m_GameObject: {fileID: 5705827617810933156}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -1329,7 +1329,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 3271278756644949376, guid: 84c0007043e4e5949b6836d93c496652, type: 3}
+  m_Sprite: {fileID: -9204957565779188351, guid: 033dd9bfb275cef47beb8a379a409b3b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1449,7 +1449,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -683, y: -53}
+  m_AnchoredPosition: {x: -683, y: 11.630066}
   m_SizeDelta: {x: 160, y: 160}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7557958352550205947
