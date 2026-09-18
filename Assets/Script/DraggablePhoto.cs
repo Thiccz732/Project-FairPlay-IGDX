@@ -17,16 +17,14 @@ public class DraggablePhoto : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
         canvasGroup = GetComponent<CanvasGroup>();
         rectTransform = GetComponent<RectTransform>();
         
-        // PERBAIKAN: Ingat posisi asli HANYA SEKALI saat game pertama kali dijalankan
         originalAnchoredPosition = rectTransform.anchoredPosition; 
     }
 
     private void OnEnable()
     {
-        // PERBAIKAN: Setiap kali buku dibuka (untuk hewan ke-2, ke-3, dst), paksa foto pulang ke posisi kiri!
         rectTransform.anchoredPosition = originalAnchoredPosition; 
         
-        isMatched = false; // Buka kuncian foto
+        isMatched = false; 
         canvasGroup.alpha = 1f;
         canvasGroup.blocksRaycasts = true;
     }
@@ -34,11 +32,6 @@ public class DraggablePhoto : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
     public void OnBeginDrag(PointerEventData eventData)
     {
         if (isMatched) return; 
-
-        if (AudioManager.instance != null)
-        {
-            AudioManager.instance.PlaySFX(AudioManager.instance.dragFotoSound);
-        }
 
         canvasGroup.alpha = 0.6f;
         canvasGroup.blocksRaycasts = false;
@@ -64,15 +57,10 @@ public class DraggablePhoto : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
         {
             RectTransform targetSlot = targetSlotObj.GetComponent<RectTransform>();
 
-            if (targetSlot != null && Vector2.Distance(rectTransform.anchoredPosition, targetSlot.anchoredPosition) <= 75f)
+            if (targetSlot != null && Vector2.Distance(transform.position, targetSlot.position) <= 50f)
             {
-                rectTransform.anchoredPosition = targetSlot.anchoredPosition;
+                transform.position = targetSlot.position; 
                 isMatched = true; 
-
-                if (AudioManager.instance != null)
-                {
-                    AudioManager.instance.PlaySFX(AudioManager.instance.snapFotoSound);
-                }
 
                 if (GameManager.instance != null) GameManager.instance.AddMatchedPhoto();
                 return; 
