@@ -22,7 +22,10 @@ public class ClueInteract : MonoBehaviour
     private Image whiteFlash;       
     private PlayerController player; 
     
+    // --- PERBAIKAN: Pisahkan variabel untuk Radar dan RadarUI ---
     private GameObject radarUtama; 
+    private GameObject radarUI; 
+    
     private GameObject joystickUI; 
     private GameObject backgroundUI; 
     private GameObject finalPanelUI; 
@@ -68,11 +71,17 @@ public class ClueInteract : MonoBehaviour
         GameObject canvasObj = GameObject.Find("Canvas");
         if (canvasObj != null)
         {
+            // --- PERBAIKAN: Cari kedua objek Radar di dalam Canvas ---
             Transform radarTransform = canvasObj.transform.Find("Radar");
             if (radarTransform != null) radarUtama = radarTransform.gameObject;
+            
+            Transform radarUITransform = canvasObj.transform.Find("RadarUI");
+            if (radarUITransform != null) radarUI = radarUITransform.gameObject;
         }
         
-        if (radarUtama == null) radarUtama = GameObject.Find("RadarUI");
+        // Fallback jika tidak ketemu di bawah Canvas
+        if (radarUtama == null) radarUtama = GameObject.Find("Radar");
+        if (radarUI == null) radarUI = GameObject.Find("RadarUI");
 
         joystickUI = GameObject.Find("Joystick_BG");
         backgroundUI = GameObject.Find("Background"); 
@@ -167,7 +176,10 @@ public class ClueInteract : MonoBehaviour
 
         if (clueCamera != null) clueCamera.SetActive(true); 
         
+        // --- PERBAIKAN: Matikan kedua UI Radar saat kamera aktif ---
         if (radarUtama != null) radarUtama.SetActive(false);
+        if (radarUI != null) radarUI.SetActive(false);
+        
         if (joystickUI != null) joystickUI.SetActive(false);
         if (backgroundUI != null) backgroundUI.SetActive(false); 
         if (finalPanelUI != null) finalPanelUI.SetActive(false); 
@@ -196,7 +208,10 @@ public class ClueInteract : MonoBehaviour
         
         if (!isGameEnding) 
         {
+            // --- PERBAIKAN: Nyalakan kembali kedua UI Radar ---
             if (radarUtama != null) radarUtama.SetActive(true);
+            if (radarUI != null) radarUI.SetActive(true);
+            
             if (joystickUI != null) joystickUI.SetActive(true);
             if (backgroundUI != null) backgroundUI.SetActive(true); 
             if (finalPanelUI != null) finalPanelUI.SetActive(true); 
@@ -218,10 +233,8 @@ public class ClueInteract : MonoBehaviour
         if (backgroundUI != null) backgroundUI.SetActive(false); 
         if (finalPanelUI != null) finalPanelUI.SetActive(false); 
 
-        // Matikan seluruh objek ClueCamera agar NVG dan filter ikut hilang
         if (clueCamera != null) clueCamera.SetActive(false); 
         
-        // Matikan tombol pause dari PauseManager
         if (PauseManager.instance != null && PauseManager.instance.iconTombolPause != null)
         {
             PauseManager.instance.iconTombolPause.gameObject.SetActive(false);
@@ -235,7 +248,6 @@ public class ClueInteract : MonoBehaviour
 
         Sprite newSnapshot = Sprite.Create(snapshotTex, new Rect(0, 0, snapshotTex.width, snapshotTex.height), new Vector2(0.5f, 0.5f));
 
-        // Nyalakan kembali kamera untuk memutar flash
         if (clueCamera != null) clueCamera.SetActive(true);
 
         if (whiteFlash != null)
@@ -252,7 +264,6 @@ public class ClueInteract : MonoBehaviour
             }
         }
         
-        // Nyalakan kembali tombol pause
         if (PauseManager.instance != null && PauseManager.instance.iconTombolPause != null)
         {
             PauseManager.instance.iconTombolPause.gameObject.SetActive(true);
