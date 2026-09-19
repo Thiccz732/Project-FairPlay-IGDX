@@ -7930,8 +7930,8 @@ RectTransform:
   - {fileID: 1006901977}
   - {fileID: 118665049}
   - {fileID: 1068499892}
-  - {fileID: 406377644}
   - {fileID: 1836054905}
+  - {fileID: 406377644}
   - {fileID: 373297277}
   - {fileID: 1429012537}
   m_Father: {fileID: 0}
@@ -10522,6 +10522,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 507cab3c72bb77a4286bef4007c29c5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  currentLevelNumber: 3
   animalStages:
   - namaHewan: Walabi Semak
     animalPrefab: {fileID: 7718305887417924496, guid: 42ffc725c847669428a344a59f915167, type: 3}

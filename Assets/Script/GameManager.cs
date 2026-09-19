@@ -20,6 +20,9 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
+    [Header("Identitas Level (Isi di Inspector)")]
+    public int currentLevelNumber = 1; // Level 1 diisi 1, Level 2 diisi 2, dst.
+
     [Header("Sistem Urutan Hewan (Tahapan Level)")]
     public AnimalStage[] animalStages; 
     private int currentStageIndex = 0; 
@@ -317,9 +320,20 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            PlayerPrefs.SetInt("LevelUnlocked", 2); 
+            // 1. Simpan bahwa Level ini sudah TAMAT (Completed)
+            PlayerPrefs.SetInt("LevelCompleted", currentLevelNumber);
+
+            // 2. Buka level berikutnya HANYA jika level selanjutnya belum terbuka
+            int levelTerbukaSaatIni = PlayerPrefs.GetInt("LevelUnlocked", 1);
+            if (currentLevelNumber + 1 > levelTerbukaSaatIni)
+            {
+                PlayerPrefs.SetInt("LevelUnlocked", currentLevelNumber + 1);
+            }
+
+            // 3. Simpan permanen ke PlayerPrefs
             PlayerPrefs.Save();
 
+            // 4. Pindah ke Scene berikutnya / Menu Distrik
             if (!string.IsNullOrEmpty(nextSceneName)) SceneManager.LoadScene(nextSceneName);
         }
     }

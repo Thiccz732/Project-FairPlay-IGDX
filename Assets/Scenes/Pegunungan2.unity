@@ -9740,8 +9740,8 @@ RectTransform:
   - {fileID: 2052626694}
   - {fileID: 1651684331}
   - {fileID: 253304436}
-  - {fileID: 1610010324}
   - {fileID: 189570804}
+  - {fileID: 1610010324}
   - {fileID: 300839058}
   - {fileID: 904919089}
   m_Father: {fileID: 0}
@@ -10656,6 +10656,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 507cab3c72bb77a4286bef4007c29c5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  currentLevelNumber: 4
   animalStages:
   - namaHewan: Kangguru Pohon
     animalPrefab: {fileID: 7718305887417924496, guid: 588f490d8afbf0243ab57ed17b65493b, type: 3}

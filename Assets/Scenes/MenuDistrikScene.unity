@@ -1343,19 +1343,24 @@ MonoBehaviour:
   levelDataList:
   - button: {fileID: 1678978757}
     spriteLocked: {fileID: 1637954016605795844, guid: 15fdec400b97adc4bbe05f2dd49d28fa, type: 3}
-    spriteUnlocked: {fileID: -7839807921522599401, guid: a016086d017587549a065a7ead1c2f5d, type: 3}
+    spriteUnlocked: {fileID: -585167557381579206, guid: 12aa12ac06821fa488c50195e582685d, type: 3}
+    spriteCompleted: {fileID: -5921441152551178366, guid: da1ef7cc208fdd34897224c7c6d65e9a, type: 3}
   - button: {fileID: 1458781186}
     spriteLocked: {fileID: 1637954016605795844, guid: 15fdec400b97adc4bbe05f2dd49d28fa, type: 3}
-    spriteUnlocked: {fileID: -7839807921522599401, guid: a016086d017587549a065a7ead1c2f5d, type: 3}
+    spriteUnlocked: {fileID: 499532027980867676, guid: 6782c5f4101a7264a9fc82d106457861, type: 3}
+    spriteCompleted: {fileID: -4269689171831539364, guid: aad3674f03c66274fa533637b0bb09dd, type: 3}
   - button: {fileID: 1221436591}
     spriteLocked: {fileID: 1637954016605795844, guid: 15fdec400b97adc4bbe05f2dd49d28fa, type: 3}
-    spriteUnlocked: {fileID: -7839807921522599401, guid: a016086d017587549a065a7ead1c2f5d, type: 3}
+    spriteUnlocked: {fileID: -3608025624613442897, guid: 4cfd248595d0555449420eafe985a601, type: 3}
+    spriteCompleted: {fileID: 7420080500666788733, guid: 8d0d5fbaaa3fa5f47814d3af388eed99, type: 3}
   - button: {fileID: 559340384}
     spriteLocked: {fileID: 1637954016605795844, guid: 15fdec400b97adc4bbe05f2dd49d28fa, type: 3}
-    spriteUnlocked: {fileID: -7839807921522599401, guid: a016086d017587549a065a7ead1c2f5d, type: 3}
+    spriteUnlocked: {fileID: -5897786992144674257, guid: 519779aa6c2b6a64e8bc7159e1ad9730, type: 3}
+    spriteCompleted: {fileID: 9192825302229162205, guid: 9da56446890b3f0468995de1733c56df, type: 3}
   - button: {fileID: 458922212}
     spriteLocked: {fileID: 1637954016605795844, guid: 15fdec400b97adc4bbe05f2dd49d28fa, type: 3}
-    spriteUnlocked: {fileID: -7839807921522599401, guid: a016086d017587549a065a7ead1c2f5d, type: 3}
+    spriteUnlocked: {fileID: 7209043928068515437, guid: a1553584703e5524ba1830e3acad2bc0, type: 3}
+    spriteCompleted: {fileID: 30944483610430819, guid: a02b19f586ad818418aac06855d696e3, type: 3}
   teksIndikatorDistrik: {fileID: 1089202509}
 --- !u!4 &1439259807
 Transform:

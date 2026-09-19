@@ -1505,6 +1505,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 507cab3c72bb77a4286bef4007c29c5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  currentLevelNumber: 2
   animalStages:
   - namaHewan: Kasuari
     animalPrefab: {fileID: 7718305887417924496, guid: b2a7d61388ddb3f438f0cd49cc728e56, type: 3}
@@ -9660,9 +9661,9 @@ RectTransform:
   - {fileID: 1023504889}
   - {fileID: 899757710}
   - {fileID: 621862445}
+  - {fileID: 238898380}
   - {fileID: 678298815}
   - {fileID: 1183284322}
-  - {fileID: 238898380}
   - {fileID: 119264383}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

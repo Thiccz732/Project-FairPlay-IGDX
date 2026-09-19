@@ -9633,8 +9633,8 @@ RectTransform:
   - {fileID: 984909751}
   - {fileID: 1651684331}
   - {fileID: 468450692}
-  - {fileID: 1220210458}
   - {fileID: 925929937}
+  - {fileID: 1220210458}
   - {fileID: 373033601}
   - {fileID: 904919089}
   m_Father: {fileID: 0}
@@ -10442,6 +10442,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 507cab3c72bb77a4286bef4007c29c5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  currentLevelNumber: 5
   animalStages:
   - namaHewan: Cendrawasih Botak
     animalPrefab: {fileID: 7718305887417924496, guid: 41f5f368888481544aacf5657c8f6e48, type: 3}
