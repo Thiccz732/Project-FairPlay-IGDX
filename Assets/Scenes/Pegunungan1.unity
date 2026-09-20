@@ -10617,14 +10617,14 @@ MonoBehaviour:
   animalStages:
   - namaHewan: Walabi Semak
     animalPrefab: {fileID: 7718305887417924496, guid: 42ffc725c847669428a344a59f915167, type: 3}
-    requiredClues: 1
+    requiredClues: 4
     animalSpawnPoints:
     - {fileID: 30647910}
     - {fileID: 1049293451}
     - {fileID: 250079114}
     - {fileID: 897045178}
-    timeLimit: 300
-  teleportInterval: 300
+    timeLimit: 110
+  teleportInterval: 25
   isTeleportPaused: 0
   teksSisaClue: {fileID: 2094648556}
   teksTimer: {fileID: 1097278469}

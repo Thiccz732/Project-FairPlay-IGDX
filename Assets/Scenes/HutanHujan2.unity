@@ -1509,14 +1509,14 @@ MonoBehaviour:
   animalStages:
   - namaHewan: Kasuari
     animalPrefab: {fileID: 7718305887417924496, guid: b2a7d61388ddb3f438f0cd49cc728e56, type: 3}
-    requiredClues: 1
+    requiredClues: 4
     animalSpawnPoints:
     - {fileID: 1489888799}
     - {fileID: 1373222698}
     - {fileID: 387029806}
     - {fileID: 1714879520}
-    timeLimit: 300
-  teleportInterval: 300
+    timeLimit: 150
+  teleportInterval: 25
   isTeleportPaused: 0
   teksSisaClue: {fileID: 1852924699}
   teksTimer: {fileID: 1383025800}

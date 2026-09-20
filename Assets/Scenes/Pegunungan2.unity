@@ -11566,8 +11566,8 @@ MonoBehaviour:
     - {fileID: 30647910}
     - {fileID: 30647910}
     - {fileID: 30647910}
-    timeLimit: 300
-  teleportInterval: 300
+    timeLimit: 100
+  teleportInterval: 25
   isTeleportPaused: 0
   teksSisaClue: {fileID: 1041893384}
   teksTimer: {fileID: 617231961}

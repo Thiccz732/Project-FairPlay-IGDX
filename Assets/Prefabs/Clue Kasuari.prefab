@@ -1407,7 +1407,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8286197217942639545}
         m_TargetAssemblyTypeName: ClueInteract, Assembly-CSharp
         m_MethodName: TombolJepretMobile
         m_Mode: 1
