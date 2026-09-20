@@ -309,7 +309,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 7476480294221172892}
         m_TargetAssemblyTypeName: CameraLensManager, Assembly-CSharp
         m_MethodName: SetNightVisionLens
         m_Mode: 1
@@ -747,8 +747,8 @@ MonoBehaviour:
   lensButtonPanel: {fileID: 7012372003966950111}
   clueCamera: {fileID: 0}
   currentLens: 0
-  wajibNormal: 1
-  wajibNightVision: 0
+  wajibNormal: 0
+  wajibNightVision: 1
   wajibMakro: 0
 --- !u!114 &3752783042639435368
 MonoBehaviour:
@@ -1558,7 +1558,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 7476480294221172892}
         m_TargetAssemblyTypeName: CameraLensManager, Assembly-CSharp
         m_MethodName: SetNormalLens
         m_Mode: 1

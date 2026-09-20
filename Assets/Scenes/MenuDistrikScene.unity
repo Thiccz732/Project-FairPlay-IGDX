@@ -1351,8 +1351,8 @@ MonoBehaviour:
     spriteCompleted: {fileID: -4269689171831539364, guid: aad3674f03c66274fa533637b0bb09dd, type: 3}
   - button: {fileID: 1221436591}
     spriteLocked: {fileID: 1637954016605795844, guid: 15fdec400b97adc4bbe05f2dd49d28fa, type: 3}
-    spriteUnlocked: {fileID: -3608025624613442897, guid: 4cfd248595d0555449420eafe985a601, type: 3}
-    spriteCompleted: {fileID: 7420080500666788733, guid: 8d0d5fbaaa3fa5f47814d3af388eed99, type: 3}
+    spriteUnlocked: {fileID: 7420080500666788733, guid: 8d0d5fbaaa3fa5f47814d3af388eed99, type: 3}
+    spriteCompleted: {fileID: -3608025624613442897, guid: 4cfd248595d0555449420eafe985a601, type: 3}
   - button: {fileID: 559340384}
     spriteLocked: {fileID: 1637954016605795844, guid: 15fdec400b97adc4bbe05f2dd49d28fa, type: 3}
     spriteUnlocked: {fileID: -5897786992144674257, guid: 519779aa6c2b6a64e8bc7159e1ad9730, type: 3}
