@@ -663,6 +663,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 265347560}
   m_CullTransparentMesh: 1
+--- !u!1 &316136942
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 316136944}
+  - component: {fileID: 316136943}
+  m_Layer: 0
+  m_Name: SetingPanel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &316136943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 316136942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a252c38e62dc62a4aac37fb6e9ad23dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SettingUIController
+  btnSoundImage: {fileID: 720105793}
+  btnMusicImage: {fileID: 643481817}
+--- !u!4 &316136944
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 316136942}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 450.68283, y: 261.7974, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &367468837
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -752,17 +798,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c09dabed64f0aed46bbda89d83828334, type: 3}
---- !u!114 &367468838 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2184565761540019349, guid: c09dabed64f0aed46bbda89d83828334, type: 3}
-  m_PrefabInstance: {fileID: 367468837}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0790c0b15d74fe54880c4661ccae7655, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AudioManager
 --- !u!1 &480101784
 GameObject:
   m_ObjectHideFlags: 0
@@ -1119,9 +1154,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 367468838}
-        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
-        m_MethodName: ToggleMusic
+      - m_Target: {fileID: 316136943}
+        m_TargetAssemblyTypeName: SettingUIController, Assembly-CSharp
+        m_MethodName: OnClickToggleMusic
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1251,9 +1286,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 367468838}
-        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
-        m_MethodName: ToggleSound
+      - m_Target: {fileID: 316136943}
+        m_TargetAssemblyTypeName: SettingUIController, Assembly-CSharp
+        m_MethodName: OnClickToggleSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2407,3 +2442,4 @@ SceneRoots:
   - {fileID: 1251510182}
   - {fileID: 367468837}
   - {fileID: 94056889}
+  - {fileID: 316136944}

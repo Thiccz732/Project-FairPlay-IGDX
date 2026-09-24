@@ -12,5 +12,11 @@ public class LevelBGM : MonoBehaviour
         {
             AudioManager.instance.GantiBGM(laguLevelIni);
         }
+        AudioSource bgm = GetComponent<AudioSource>();
+        if (bgm != null)
+        {
+            // Paksa AudioSource lokal ini ngikutin status mute dari PlayerPrefs!
+            bgm.mute = PlayerPrefs.GetInt("IsMusicMuted", 0) == 1;
+        }
     }
 }
