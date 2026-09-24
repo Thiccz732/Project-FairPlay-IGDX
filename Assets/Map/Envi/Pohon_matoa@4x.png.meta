@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d8554ac2514136a4fb5fc6341cc632bb
+guid: a0b0155266bcb0347b03ded8f6d39cdf
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4596958956889435466
-    second: Semak2_0
+      213: 7217388779882686705
+    second: Pohon_matoa@4x_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,40 +96,27 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Semak2_0
+      name: Pohon_matoa@4x_0
       rect:
         serializedVersion: 2
-        x: 77
-        y: 125
-        width: 891
-        height: 676
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 142
+        y: 13
+        width: 1409
+        height: 2635
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a4de178c0ddabcf30800000000000000
-      internalID: 4596958956889435466
+      spriteID: 1f82cce1bd0592460800000000000000
+      internalID: 7217388779882686705
       vertices: []
       indices: 
       edges: []
@@ -138,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: f4dc143dec0427c4bbd86b87695f9f9b
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Semak2_0: 4596958956889435466
+      Pohon_matoa@4x_0: 7217388779882686705
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

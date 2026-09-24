@@ -1,29 +1,32 @@
 using UnityEngine;
+using UnityEngine.Rendering; // Wajib ditambahkan agar sistem mengenali Sorting Group
 
-[RequireComponent(typeof(SpriteRenderer))]
 public class AutoSorting : MonoBehaviour
 {
-    private SpriteRenderer sr;
-
     [Header("Pengaturan")]
-    [Tooltip("Centang ini untuk benda yang tidak bergerak (seperti Batu/Pohon) agar game lebih enteng")]
     public bool isStatic = false;
-
-    [Tooltip("Geser angka ini jika tumpukannya masih kurang pas")]
     public float yOffset = 0f;
+
+    private SpriteRenderer sr;
+    private SortingGroup sg;
 
     private void Start()
     {
         sr = GetComponent<SpriteRenderer>();
+        sg = GetComponent<SortingGroup>(); // Mengambil komponen Sorting Group di objek induk
     }
 
     private void LateUpdate()
     {
-        // Script ini otomatis mengubah angka Order in Layer berdasarkan posisi Y
-        // Semakin ke bawah posisinya di layar, angkanya akan semakin besar
-        sr.sortingOrder = Mathf.RoundToInt((transform.position.y + yOffset) * -100f);
+        // Menghitung kedalaman
+        int order = Mathf.RoundToInt((transform.position.y + yOffset) * -100f);
 
-        // Jika ini benda mati, matikan script setelah menghitung 1 kali agar hemat baterai/CPU
+        // Jika objek ini punya SpriteRenderer (seperti Player), terapkan ke sana
+        if (sr != null) sr.sortingOrder = order;
+        
+        // Jika objek ini adalah Induk yang punya SortingGroup (seperti grup Semak+Batu), terapkan ke sana
+        if (sg != null) sg.sortingOrder = order;
+
         if (isStatic)
         {
             enabled = false; 
