@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: bf5da428f025c0a4e8734a354e09c08e
+guid: 997421c5b631bba4aaa46601321b68a1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2005240713839735213
-    second: Semak1_0
+      213: -1007889866435812457
+    second: Biom_Hutan2_gunung@4x_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,30 +96,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Semak1_0
+      name: Biom_Hutan2_gunung@4x_0
       rect:
         serializedVersion: 2
-        x: 82
-        y: 37
-        width: 892
-        height: 676
+        x: 0
+        y: 0
+        width: 2139
+        height: 831
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: da171951ecb04db10800000000000000
-      internalID: 2005240713839735213
+      spriteID: 793a06aa1814302f0800000000000000
+      internalID: -1007889866435812457
       vertices: []
       indices: 
       edges: []
@@ -138,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 4beb29efc6ed55a4ca454bc843704a70
+    spriteID: 53d020623a28d984289c06312e020c97
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Semak1_0: 2005240713839735213
+      Biom_Hutan2_gunung@4x_0: -1007889866435812457
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
