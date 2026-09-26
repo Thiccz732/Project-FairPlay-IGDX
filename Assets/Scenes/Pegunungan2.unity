@@ -934,7 +934,7 @@ ParticleSystemRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 50
+  m_SortingOrder: 30000
   m_MaskInteraction: 2
   m_RenderMode: 0
   m_MeshDistribution: 0
@@ -5700,7 +5700,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -23.3, y: 10.1, z: -0}
-  m_LocalScale: {x: 1.33, y: 28.852568, z: 1}
+  m_LocalScale: {x: 1.7423, y: 28.852568, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
