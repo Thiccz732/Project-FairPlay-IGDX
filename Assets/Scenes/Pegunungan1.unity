@@ -8084,16 +8084,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6737182363661903731, guid: 4c67da159c713be439b16262e4198be6, type: 3}
-      insertIndex: 4
-      addedObject: {fileID: 1693828717}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c67da159c713be439b16262e4198be6, type: 3}
---- !u!1 &527247570 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6737182363661903731, guid: 4c67da159c713be439b16262e4198be6, type: 3}
-  m_PrefabInstance: {fileID: 527247569}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &529062950
 GameObject:
   m_ObjectHideFlags: 0
@@ -8326,7 +8318,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -9.2, y: 6.2, z: 0}
-  m_LocalScale: {x: 130.8659, y: 72.95417, z: 43.78555}
+  m_LocalScale: {x: 157.70651, y: 87.917076, z: 52.76597}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -14208,20 +14200,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5474905476223209985, guid: 4c67da159c713be439b16262e4198be6, type: 3}
   m_PrefabInstance: {fileID: 527247569}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1693828717
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 527247570}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72c10443304b2f74a9a8669363b64074, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AutoSorting
-  isStatic: 0
-  yOffset: 0
 --- !u!1 &1695607046
 GameObject:
   m_ObjectHideFlags: 0
@@ -14449,7 +14427,7 @@ MonoBehaviour:
   - {fileID: -6467354976091625785, guid: 5228c6f942153384e90ca3d9ddb803d1, type: 3}
   - {fileID: -469517197277182853, guid: 5228c6f942153384e90ca3d9ddb803d1, type: 3}
   minimumDistance: 30
-  spawnAreaSize: {x: 115.5, y: 54.2}
+  spawnAreaSize: {x: 140.7, y: 78.8}
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 512

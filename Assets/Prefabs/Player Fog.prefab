@@ -5216,6 +5216,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5474905476223209985}
   - component: {fileID: 6792933023798189980}
+  - component: {fileID: -7488780549236923021}
   - component: {fileID: 2867072932897643846}
   - component: {fileID: 3095467826809871211}
   - component: {fileID: 7969995680450942496}
@@ -5305,6 +5306,20 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &-7488780549236923021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6737182363661903731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72c10443304b2f74a9a8669363b64074, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AutoSorting
+  isStatic: 0
+  yOffset: 0
 --- !u!50 &2867072932897643846
 Rigidbody2D:
   serializedVersion: 5
@@ -5385,6 +5400,7 @@ MonoBehaviour:
   acceleration: 40
   deceleration: 50
   walkParticle: {fileID: 1930447958194127560}
+  stepInterval: 0.35
 --- !u!95 &3613125073867005808
 Animator:
   serializedVersion: 7
