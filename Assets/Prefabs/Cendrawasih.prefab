@@ -1062,7 +1062,7 @@ RectTransform:
   m_GameObject: {fileID: 4483495738749320964}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.88685, y: 0.88685, z: 0.88685}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 6058249472144259143}
@@ -1660,8 +1660,7 @@ MonoBehaviour:
   viewRadius: 5
   viewAngle: 90
   fovVisual: {fileID: 7031186586242290382}
-  sweepAngle: 45
-  sweepSpeed: 2
+  rotationSpeed: 50
   playerMask:
     serializedVersion: 2
     m_Bits: 64
