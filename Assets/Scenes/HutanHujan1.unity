@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 15168268}
   - component: {fileID: 15168270}
   - component: {fileID: 15168269}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Untitled59_20260802175721_12 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -238,7 +238,7 @@ GameObject:
   - component: {fileID: 19926906}
   - component: {fileID: 19926905}
   - component: {fileID: 19926904}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Batu2_0 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5225,7 +5225,7 @@ Transform:
   m_GameObject: {fileID: 86622495}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.2, y: 13.4, z: -0}
+  m_LocalPosition: {x: 6.2, y: 14.7, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5317,7 +5317,7 @@ GameObject:
   - component: {fileID: 153289203}
   - component: {fileID: 153289204}
   - component: {fileID: 153289205}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Semak2_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5883,10 +5883,10 @@ MonoBehaviour:
   - {fileID: -7224218902949251785, guid: 318f8588097e4c34f9c79d31aaea6b63, type: 3}
   - {fileID: -8705903866655950142, guid: 318f8588097e4c34f9c79d31aaea6b63, type: 3}
   minimumDistance: 10
-  spawnAreaSize: {x: 57.5, y: 24.7}
+  spawnAreaSize: {x: 64.9, y: 39.2}
   obstacleLayer:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 640
   safeRadius: 0.5
 --- !u!4 &279987351
 Transform:
@@ -5929,7 +5929,7 @@ Transform:
   m_GameObject: {fileID: 335934640}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 18.76, y: -3.43, z: 0}
+  m_LocalPosition: {x: -8.5, y: 17.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6021,7 +6021,7 @@ GameObject:
   - component: {fileID: 395897063}
   - component: {fileID: 395897065}
   - component: {fileID: 395897064}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Untitled59_20260802175721_12 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6206,7 +6206,7 @@ GameObject:
   - component: {fileID: 451711461}
   - component: {fileID: 451711463}
   - component: {fileID: 451711464}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Untitled59_20260802175721_12 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6301,6 +6301,159 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AutoSorting
   isStatic: 1
   yOffset: 0
+--- !u!1 &456968145
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 456968146}
+  - component: {fileID: 456968149}
+  - component: {fileID: 456968148}
+  - component: {fileID: 456968147}
+  m_Layer: 7
+  m_Name: Pohon_gede_1@4x_0 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &456968146
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 456968145}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 16.32, y: -23.78, z: 0}
+  m_LocalScale: {x: 0.2929, y: 0.2929, z: 0.2929}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1216419702}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &456968147
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 456968145}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.7978196, y: 6.720971}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 51.02665, y: 60.97}
+    newSize: {x: 51.02665, y: 60.97}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 13.011268, y: 5.471428}
+  m_EdgeRadius: 0
+--- !u!114 &456968148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 456968145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72c10443304b2f74a9a8669363b64074, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AutoSorting
+  isStatic: 1
+  yOffset: 3
+--- !u!212 &456968149
+SpriteRenderer:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 456968145}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_Sprite: {fileID: 2191348033838075587, guid: 3dc25575362f29743a572de345e70aca, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 51.02665, y: 60.97}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_SpriteSortPoint: 0
 --- !u!1 &481287705
 GameObject:
   m_ObjectHideFlags: 0
@@ -6314,7 +6467,7 @@ GameObject:
   - component: {fileID: 481287709}
   - component: {fileID: 481287708}
   - component: {fileID: 481287707}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Batu2_0 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6482,7 +6635,7 @@ GameObject:
   - component: {fileID: 483278491}
   - component: {fileID: 483278493}
   - component: {fileID: 483278492}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Untitled59_20260802175721_12 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6725,7 +6878,7 @@ GameObject:
   - component: {fileID: 493173117}
   - component: {fileID: 493173119}
   - component: {fileID: 493173118}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Untitled59_20260802175721_12 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7060,7 +7213,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 55
+    m_Bits: 247
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -7507,7 +7660,7 @@ Transform:
   m_GameObject: {fileID: 693263508}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 18.5, y: -2.86, z: 0}
+  m_LocalPosition: {x: -18.82, y: 5.33, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7729,7 +7882,7 @@ GameObject:
   - component: {fileID: 889000498}
   - component: {fileID: 889000500}
   - component: {fileID: 889000499}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Untitled59_20260802175721_12 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8299,7 +8452,7 @@ GameObject:
   - component: {fileID: 925405657}
   - component: {fileID: 925405659}
   - component: {fileID: 925405658}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Pohon_matoa@4x_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8452,7 +8605,7 @@ GameObject:
   - component: {fileID: 942324997}
   - component: {fileID: 942324999}
   - component: {fileID: 942324998}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Batu3_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8620,7 +8773,7 @@ Transform:
   m_GameObject: {fileID: 955526627}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 17.58, y: -2.67, z: 0}
+  m_LocalPosition: {x: 14.6, y: 12.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9023,7 +9176,7 @@ Transform:
   m_GameObject: {fileID: 1068163172}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 17.61, y: -3.87, z: 0}
+  m_LocalPosition: {x: 34.43, y: -9.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9041,7 +9194,7 @@ GameObject:
   - component: {fileID: 1085955600}
   - component: {fileID: 1085955599}
   - component: {fileID: 1085955598}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Pohon_merbau@4x_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9193,7 +9346,7 @@ GameObject:
   - component: {fileID: 1142466130}
   - component: {fileID: 1142466132}
   - component: {fileID: 1142466131}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Untitled59_20260802175721_12 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9374,7 +9527,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1216419702}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Envi
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9401,6 +9554,7 @@ Transform:
   - {fileID: 19926903}
   - {fileID: 1085955597}
   - {fileID: 1902942105}
+  - {fileID: 456968146}
   - {fileID: 925405656}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9475,7 +9629,7 @@ MonoBehaviour:
   animalStages:
   - namaHewan: Cendrawasih
     animalPrefab: {fileID: 7718305887417924496, guid: 3fbb0f1e2237d3444ad660139cca7310, type: 3}
-    requiredClues: 4
+    requiredClues: 1
     animalSpawnPoints:
     - {fileID: 1068163173}
     - {fileID: 335934641}
@@ -9484,6 +9638,7 @@ MonoBehaviour:
     timeLimit: 150
   teleportInterval: 25
   isTeleportPaused: 0
+  isPhotoModeActive: 0
   teksSisaClue: {fileID: 906055551}
   teksTimer: {fileID: 920861621}
   finalPanelUI: {fileID: 1245040330}
@@ -9914,7 +10069,7 @@ GameObject:
   - component: {fileID: 1287725117}
   - component: {fileID: 1287725119}
   - component: {fileID: 1287725118}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Semak2_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10415,7 +10570,7 @@ GameObject:
   - component: {fileID: 1340019231}
   - component: {fileID: 1340019232}
   - component: {fileID: 1340019233}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Untitled59_20260802175721_12 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11054,7 +11209,7 @@ GameObject:
   - component: {fileID: 1504370033}
   - component: {fileID: 1504370035}
   - component: {fileID: 1504370034}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Semak2_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11523,7 +11678,7 @@ GameObject:
   - component: {fileID: 1658468892}
   - component: {fileID: 1658468891}
   - component: {fileID: 1658468890}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Batu2_0 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12548,7 +12703,7 @@ GameObject:
   - component: {fileID: 1813495381}
   - component: {fileID: 1813495382}
   - component: {fileID: 1813495383}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Batu2_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12716,7 +12871,7 @@ GameObject:
   - component: {fileID: 1830038127}
   - component: {fileID: 1830038129}
   - component: {fileID: 1830038128}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Untitled59_20260802175721_1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12915,7 +13070,7 @@ GameObject:
   - component: {fileID: 1902942106}
   - component: {fileID: 1902942107}
   - component: {fileID: 1902942108}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Pohon_gede_1@4x_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13234,7 +13389,7 @@ GameObject:
   - component: {fileID: 1919413120}
   - component: {fileID: 1919413122}
   - component: {fileID: 1919413121}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Semak2_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13879,7 +14034,7 @@ GameObject:
   - component: {fileID: 2108300980}
   - component: {fileID: 2108300981}
   - component: {fileID: 2108300982}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Untitled59_20260802175721_1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

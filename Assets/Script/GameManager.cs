@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour
     [Header("Pengaturan Hewan (Global)")]
     public float teleportInterval = 5f;
     [HideInInspector] public bool isTeleportPaused = false; 
+    [HideInInspector] public bool isPhotoModeActive = false; // Penanda mode foto
 
     [Header("UI Tracker (Teks yang Selalu Muncul)")] 
     public TextMeshProUGUI teksSisaClue; 
@@ -216,6 +217,14 @@ public class GameManager : MonoBehaviour
             }
 
             spawnedAnimalInstance = Instantiate(currentStage.animalPrefab, chosenSpawnPoint.position, Quaternion.identity);
+            
+            // Menyuntikkan titik kabur ke hewan
+            AnimalFOV fovScript = spawnedAnimalInstance.GetComponent<AnimalFOV>();
+            if (fovScript != null)
+            {
+                fovScript.SetEscapePoints(currentStage.animalSpawnPoints, chosenSpawnPoint);
+            }
+
             teleportCoroutine = StartCoroutine(AnimalTeleportRoutine(currentStage.animalSpawnPoints, chosenSpawnPoint));
         }
     }
@@ -320,20 +329,16 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            // 1. Simpan bahwa Level ini sudah TAMAT (Completed)
             PlayerPrefs.SetInt("LevelCompleted", currentLevelNumber);
 
-            // 2. Buka level berikutnya HANYA jika level selanjutnya belum terbuka
             int levelTerbukaSaatIni = PlayerPrefs.GetInt("LevelUnlocked", 1);
             if (currentLevelNumber + 1 > levelTerbukaSaatIni)
             {
                 PlayerPrefs.SetInt("LevelUnlocked", currentLevelNumber + 1);
             }
 
-            // 3. Simpan permanen ke PlayerPrefs
             PlayerPrefs.Save();
 
-            // 4. Pindah ke Scene berikutnya / Menu Distrik
             if (!string.IsNullOrEmpty(nextSceneName)) SceneManager.LoadScene(nextSceneName);
         }
     }
@@ -346,6 +351,7 @@ public class GameManager : MonoBehaviour
 
     public void ToggleModeFoto(bool isKameraAktif)
     {
+        isPhotoModeActive = isKameraAktif; // Menyimpan status kamera
         SetTrackerUIVisible(!isKameraAktif);
     }
 }

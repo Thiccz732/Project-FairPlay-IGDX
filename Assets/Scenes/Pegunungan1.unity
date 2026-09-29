@@ -119,6 +119,63 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &28081871
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5474905476223209985, guid: 97c8bbbd7e1f5c54dbe38dc05b10530d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5474905476223209985, guid: 97c8bbbd7e1f5c54dbe38dc05b10530d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5474905476223209985, guid: 97c8bbbd7e1f5c54dbe38dc05b10530d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5474905476223209985, guid: 97c8bbbd7e1f5c54dbe38dc05b10530d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5474905476223209985, guid: 97c8bbbd7e1f5c54dbe38dc05b10530d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5474905476223209985, guid: 97c8bbbd7e1f5c54dbe38dc05b10530d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5474905476223209985, guid: 97c8bbbd7e1f5c54dbe38dc05b10530d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5474905476223209985, guid: 97c8bbbd7e1f5c54dbe38dc05b10530d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5474905476223209985, guid: 97c8bbbd7e1f5c54dbe38dc05b10530d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5474905476223209985, guid: 97c8bbbd7e1f5c54dbe38dc05b10530d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6737182363661903731, guid: 97c8bbbd7e1f5c54dbe38dc05b10530d, type: 3}
+      propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 97c8bbbd7e1f5c54dbe38dc05b10530d, type: 3}
 --- !u!1 &30647909
 GameObject:
   m_ObjectHideFlags: 0
@@ -233,7 +290,7 @@ GameObject:
   - component: {fileID: 41809121}
   - component: {fileID: 41809123}
   - component: {fileID: 41809122}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Untitled59_20260802175721_12 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -340,7 +397,7 @@ GameObject:
   - component: {fileID: 60588640}
   - component: {fileID: 60588639}
   - component: {fileID: 60588638}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Pohon_gede_1@4x_0 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -572,7 +629,7 @@ GameObject:
   - component: {fileID: 90499598}
   - component: {fileID: 90499597}
   - component: {fileID: 90499596}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Pohon_matoa@4x_0 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5712,7 +5769,7 @@ GameObject:
   - component: {fileID: 206304257}
   - component: {fileID: 206304256}
   - component: {fileID: 206304255}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Pohon_matoa@4x_0 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5864,7 +5921,7 @@ GameObject:
   - component: {fileID: 206944399}
   - component: {fileID: 206944401}
   - component: {fileID: 206944400}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Semak2_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6020,7 +6077,7 @@ GameObject:
   - component: {fileID: 248351672}
   - component: {fileID: 248351671}
   - component: {fileID: 248351670}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Pohon_gede_1@4x_0 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6897,7 +6954,7 @@ GameObject:
   - component: {fileID: 399507439}
   - component: {fileID: 399507441}
   - component: {fileID: 399507440}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Untitled59_20260802175721_12 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7159,7 +7216,7 @@ GameObject:
   - component: {fileID: 429715140}
   - component: {fileID: 429715142}
   - component: {fileID: 429715141}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Untitled59_20260802175721_1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7266,7 +7323,7 @@ GameObject:
   - component: {fileID: 434981647}
   - component: {fileID: 434981646}
   - component: {fileID: 434981645}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: pohon kecil1@4x_0 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7419,7 +7476,7 @@ GameObject:
   - component: {fileID: 448745589}
   - component: {fileID: 448745588}
   - component: {fileID: 448745587}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Biom_Hutan2_gunung@4x_0 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7813,7 +7870,7 @@ GameObject:
   - component: {fileID: 471104890}
   - component: {fileID: 471104889}
   - component: {fileID: 471104888}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Biom_Hutan2_gunung@4x_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8029,63 +8086,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 489303400}
   m_CullTransparentMesh: 1
---- !u!1001 &527247569
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 5474905476223209985, guid: 4c67da159c713be439b16262e4198be6, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -5.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 5474905476223209985, guid: 4c67da159c713be439b16262e4198be6, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.23
-      objectReference: {fileID: 0}
-    - target: {fileID: 5474905476223209985, guid: 4c67da159c713be439b16262e4198be6, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5474905476223209985, guid: 4c67da159c713be439b16262e4198be6, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5474905476223209985, guid: 4c67da159c713be439b16262e4198be6, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5474905476223209985, guid: 4c67da159c713be439b16262e4198be6, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5474905476223209985, guid: 4c67da159c713be439b16262e4198be6, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5474905476223209985, guid: 4c67da159c713be439b16262e4198be6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5474905476223209985, guid: 4c67da159c713be439b16262e4198be6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5474905476223209985, guid: 4c67da159c713be439b16262e4198be6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6737182363661903731, guid: 4c67da159c713be439b16262e4198be6, type: 3}
-      propertyPath: m_Name
-      value: Player Fog
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 4c67da159c713be439b16262e4198be6, type: 3}
 --- !u!1 &529062950
 GameObject:
   m_ObjectHideFlags: 0
@@ -8097,7 +8097,7 @@ GameObject:
   - component: {fileID: 529062951}
   - component: {fileID: 529062953}
   - component: {fileID: 529062952}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Untitled59_20260802175721_12 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8785,7 +8785,7 @@ GameObject:
   - component: {fileID: 716106856}
   - component: {fileID: 716106855}
   - component: {fileID: 716106854}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Batu2_0 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9097,7 +9097,7 @@ GameObject:
   - component: {fileID: 803153729}
   - component: {fileID: 803153731}
   - component: {fileID: 803153730}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Semak1_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9205,7 +9205,7 @@ GameObject:
   - component: {fileID: 805164817}
   - component: {fileID: 805164816}
   - component: {fileID: 805164815}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Batu2_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9527,7 +9527,7 @@ GameObject:
   - component: {fileID: 836401888}
   - component: {fileID: 836401887}
   - component: {fileID: 836401886}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: pohon kecil1@4x_0 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9774,7 +9774,7 @@ GameObject:
   - component: {fileID: 882459057}
   - component: {fileID: 882459059}
   - component: {fileID: 882459058}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Untitled59_20260802175721_12 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10283,7 +10283,7 @@ GameObject:
   - component: {fileID: 975491065}
   - component: {fileID: 975491064}
   - component: {fileID: 975491063}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Pohon_matoa@4x_0 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10659,7 +10659,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 55
+    m_Bits: 247
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -10680,7 +10680,7 @@ Transform:
   m_GameObject: {fileID: 1010607379}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.15, y: -1.23, z: -10}
+  m_LocalPosition: {x: -4, y: -1.9, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10698,7 +10698,7 @@ GameObject:
   - component: {fileID: 1012345990}
   - component: {fileID: 1012345989}
   - component: {fileID: 1012345988}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Batu3_0 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10852,7 +10852,7 @@ GameObject:
   - component: {fileID: 1047989060}
   - component: {fileID: 1047989062}
   - component: {fileID: 1047989061}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Semak1_0 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11385,7 +11385,7 @@ GameObject:
   - component: {fileID: 1135529841}
   - component: {fileID: 1135529840}
   - component: {fileID: 1135529839}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: pohon kecil1@4x_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11703,6 +11703,11 @@ Transform:
   - {fileID: 346343150}
   m_Father: {fileID: 1172382488}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1271229695 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5474905476223209985, guid: 97c8bbbd7e1f5c54dbe38dc05b10530d, type: 3}
+  m_PrefabInstance: {fileID: 28081871}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1291878183
 GameObject:
   m_ObjectHideFlags: 0
@@ -11715,7 +11720,7 @@ GameObject:
   - component: {fileID: 1291878187}
   - component: {fileID: 1291878186}
   - component: {fileID: 1291878185}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Pohon_matoa@4x_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12062,7 +12067,7 @@ MonoBehaviour:
   m_StreamingVersion: 20241001
   m_LegacyPriority: 0
   Target:
-    TrackingTarget: {fileID: 1693828716}
+    TrackingTarget: {fileID: 1271229695}
     LookAtTarget: {fileID: 0}
     CustomLookAtTarget: 0
   Lens:
@@ -12094,7 +12099,7 @@ Transform:
   m_GameObject: {fileID: 1327143204}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.15, y: -1.23, z: -10}
+  m_LocalPosition: {x: -4, y: -1.9, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12111,7 +12116,7 @@ GameObject:
   - component: {fileID: 1372015126}
   - component: {fileID: 1372015128}
   - component: {fileID: 1372015127}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Untitled59_20260802175721_1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12330,7 +12335,7 @@ GameObject:
   - component: {fileID: 1457726788}
   - component: {fileID: 1457726787}
   - component: {fileID: 1457726786}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Pohon_matoa@4x_0 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12627,7 +12632,7 @@ GameObject:
   - component: {fileID: 1512839145}
   - component: {fileID: 1512839144}
   - component: {fileID: 1512839143}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Pohon_gede_1@4x_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12882,7 +12887,7 @@ GameObject:
   - component: {fileID: 1517826068}
   - component: {fileID: 1517826070}
   - component: {fileID: 1517826069}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: pohon pakis1@4x_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13207,7 +13212,7 @@ GameObject:
   - component: {fileID: 1547822426}
   - component: {fileID: 1547822428}
   - component: {fileID: 1547822427}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Semak2_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13313,7 +13318,7 @@ GameObject:
   - component: {fileID: 1553570508}
   - component: {fileID: 1553570510}
   - component: {fileID: 1553570509}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Semak1_0 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13496,7 +13501,7 @@ GameObject:
   - component: {fileID: 1609426187}
   - component: {fileID: 1609426186}
   - component: {fileID: 1609426185}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Batu2_0 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13664,7 +13669,7 @@ GameObject:
   - component: {fileID: 1643314558}
   - component: {fileID: 1643314560}
   - component: {fileID: 1643314559}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Semak2_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14052,7 +14057,7 @@ GameObject:
   - component: {fileID: 1690631775}
   - component: {fileID: 1690631774}
   - component: {fileID: 1690631773}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Batu3_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14195,11 +14200,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!4 &1693828716 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5474905476223209985, guid: 4c67da159c713be439b16262e4198be6, type: 3}
-  m_PrefabInstance: {fileID: 527247569}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1695607046
 GameObject:
   m_ObjectHideFlags: 0
@@ -14430,7 +14430,7 @@ MonoBehaviour:
   spawnAreaSize: {x: 140.7, y: 78.8}
   obstacleLayer:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 640
   safeRadius: 0.5
 --- !u!1 &1753935243
 GameObject:
@@ -14478,7 +14478,7 @@ GameObject:
   - component: {fileID: 1776021795}
   - component: {fileID: 1776021797}
   - component: {fileID: 1776021796}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Untitled59_20260802175721_12 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15008,7 +15008,7 @@ MonoBehaviour:
   animalStages:
   - namaHewan: Walabi Semak
     animalPrefab: {fileID: 7718305887417924496, guid: 42ffc725c847669428a344a59f915167, type: 3}
-    requiredClues: 4
+    requiredClues: 1
     animalSpawnPoints:
     - {fileID: 30647910}
     - {fileID: 1049293451}
@@ -15017,6 +15017,7 @@ MonoBehaviour:
     timeLimit: 110
   teleportInterval: 25
   isTeleportPaused: 0
+  isPhotoModeActive: 0
   teksSisaClue: {fileID: 2094648556}
   teksTimer: {fileID: 1097278469}
   finalPanelUI: {fileID: 373297276}
@@ -15053,7 +15054,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1914822820}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Envi
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15108,7 +15109,7 @@ GameObject:
   - component: {fileID: 1916791926}
   - component: {fileID: 1916791928}
   - component: {fileID: 1916791927}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Untitled59_20260802175721_12 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15214,7 +15215,7 @@ GameObject:
   - component: {fileID: 1927316841}
   - component: {fileID: 1927316843}
   - component: {fileID: 1927316842}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Untitled59_20260802175721_1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15320,7 +15321,7 @@ GameObject:
   - component: {fileID: 1943133854}
   - component: {fileID: 1943133856}
   - component: {fileID: 1943133855}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Untitled59_20260802175721_1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15927,8 +15928,8 @@ SceneRoots:
   - {fileID: 1705585825}
   - {fileID: 1327143208}
   - {fileID: 87320112}
+  - {fileID: 28081871}
   - {fileID: 1736952177}
-  - {fileID: 527247569}
   - {fileID: 973237248}
   - {fileID: 456681228}
   - {fileID: 648302376}

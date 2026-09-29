@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 25335488}
   - component: {fileID: 25335490}
   - component: {fileID: 25335489}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Untitled59_20260802175721_12 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -250,7 +250,7 @@ Transform:
   m_GameObject: {fileID: 30647909}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -69.1, y: -4.3, z: 0}
+  m_LocalPosition: {x: -84.2, y: -1.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -268,7 +268,7 @@ GameObject:
   - component: {fileID: 77330924}
   - component: {fileID: 77330923}
   - component: {fileID: 77330922}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Pohon_gede_1@4x_0 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -499,7 +499,7 @@ GameObject:
   - component: {fileID: 128826032}
   - component: {fileID: 128826034}
   - component: {fileID: 128826033}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Semak1_0 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -820,7 +820,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 163510317}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Envi
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5874,7 +5874,7 @@ Transform:
   m_GameObject: {fileID: 250079113}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.3, y: 34.5, z: 0}
+  m_LocalPosition: {x: 13.4, y: 50.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6043,7 +6043,7 @@ GameObject:
   - component: {fileID: 263446457}
   - component: {fileID: 263446459}
   - component: {fileID: 263446458}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: pohon pakis1@4x_0 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6149,7 +6149,7 @@ GameObject:
   - component: {fileID: 270694484}
   - component: {fileID: 270694486}
   - component: {fileID: 270694485}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Semak2_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6724,7 +6724,7 @@ GameObject:
   - component: {fileID: 346453772}
   - component: {fileID: 346453771}
   - component: {fileID: 346453770}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Pohon_gede_1@4x_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6980,7 +6980,7 @@ GameObject:
   - component: {fileID: 380702158}
   - component: {fileID: 380702157}
   - component: {fileID: 380702156}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: pohon kecil1@4x_0 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7234,7 +7234,7 @@ GameObject:
   - component: {fileID: 434911438}
   - component: {fileID: 434911440}
   - component: {fileID: 434911439}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Semak1_0 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7798,7 +7798,7 @@ GameObject:
   - component: {fileID: 488431668}
   - component: {fileID: 488431667}
   - component: {fileID: 488431666}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Pohon_gede_1@4x_0 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8291,7 +8291,7 @@ GameObject:
   - component: {fileID: 544162515}
   - component: {fileID: 544162514}
   - component: {fileID: 544162513}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Biom_Hutan2_gunung@4x_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8443,7 +8443,7 @@ GameObject:
   - component: {fileID: 582390544}
   - component: {fileID: 582390546}
   - component: {fileID: 582390545}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Untitled59_20260802175721_12 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8839,7 +8839,7 @@ GameObject:
   - component: {fileID: 681322412}
   - component: {fileID: 681322414}
   - component: {fileID: 681322413}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Untitled59_20260802175721_12 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9020,7 +9020,7 @@ GameObject:
   - component: {fileID: 688461265}
   - component: {fileID: 688461267}
   - component: {fileID: 688461266}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Semak1_0 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9201,7 +9201,7 @@ GameObject:
   - component: {fileID: 811372952}
   - component: {fileID: 811372954}
   - component: {fileID: 811372953}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Semak2_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9307,7 +9307,7 @@ GameObject:
   - component: {fileID: 837449876}
   - component: {fileID: 837449878}
   - component: {fileID: 837449877}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Untitled59_20260802175721_1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9413,7 +9413,7 @@ GameObject:
   - component: {fileID: 850366334}
   - component: {fileID: 850366336}
   - component: {fileID: 850366335}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Semak1_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9521,7 +9521,7 @@ GameObject:
   - component: {fileID: 859685164}
   - component: {fileID: 859685163}
   - component: {fileID: 859685162}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Batu2_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9691,7 +9691,7 @@ GameObject:
   - component: {fileID: 868190039}
   - component: {fileID: 868190038}
   - component: {fileID: 868190037}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Batu2_0 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9873,7 +9873,7 @@ Transform:
   m_GameObject: {fileID: 897045177}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.3, y: -10.8, z: 0}
+  m_LocalPosition: {x: -3.4, y: -12.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10212,7 +10212,7 @@ GameObject:
   - component: {fileID: 932502573}
   - component: {fileID: 932502575}
   - component: {fileID: 932502574}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Untitled59_20260802175721_12 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10538,7 +10538,7 @@ GameObject:
   - component: {fileID: 972617989}
   - component: {fileID: 972617991}
   - component: {fileID: 972617990}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Semak2_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10793,7 +10793,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 55
+    m_Bits: 247
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -10968,7 +10968,7 @@ GameObject:
   - component: {fileID: 1042670097}
   - component: {fileID: 1042670099}
   - component: {fileID: 1042670098}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: pohon pakis1@4x_0 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11300,7 +11300,7 @@ Transform:
   m_GameObject: {fileID: 1049293450}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -43.5, y: 30.7, z: 0}
+  m_LocalPosition: {x: -89.97, y: 33.77, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11317,7 +11317,7 @@ GameObject:
   - component: {fileID: 1050998621}
   - component: {fileID: 1050998623}
   - component: {fileID: 1050998622}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Untitled59_20260802175721_12 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11514,7 +11514,7 @@ GameObject:
   - component: {fileID: 1067219912}
   - component: {fileID: 1067219911}
   - component: {fileID: 1067219910}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Pohon_matoa@4x_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11667,7 +11667,7 @@ GameObject:
   - component: {fileID: 1081431614}
   - component: {fileID: 1081431613}
   - component: {fileID: 1081431612}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Pohon_gede_1@4x_0 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11820,7 +11820,7 @@ GameObject:
   - component: {fileID: 1093231755}
   - component: {fileID: 1093231754}
   - component: {fileID: 1093231753}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Pohon_matoa@4x_0 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12304,7 +12304,7 @@ GameObject:
   - component: {fileID: 1299398294}
   - component: {fileID: 1299398293}
   - component: {fileID: 1299398292}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Pohon_gede_1@4x_0 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12728,7 +12728,7 @@ GameObject:
   - component: {fileID: 1422634849}
   - component: {fileID: 1422634851}
   - component: {fileID: 1422634850}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Untitled59_20260802175721_1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12834,7 +12834,7 @@ GameObject:
   - component: {fileID: 1464114022}
   - component: {fileID: 1464114024}
   - component: {fileID: 1464114023}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Untitled59_20260802175721_1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12941,7 +12941,7 @@ GameObject:
   - component: {fileID: 1488794441}
   - component: {fileID: 1488794440}
   - component: {fileID: 1488794439}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Biom_Hutan2_gunung@4x_0 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13477,7 +13477,7 @@ GameObject:
   - component: {fileID: 1579621863}
   - component: {fileID: 1579621865}
   - component: {fileID: 1579621864}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Untitled59_20260802175721_1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13584,7 +13584,7 @@ GameObject:
   - component: {fileID: 1593675334}
   - component: {fileID: 1593675333}
   - component: {fileID: 1593675332}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Batu3_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14071,7 +14071,7 @@ GameObject:
   - component: {fileID: 1686550050}
   - component: {fileID: 1686550052}
   - component: {fileID: 1686550051}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: pohon pakis1@4x_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14389,7 +14389,7 @@ MonoBehaviour:
   spawnAreaSize: {x: 153.7, y: 84}
   obstacleLayer:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 640
   safeRadius: 0.5
 --- !u!1 &1740240945
 GameObject:
@@ -14707,7 +14707,7 @@ GameObject:
   - component: {fileID: 1833677775}
   - component: {fileID: 1833677774}
   - component: {fileID: 1833677773}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: pohon kecil1@4x_0 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14860,7 +14860,7 @@ GameObject:
   - component: {fileID: 1836350630}
   - component: {fileID: 1836350629}
   - component: {fileID: 1836350628}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Batu3_0 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15016,7 +15016,7 @@ GameObject:
   - component: {fileID: 1836850457}
   - component: {fileID: 1836850456}
   - component: {fileID: 1836850455}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Batu2_0 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15185,7 +15185,7 @@ GameObject:
   - component: {fileID: 1854008174}
   - component: {fileID: 1854008173}
   - component: {fileID: 1854008172}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Pohon_matoa@4x_0 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15338,7 +15338,7 @@ GameObject:
   - component: {fileID: 1861943176}
   - component: {fileID: 1861943175}
   - component: {fileID: 1861943174}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Pohon_matoa@4x_0 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15590,7 +15590,7 @@ MonoBehaviour:
   animalStages:
   - namaHewan: Kangguru Pohon
     animalPrefab: {fileID: 7718305887417924496, guid: 588f490d8afbf0243ab57ed17b65493b, type: 3}
-    requiredClues: 4
+    requiredClues: 1
     animalSpawnPoints:
     - {fileID: 30647910}
     - {fileID: 30647910}
@@ -15599,6 +15599,7 @@ MonoBehaviour:
     timeLimit: 100
   teleportInterval: 25
   isTeleportPaused: 0
+  isPhotoModeActive: 0
   teksSisaClue: {fileID: 1041893384}
   teksTimer: {fileID: 617231961}
   finalPanelUI: {fileID: 300839057}
@@ -15642,7 +15643,7 @@ GameObject:
   - component: {fileID: 1919857701}
   - component: {fileID: 1919857703}
   - component: {fileID: 1919857702}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Untitled59_20260802175721_12 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15961,7 +15962,7 @@ GameObject:
   - component: {fileID: 2032943682}
   - component: {fileID: 2032943681}
   - component: {fileID: 2032943680}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: pohon kecil1@4x_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16267,7 +16268,7 @@ GameObject:
   - component: {fileID: 2136913697}
   - component: {fileID: 2136913696}
   - component: {fileID: 2136913695}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Pohon_matoa@4x_0 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

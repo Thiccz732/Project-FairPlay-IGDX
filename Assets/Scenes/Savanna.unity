@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 4016656}
   - component: {fileID: 4016658}
   - component: {fileID: 4016657}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Asset 3@4x_0 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -250,7 +250,7 @@ Transform:
   m_GameObject: {fileID: 30647909}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14.2, y: -7.7, z: 0}
+  m_LocalPosition: {x: -1.8, y: 0.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5597,7 +5597,7 @@ GameObject:
   - component: {fileID: 214001199}
   - component: {fileID: 214001201}
   - component: {fileID: 214001200}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Asset 3@4x_0 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5861,7 +5861,7 @@ Transform:
   m_GameObject: {fileID: 250079113}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.3, y: 34.5, z: 0}
+  m_LocalPosition: {x: -44.9, y: 25.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5969,7 +5969,7 @@ GameObject:
   - component: {fileID: 270213396}
   - component: {fileID: 270213395}
   - component: {fileID: 270213394}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Asset 10@4x_0 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8213,7 +8213,7 @@ Transform:
   m_GameObject: {fileID: 897045177}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -54.4, y: 34.4, z: 0}
+  m_LocalPosition: {x: -7.1, y: 31.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8707,7 +8707,7 @@ GameObject:
   - component: {fileID: 981355076}
   - component: {fileID: 981355077}
   - component: {fileID: 981355078}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Asset 3@4x_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9037,7 +9037,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 55
+    m_Bits: 247
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -9226,7 +9226,7 @@ Transform:
   m_GameObject: {fileID: 1049293450}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.6, y: 1, z: 0}
+  m_LocalPosition: {x: 16.3, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9334,7 +9334,7 @@ GameObject:
   - component: {fileID: 1092359372}
   - component: {fileID: 1092359371}
   - component: {fileID: 1092359370}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Asset 5@4x_0 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9932,7 +9932,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1441430220}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Envi
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10645,10 +10645,10 @@ MonoBehaviour:
   - {fileID: -6467354976091625785, guid: 5228c6f942153384e90ca3d9ddb803d1, type: 3}
   - {fileID: -469517197277182853, guid: 5228c6f942153384e90ca3d9ddb803d1, type: 3}
   minimumDistance: 30
-  spawnAreaSize: {x: 98.1, y: 53.3}
+  spawnAreaSize: {x: 82.3, y: 42.1}
   obstacleLayer:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 640
   safeRadius: 0.5
 --- !u!1 &1738808657
 GameObject:
@@ -10915,7 +10915,7 @@ Transform:
   m_GameObject: {fileID: 1753935243}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.80662, y: -7.30147, z: 0}
+  m_LocalPosition: {x: -8, y: -7.30147, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -11131,7 +11131,7 @@ GameObject:
   - component: {fileID: 1885811680}
   - component: {fileID: 1885811682}
   - component: {fileID: 1885811681}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Asset 5@4x_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11336,7 +11336,7 @@ MonoBehaviour:
   animalStages:
   - namaHewan: Cendrawasih Botak
     animalPrefab: {fileID: 7718305887417924496, guid: 41f5f368888481544aacf5657c8f6e48, type: 3}
-    requiredClues: 4
+    requiredClues: 1
     animalSpawnPoints:
     - {fileID: 30647910}
     - {fileID: 30647910}
@@ -11345,6 +11345,7 @@ MonoBehaviour:
     timeLimit: 95
   teleportInterval: 25
   isTeleportPaused: 0
+  isPhotoModeActive: 0
   teksSisaClue: {fileID: 1041893384}
   teksTimer: {fileID: 617231961}
   finalPanelUI: {fileID: 373033600}
@@ -11384,7 +11385,7 @@ GameObject:
   - component: {fileID: 1911677333}
   - component: {fileID: 1911677331}
   - component: {fileID: 1911677332}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Asset 10@4x_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
