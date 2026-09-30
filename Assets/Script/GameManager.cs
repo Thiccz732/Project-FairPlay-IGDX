@@ -32,9 +32,10 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public bool isTeleportPaused = false; 
     [HideInInspector] public bool isPhotoModeActive = false; // Penanda mode foto
 
-    [Header("UI Tracker (Teks yang Selalu Muncul)")] 
+    [Header("UI Tracker & Pause (Teks yang Selalu Muncul)")] 
     public TextMeshProUGUI teksSisaClue; 
     public TextMeshProUGUI teksTimer; 
+    public GameObject tombolPauseUI; // BARU: Masukkan tombol pause di Inspector
 
     [Header("UI Akhir Game (Susun Foto)")] 
     public GameObject finalPanelUI;      
@@ -351,7 +352,13 @@ public class GameManager : MonoBehaviour
 
     public void ToggleModeFoto(bool isKameraAktif)
     {
-        isPhotoModeActive = isKameraAktif; // Menyimpan status kamera
+        isPhotoModeActive = isKameraAktif; 
         SetTrackerUIVisible(!isKameraAktif);
+
+        // FITUR BARU: Menyembunyikan tombol pause saat kamera menyala
+        if (tombolPauseUI != null)
+        {
+            tombolPauseUI.SetActive(!isKameraAktif);
+        }
     }
 }
