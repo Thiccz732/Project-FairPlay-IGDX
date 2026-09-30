@@ -144,6 +144,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
   sfxSource: {fileID: 4688179618016005170}
   clickSound: {fileID: 8300000, guid: c59edfafcf9271244a17c2d8724b1d2e, type: 3}
+  districtCompleteSound: {fileID: 8300000, guid: 132d980cce1714d448fc4ff43133ec46, type: 3}
   animalFoundSound: {fileID: 8300000, guid: 64e2308550b9fe443a8cfc47d90bb815, type: 3}
   balikKertasSound: {fileID: 8300000, guid: 2f864d77414bf834099ac51b00fca6b6, type: 3}
   cameraShutterSound: {fileID: 8300000, guid: e233fd2ade8d0084893d3e824fb96e19, type: 3}
@@ -153,3 +154,11 @@ MonoBehaviour:
   snapFotoSound: {fileID: 8300000, guid: 64d4cfbf70040a74c87a535d8ecf8014, type: 3}
   stepsSound: {fileID: 8300000, guid: 13e049376bd91cb49bd0f53aa14de946, type: 3}
   bgmSource: {fileID: 0}
+  btnSoundImage: {fileID: 0}
+  soundOnSprite: {fileID: 0}
+  soundOffSprite: {fileID: 0}
+  btnMusicImage: {fileID: 0}
+  musicOnSprite: {fileID: 0}
+  musicOffSprite: {fileID: 0}
+  isSoundMuted: 0
+  isMusicMuted: 0

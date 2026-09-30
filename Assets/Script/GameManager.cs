@@ -293,9 +293,21 @@ public class GameManager : MonoBehaviour
         if (isStageEnding) return; 
 
         matchedPhotos++;
+
+        if (AudioManager.instance != null)
+        {
+            AudioManager.instance.PlaySFX(AudioManager.instance.snapFotoSound);
+        }
+
         if (matchedPhotos >= totalPhotosToMatch)
         {
             isStageEnding = true; 
+
+            if (AudioManager.instance != null)
+            {
+                AudioManager.instance.PlayDistrictCompleteSFX();
+            }
+
             StartCoroutine(NextStageRoutine());
         }
     }

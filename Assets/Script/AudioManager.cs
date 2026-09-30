@@ -8,6 +8,8 @@ public class AudioManager : MonoBehaviour
     [Header("Pengaturan SFX UI & Game")]
     public AudioSource sfxSource;
     public AudioClip clickSound;
+
+    public AudioClip districtCompleteSound;
     
     // SFX UI
     public AudioClip animalFoundSound;
@@ -170,6 +172,14 @@ public class AudioManager : MonoBehaviour
         {
             sfxSource.Stop(); 
             sfxSource.PlayOneShot(clip, volume);
+        }
+    }
+
+    public void PlayDistrictCompleteSFX()
+    {
+        if (instance != null)
+        {
+            instance.PlaySFX(instance.districtCompleteSound);
         }
     }
 

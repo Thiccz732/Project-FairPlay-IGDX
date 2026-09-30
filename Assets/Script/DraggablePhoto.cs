@@ -36,6 +36,11 @@ public class DraggablePhoto : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
         canvasGroup.alpha = 0.6f;
         canvasGroup.blocksRaycasts = false;
         transform.SetAsLastSibling(); 
+
+        if (AudioManager.instance != null)
+        {
+            AudioManager.instance.PlaySFX(AudioManager.instance.dragFotoSound);
+        }
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -68,5 +73,10 @@ public class DraggablePhoto : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
         }
 
         rectTransform.anchoredPosition = originalAnchoredPosition;
+
+        if (AudioManager.instance != null)
+        {
+            AudioManager.instance.PlaySFX(AudioManager.instance.snapFotoSound);
+        }
     }
 }
