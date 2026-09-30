@@ -14615,7 +14615,7 @@ MonoBehaviour:
   - {fileID: 1350128070082706223, guid: 5228c6f942153384e90ca3d9ddb803d1, type: 3}
   - {fileID: -6467354976091625785, guid: 5228c6f942153384e90ca3d9ddb803d1, type: 3}
   - {fileID: -469517197277182853, guid: 5228c6f942153384e90ca3d9ddb803d1, type: 3}
-  minimumDistance: 30
+  minimumDistance: 14
   spawnAreaSize: {x: 140.7, y: 78.8}
   obstacleLayer:
     serializedVersion: 2

@@ -7092,7 +7092,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &468450692
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8758,7 +8758,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &925929934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9007,7 +9007,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &984909751
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9438,7 +9438,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1054711552
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9680,7 +9680,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1220210458
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10507,7 +10507,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1651684331
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11531,7 +11531,7 @@ MonoBehaviour:
     - {fileID: 30647910}
     - {fileID: 30647910}
     - {fileID: 30647910}
-    timeLimit: 95
+    timeLimit: 10
   teleportInterval: 25
   isTeleportPaused: 0
   isPhotoModeActive: 0

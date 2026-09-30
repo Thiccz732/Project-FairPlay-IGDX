@@ -4174,7 +4174,7 @@ Transform:
   m_GameObject: {fileID: 794329697}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -56.4, y: -2.2, z: 0}
+  m_LocalPosition: {x: -57.8, y: -3.2, z: 0}
   m_LocalScale: {x: 0.6301019, y: 0.6301019, z: 0.6301019}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14361,8 +14361,8 @@ MonoBehaviour:
   - {fileID: 1350128070082706223, guid: 5228c6f942153384e90ca3d9ddb803d1, type: 3}
   - {fileID: -6467354976091625785, guid: 5228c6f942153384e90ca3d9ddb803d1, type: 3}
   - {fileID: -469517197277182853, guid: 5228c6f942153384e90ca3d9ddb803d1, type: 3}
-  minimumDistance: 20
-  spawnAreaSize: {x: 87.3, y: 45.4}
+  minimumDistance: 12
+  spawnAreaSize: {x: 66.3, y: 47.8}
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 640
@@ -14376,7 +14376,7 @@ Transform:
   m_GameObject: {fileID: 1908666126}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -22.7, y: 10.9, z: 0}
+  m_LocalPosition: {x: -12.1, y: 11.9, z: 0}
   m_LocalScale: {x: 0.87272, y: 0.87272, z: 0.87272}
   m_ConstrainProportionsScale: 0
   m_Children:
