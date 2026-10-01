@@ -10408,7 +10408,7 @@ MonoBehaviour:
   animalStages:
   - namaHewan: Cendrawasih
     animalPrefab: {fileID: 7718305887417924496, guid: 3fbb0f1e2237d3444ad660139cca7310, type: 3}
-    requiredClues: 4
+    requiredClues: 1
     animalSpawnPoints:
     - {fileID: 1068163173}
     - {fileID: 335934641}
