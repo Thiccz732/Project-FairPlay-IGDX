@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 40575347}
   - component: {fileID: 40575346}
   m_Layer: 5
-  m_Name: Image (3)
+  m_Name: BadgeMaulCepat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -144,7 +144,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 40575344}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -399,6 +399,7 @@ GameObject:
   - component: {fileID: 185695658}
   - component: {fileID: 185695657}
   - component: {fileID: 185695659}
+  - component: {fileID: 185695660}
   m_Layer: 0
   m_Name: AlbumManager
   m_TagString: Untagged
@@ -583,6 +584,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &185695660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 185695656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a29c860047c23a41832b205e3ab501f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AlbumBadgeUI
+  iconHutanHujan: {fileID: 1180887103}
+  iconPegunungan: {fileID: 1220913313}
+  iconSavanna: {fileID: 1000968693}
+  iconMaulSpeedrun: {fileID: 40575344}
 --- !u!1 &213299921
 GameObject:
   m_ObjectHideFlags: 0
@@ -2221,7 +2238,7 @@ GameObject:
   - component: {fileID: 1000968696}
   - component: {fileID: 1000968695}
   m_Layer: 5
-  m_Name: Image (2)
+  m_Name: BadgeSavanna
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2234,7 +2251,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1000968693}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2406,7 +2423,7 @@ GameObject:
   - component: {fileID: 1180887106}
   - component: {fileID: 1180887105}
   m_Layer: 5
-  m_Name: Image
+  m_Name: BadgeHutanHujan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2419,7 +2436,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1180887103}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2481,7 +2498,7 @@ GameObject:
   - component: {fileID: 1220913316}
   - component: {fileID: 1220913315}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: BadgeHutanPegunungan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2494,7 +2511,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1220913313}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

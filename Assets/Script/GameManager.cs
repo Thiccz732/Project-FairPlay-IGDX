@@ -74,6 +74,11 @@ public class GameManager : MonoBehaviour
         if (finalPanelUI != null) finalPanelUI.SetActive(false);
         if (gameOverPanel != null) gameOverPanel.SetActive(false); 
 
+        if (BadgeManager.instance != null)
+        {
+            BadgeManager.instance.StartLevelTimer(); // Mulai hitung waktu speedrun
+        }
+
         Invoke(nameof(StartStage), 0.1f);
     }
 
@@ -303,9 +308,16 @@ public class GameManager : MonoBehaviour
         {
             isStageEnding = true; 
 
+            // SFX District Complete
             if (AudioManager.instance != null)
             {
                 AudioManager.instance.PlayDistrictCompleteSFX();
+            }
+
+            // --- FIX BADGE 1: Cek Speedrun Badge saat seluruh puzzle foto selesai ---
+            if (BadgeManager.instance != null)
+            {
+                BadgeManager.instance.CheckSpeedrunBadge();
             }
 
             StartCoroutine(NextStageRoutine());
@@ -348,6 +360,25 @@ public class GameManager : MonoBehaviour
             if (currentLevelNumber + 1 > levelTerbukaSaatIni)
             {
                 PlayerPrefs.SetInt("LevelUnlocked", currentLevelNumber + 1);
+            }
+            
+            if (BadgeManager.instance != null)
+            {
+                // Contoh logic: Jika ini Level 2 Hutan Hujan
+                if (currentLevelNumber == 2) 
+                {
+                    BadgeManager.instance.CheckHutanHujanBadge();
+                }
+                // Contoh logic: Jika ini Level 4 (Level 2 Hutan Pegunungan)
+                else if (currentLevelNumber == 4) 
+                {
+                    BadgeManager.instance.CheckPegununganBadge();
+                }
+                // Contoh logic: Jika ini Level 5 (Level Savanna)
+                else if (currentLevelNumber == 5) 
+                {
+                    BadgeManager.instance.CheckSavannaBadge();
+                }
             }
 
             PlayerPrefs.Save();
