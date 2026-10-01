@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c3563fe3cf60f474da9b113089fa0c0f
+guid: 37a81f316003c2848a785369ad24ce02
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1864286319536595958
-    second: Pohon_Sagu@4x_0
+      213: -3568470950595665546
+    second: biom_hutan2_1@4x_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Pohon_Sagu@4x_0
+      name: biom_hutan2_1@4x_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1973
-        height: 2760
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 1504
+        height: 1016
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a0c96644879b026e0800000000000000
-      internalID: -1864286319536595958
+      spriteID: 671e176b39e3a7ec0800000000000000
+      internalID: -3568470950595665546
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: cf75628240d1bba4fb2f702d1c74dcb5
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Pohon_Sagu@4x_0: -1864286319536595958
+      biom_hutan2_1@4x_0: -3568470950595665546
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
