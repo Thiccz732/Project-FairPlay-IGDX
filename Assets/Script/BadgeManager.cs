@@ -94,8 +94,8 @@ public class BadgeManager : MonoBehaviour
     {
         StopLevelTimer();
 
-        // Cek jika waktu di bawah 60 detik dan belum pernah dapet badgenya
-        if (levelTimer < 60f && PlayerPrefs.GetInt("Badge_MaulSpeedrun", 0) == 0)
+        // Cek jika waktu di bawah 75 detik dan belum pernah dapet badgenya
+        if (levelTimer < 75f && PlayerPrefs.GetInt("Badge_MaulSpeedrun", 0) == 0)
         {
             PlayerPrefs.SetInt("Badge_MaulSpeedrun", 1);
             PlayerPrefs.Save();
