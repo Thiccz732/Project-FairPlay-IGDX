@@ -37,6 +37,12 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI teksTimer; 
     public GameObject tombolPauseUI; // BARU: Masukkan tombol pause di Inspector
 
+    [Header("Fitur Red Flash (Waktu Kritis)")]
+    [Tooltip("Image UI full-screen warna merah (Raycast Target di-uncheck)")]
+    public Image redFlashOverlay; 
+    public float flashSpeed = 5f; // Kecepatan kedip layar
+    public float maxAlpha = 0.35f;
+
     [Header("UI Akhir Game (Susun Foto)")] 
     public GameObject finalPanelUI;      
     public int totalPhotosToMatch = 4;   
@@ -73,6 +79,13 @@ public class GameManager : MonoBehaviour
 
         if (finalPanelUI != null) finalPanelUI.SetActive(false);
         if (gameOverPanel != null) gameOverPanel.SetActive(false); 
+        
+        if (redFlashOverlay != null)
+        {
+            Color c = redFlashOverlay.color;
+            c.a = 0f;
+            redFlashOverlay.color = c;
+        }
 
         if (BadgeManager.instance != null)
         {
@@ -95,6 +108,28 @@ public class GameManager : MonoBehaviour
             }
 
             UpdateUITimer();
+            HandleRedFlashOverlay();
+        }
+    }
+
+    private void HandleRedFlashOverlay()
+    {
+        if (redFlashOverlay == null) return;
+
+        // Jika waktu sisa <= 10 detik dan stage belum selesai, bikin efek kelap-kelip
+        if (currentTimeLeft <= 10f && currentTimeLeft > 0f && !isStageEnding)
+        {
+            float alpha = Mathf.PingPong(Time.time * flashSpeed, maxAlpha);
+            Color c = redFlashOverlay.color;
+            c.a = alpha;
+            redFlashOverlay.color = c;
+        }
+        else
+        {
+            // Matikan warna merah (kembalikan ke transparan)
+            Color c = redFlashOverlay.color;
+            c.a = 0f;
+            redFlashOverlay.color = c;
         }
     }
 
@@ -116,12 +151,20 @@ public class GameManager : MonoBehaviour
     {
         isTimerRunning = false;
         
+        if (redFlashOverlay != null)
+        {
+            Color c = redFlashOverlay.color;
+            c.a = 0f;
+            redFlashOverlay.color = c;
+        }
+
         if (playerTransform != null) playerTransform.GetComponent<PlayerController>().enabled = false;
         
         if (gameOverPanel != null) 
         {
             gameOverPanel.SetActive(true);
         }
+        
     }
 
     private void StartStage()
@@ -132,6 +175,13 @@ public class GameManager : MonoBehaviour
         isStageEnding = false; 
         
         System.Array.Clear(capturedSnapshots, 0, capturedSnapshots.Length);
+
+        if (redFlashOverlay != null)
+        {
+            Color c = redFlashOverlay.color;
+            c.a = 0f;
+            redFlashOverlay.color = c;
+        }
 
         if (ClueSpawner.instance != null && animalStages.Length > 0)
         {
@@ -266,6 +316,13 @@ public class GameManager : MonoBehaviour
     private void ShowFinalPanel()
     {
         SetTrackerUIVisible(false); 
+
+        if (redFlashOverlay != null)
+        {
+            Color c = redFlashOverlay.color;
+            c.a = 0f;
+            redFlashOverlay.color = c;
+        }
 
         if (finalPanelUI != null)
         {
