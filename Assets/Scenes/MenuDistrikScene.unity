@@ -298,7 +298,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -31, y: -41.35205}
-  m_SizeDelta: {x: 282.56604, y: 92.11401}
+  m_SizeDelta: {x: 219, y: 66}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &259581603
 MonoBehaviour:
@@ -320,9 +320,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1178561990889159156, guid: c7ac9b37844f4d44b9cf7da597b4237a, type: 3}
+  m_Sprite: {fileID: 2612099835004634659, guid: 4702799987919bc4fa6cd9f1480e425e, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -374,7 +374,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 33, y: -29}
-  m_SizeDelta: {x: 116.81891, y: 116.81891}
+  m_SizeDelta: {x: 104, y: 104}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &440601210
 MonoBehaviour:
@@ -464,9 +464,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 5000927251509650613, guid: 33d19aa6ef2683044ab15ae15c1e6bb1, type: 3}
+  m_Sprite: {fileID: 3344252854089987579, guid: d9902856ad1f2bc43a7ddd477d1faf4c, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -1064,7 +1064,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 100, y: -7}
+  m_AnchoredPosition: {x: 100, y: -13.7}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1089202509
@@ -1342,25 +1342,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MenuDistrikManager
   levelDataList:
   - button: {fileID: 1678978757}
-    spriteLocked: {fileID: 1637954016605795844, guid: 15fdec400b97adc4bbe05f2dd49d28fa, type: 3}
-    spriteUnlocked: {fileID: -585167557381579206, guid: 12aa12ac06821fa488c50195e582685d, type: 3}
-    spriteCompleted: {fileID: -5921441152551178366, guid: da1ef7cc208fdd34897224c7c6d65e9a, type: 3}
+    spriteLocked: {fileID: 3183780878320308285, guid: 0f0fd06b8d76ab94dadc6e336c5b8f98, type: 3}
+    spriteUnlocked: {fileID: -8875042111266530269, guid: 033cfe45097ad5d4ba82e16ba217bb09, type: 3}
+    spriteCompleted: {fileID: -5921441152551178366, guid: 968c8b7a546b9c24a875bf66c6f02a2a, type: 3}
   - button: {fileID: 1458781186}
-    spriteLocked: {fileID: 1637954016605795844, guid: 15fdec400b97adc4bbe05f2dd49d28fa, type: 3}
-    spriteUnlocked: {fileID: 499532027980867676, guid: 6782c5f4101a7264a9fc82d106457861, type: 3}
-    spriteCompleted: {fileID: -4269689171831539364, guid: aad3674f03c66274fa533637b0bb09dd, type: 3}
+    spriteLocked: {fileID: 3183780878320308285, guid: 0f0fd06b8d76ab94dadc6e336c5b8f98, type: 3}
+    spriteUnlocked: {fileID: 499532027980867676, guid: 6c688c44592508a47b9736f323b3ce7a, type: 3}
+    spriteCompleted: {fileID: -4269689171831539364, guid: c189f05eeaf55b84792fb663adf04725, type: 3}
   - button: {fileID: 1221436591}
-    spriteLocked: {fileID: 1637954016605795844, guid: 15fdec400b97adc4bbe05f2dd49d28fa, type: 3}
-    spriteUnlocked: {fileID: 7420080500666788733, guid: 8d0d5fbaaa3fa5f47814d3af388eed99, type: 3}
-    spriteCompleted: {fileID: -3608025624613442897, guid: 4cfd248595d0555449420eafe985a601, type: 3}
+    spriteLocked: {fileID: 3183780878320308285, guid: 0f0fd06b8d76ab94dadc6e336c5b8f98, type: 3}
+    spriteUnlocked: {fileID: 7420080500666788733, guid: 6f069e4d8e59acf46bf24380d650691e, type: 3}
+    spriteCompleted: {fileID: -3608025624613442897, guid: d427ec243f0236a40bdc74d7f5b621fa, type: 3}
   - button: {fileID: 559340384}
-    spriteLocked: {fileID: 1637954016605795844, guid: 15fdec400b97adc4bbe05f2dd49d28fa, type: 3}
-    spriteUnlocked: {fileID: -5897786992144674257, guid: 519779aa6c2b6a64e8bc7159e1ad9730, type: 3}
-    spriteCompleted: {fileID: 9192825302229162205, guid: 9da56446890b3f0468995de1733c56df, type: 3}
+    spriteLocked: {fileID: 3183780878320308285, guid: 0f0fd06b8d76ab94dadc6e336c5b8f98, type: 3}
+    spriteUnlocked: {fileID: -5897786992144674257, guid: a1926bfb84b0c9847b8440bcc81a5005, type: 3}
+    spriteCompleted: {fileID: 9192825302229162205, guid: 1008ddf083746eb448f498922c175aad, type: 3}
   - button: {fileID: 458922212}
-    spriteLocked: {fileID: 1637954016605795844, guid: 15fdec400b97adc4bbe05f2dd49d28fa, type: 3}
-    spriteUnlocked: {fileID: 7209043928068515437, guid: a1553584703e5524ba1830e3acad2bc0, type: 3}
-    spriteCompleted: {fileID: 30944483610430819, guid: a02b19f586ad818418aac06855d696e3, type: 3}
+    spriteLocked: {fileID: 3183780878320308285, guid: 0f0fd06b8d76ab94dadc6e336c5b8f98, type: 3}
+    spriteUnlocked: {fileID: 7209043928068515437, guid: 3eeb3f2f30cce5c47aa9a4c3c7cb40dc, type: 3}
+    spriteCompleted: {fileID: 30944483610430819, guid: df6c398a168333144aeb37ece23aa2de, type: 3}
   teksIndikatorDistrik: {fileID: 1089202509}
 --- !u!4 &1439259807
 Transform:
@@ -1637,7 +1637,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 65, y: 73}
-  m_SizeDelta: {x: 676, y: 106}
+  m_SizeDelta: {x: 384, y: 111}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1545725888
 MonoBehaviour:
@@ -1727,9 +1727,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 4115567217725301971, guid: b74773e7dac2ce94c932f2d9ded70722, type: 3}
+  m_Sprite: {fileID: -4193939668039024358, guid: 9e007db500c8ce249b0bc96ecec1bde9, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1

@@ -38,6 +38,10 @@ public class AudioManager : MonoBehaviour
     public bool isSoundMuted = false;
     public bool isMusicMuted = false;
 
+    [Header("SFX Timer & Game Over")]
+    public AudioClip countdownBeepSound; 
+    public AudioClip gameOverSound;
+
     private void Awake()
     {
         if (instance == null) 
@@ -190,5 +194,22 @@ public class AudioManager : MonoBehaviour
 
         bgmSource.clip = laguBaru;
         bgmSource.Play();
+    }
+
+    public void PlayCountdownBeepSFX()
+    {
+        if (instance != null)
+        {
+            instance.PlaySFX(instance.countdownBeepSound, 0.7f); // Volume disesuaikan
+        }
+    }
+
+// Fungsi panggil SFX Game Over
+    public void PlayGameOverSFX()
+    {
+        if (instance != null)
+        {
+            instance.PlaySFX(instance.gameOverSound);
+        }
     }
 }

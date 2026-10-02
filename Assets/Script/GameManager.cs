@@ -43,6 +43,8 @@ public class GameManager : MonoBehaviour
     public float flashSpeed = 5f; // Kecepatan kedip layar
     public float maxAlpha = 0.35f;
 
+    private int lastBeepSecond = -1; // Menjaga agar SFX Beep cuma bunyi 1x per detik
+
     [Header("UI Akhir Game (Susun Foto)")] 
     public GameObject finalPanelUI;      
     public int totalPhotosToMatch = 4;   
@@ -142,8 +144,27 @@ public class GameManager : MonoBehaviour
             
             teksTimer.text = string.Format("Waktu: {0:00}:{1:00}", menit, detik);
             
-            if (currentTimeLeft <= 10f) teksTimer.color = Color.red;
-            else teksTimer.color = Color.white;
+            if (currentTimeLeft <= 10f) 
+            {
+                teksTimer.color = Color.red;
+
+                // --- LOGIKA SFX COUNTDOWN (10 Detik Terakhir) ---
+                int currentSecond = Mathf.CeilToInt(currentTimeLeft);
+                if (currentSecond <= 10 && currentSecond > 0 && currentSecond != lastBeepSecond)
+                {
+                    lastBeepSecond = currentSecond;
+                    
+                    if (AudioManager.instance != null)
+                    {
+                        AudioManager.instance.PlayCountdownBeepSFX();
+                    }
+                }
+            }
+        else 
+        {
+            teksTimer.color = Color.white;
+            lastBeepSecond = -1; // Reset tracker detik jika waktu masih aman
+        }
         }
     }
 
@@ -156,6 +177,11 @@ public class GameManager : MonoBehaviour
             Color c = redFlashOverlay.color;
             c.a = 0f;
             redFlashOverlay.color = c;
+        }
+
+        if (AudioManager.instance != null)
+        {
+            AudioManager.instance.PlayGameOverSFX();
         }
 
         if (playerTransform != null) playerTransform.GetComponent<PlayerController>().enabled = false;
@@ -173,6 +199,7 @@ public class GameManager : MonoBehaviour
         isAnimalSpawned = false;
         matchedPhotos = 0; 
         isStageEnding = false; 
+        lastBeepSecond = -1; // Reset tracker beep countdown
         
         System.Array.Clear(capturedSnapshots, 0, capturedSnapshots.Length);
 

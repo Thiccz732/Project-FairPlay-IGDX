@@ -162,3 +162,5 @@ MonoBehaviour:
   musicOffSprite: {fileID: 0}
   isSoundMuted: 0
   isMusicMuted: 0
+  countdownBeepSound: {fileID: 8300000, guid: 927f6735d13d19442a82731b4ba3d5b2, type: 3}
+  gameOverSound: {fileID: 8300000, guid: aa7e166f2243ac2478d83a146cacc05b, type: 3}
