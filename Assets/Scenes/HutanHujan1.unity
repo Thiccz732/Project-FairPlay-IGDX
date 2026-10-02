@@ -6000,7 +6000,7 @@ GameObject:
   - component: {fileID: 199437158}
   - component: {fileID: 199437157}
   - component: {fileID: 199437156}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: biom_hutan2_2@4x_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6211,7 +6211,7 @@ GameObject:
   - component: {fileID: 309978387}
   - component: {fileID: 309978388}
   - component: {fileID: 309978386}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Pohon_Sagu@4x_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7883,7 +7883,7 @@ GameObject:
   - component: {fileID: 624933299}
   - component: {fileID: 624933301}
   - component: {fileID: 624933300}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: biom_gunung_2@4x_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7989,7 +7989,7 @@ GameObject:
   - component: {fileID: 639969321}
   - component: {fileID: 639969323}
   - component: {fileID: 639969322}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: biom_gunung_2@4x_0 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8345,7 +8345,7 @@ GameObject:
   - component: {fileID: 735656649}
   - component: {fileID: 735656651}
   - component: {fileID: 735656650}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: biom_gunung_2@4x_0 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12732,7 +12732,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -5000
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -3969689513437162918, guid: 440e66a7dc1c7db4d972bf0a7ee8b210, type: 3}
+  m_Sprite: {fileID: 6194026115384136773, guid: 0099f854013b63c4e9df1d0461512dbf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -12752,7 +12752,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 6.6, y: -5.9, z: 0}
-  m_LocalScale: {x: 0.22793406, y: 0.22793406, z: 0.22793406}
+  m_LocalScale: {x: 0.35525802, y: 0.35525802, z: 0.35525802}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

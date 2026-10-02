@@ -375,7 +375,7 @@ GameObject:
   - component: {fileID: 47208201}
   - component: {fileID: 47208203}
   - component: {fileID: 47208202}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: biom_gunung_2@4x_0 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -750,7 +750,7 @@ GameObject:
   - component: {fileID: 103322760}
   - component: {fileID: 103322762}
   - component: {fileID: 103322761}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: biom_gunung_2@4x_0 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2871,7 +2871,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -5000
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 222723828263249916, guid: e1de768b5ff4fd4419995beec0558863, type: 3}
+  m_Sprite: {fileID: 3339131933828511651, guid: 9fe5434b0a486834ea5d253d08557362, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2891,7 +2891,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -22.5, y: 11.1, z: 0}
-  m_LocalScale: {x: 0.2936508, y: 0.2936508, z: 0.2936508}
+  m_LocalScale: {x: 0.47221988, y: 0.47221988, z: 0.47221988}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -3215,7 +3215,7 @@ GameObject:
   - component: {fileID: 506829338}
   - component: {fileID: 506829340}
   - component: {fileID: 506829339}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: biom_gunung_2@4x_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3231,7 +3231,7 @@ Transform:
   m_GameObject: {fileID: 506829337}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -37.687878, y: 7.9226303, z: 0}
+  m_LocalPosition: {x: -39.77, y: 9.41, z: 0}
   m_LocalScale: {x: 0.54745, y: 0.54745, z: 0.54745}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4054,7 +4054,7 @@ GameObject:
   - component: {fileID: 713064249}
   - component: {fileID: 713064251}
   - component: {fileID: 713064250}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: biom_gunung_2@4x_0 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12803,7 +12803,7 @@ GameObject:
   - component: {fileID: 1594712465}
   - component: {fileID: 1594712467}
   - component: {fileID: 1594712466}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: biom_gunung_2@4x_0 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13513,8 +13513,8 @@ Transform:
   m_GameObject: {fileID: 1767650819}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 28.687, y: -4.7, z: 0}
-  m_LocalScale: {x: 0.6469639, y: 0.6469639, z: 0.6469639}
+  m_LocalPosition: {x: 34.1, y: -6.32, z: 0}
+  m_LocalScale: {x: 0.683582, y: 0.683582, z: 0.683582}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1895817142}
@@ -14291,7 +14291,7 @@ GameObject:
   - component: {fileID: 2085904309}
   - component: {fileID: 2085904311}
   - component: {fileID: 2085904308}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: biom_hutan2_2@4x_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14412,7 +14412,7 @@ Transform:
   m_GameObject: {fileID: 2085904307}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -16.227879, y: 13.942631, z: 0}
+  m_LocalPosition: {x: -13.8, y: 11.89, z: 0}
   m_LocalScale: {x: -0.456839, y: 0.4131, z: 0.4131}
   m_ConstrainProportionsScale: 0
   m_Children: []
