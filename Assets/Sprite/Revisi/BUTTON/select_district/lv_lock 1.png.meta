@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 682ea3885145d864dae0bc4a5afc81e0
+guid: e2a668645ba15f249a1957f4ef9af693
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2842154878110420093
-    second: biom sabana-01_0
+      213: 2696633169629992709
+    second: lv_lock_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: biom sabana-01_0
+      name: lv_lock_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32000
-        height: 18000
+        width: 96
+        height: 130
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d7c4a62adcc517720800000000000000
-      internalID: 2842154878110420093
+      spriteID: 507d455949d5c6520800000000000000
+      internalID: 2696633169629992709
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      biom sabana-01_0: 2842154878110420093
+      lv_lock_0: 2696633169629992709
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -123,12 +123,23 @@ public class AlbumManager : MonoBehaviour
 
             if (slotIndex < slotFotoSamping.Length && slotFotoSamping[slotIndex] != null)
             {
-                slotFotoSamping[slotIndex].sprite = daftarHewan[i].spriteFotoStatis;
-                
-                bool sideUnlocked = PlayerPrefs.GetInt(daftarHewan[i].keyPlayerPrefs, 0) == 1;
-                slotFotoSamping[slotIndex].color = sideUnlocked ? Color.white : new Color(0.2f, 0.2f, 0.2f, 1f);
-                
-                slotIndex++;
+                Image targetImage = slotFotoSamping[slotIndex];
+
+
+                Transform childIsi = targetImage.transform.Find("IsiFoto");
+            if (childIsi != null)
+            {
+                targetImage = childIsi.GetComponent<Image>();
+            }
+
+            // Pasang sprite foto statis di child/image sasaran
+            targetImage.sprite = daftarHewan[i].spriteFotoStatis;
+            targetImage.preserveAspect = true; // Biar tetep proporsional
+            
+            bool sideUnlocked = PlayerPrefs.GetInt(daftarHewan[i].keyPlayerPrefs, 0) == 1;
+            targetImage.color = sideUnlocked ? Color.white : new Color(0.2f, 0.2f, 0.2f, 1f);
+            
+            slotIndex++;
             }
         }
     }
