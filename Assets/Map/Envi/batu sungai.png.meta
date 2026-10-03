@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 1145483a80cd96a4f88138826d34ae0d
+guid: 57d9d412204925543840ef0149e0a5a2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1273527071928589863
-    second: biom hutan_tanpa_pohon_batu_semak-01_0
+      213: -2360763477827868948
+    second: batu sungai_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,30 +96,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: biom hutan_tanpa_pohon_batu_semak-01_0
+      name: batu sungai_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32000
-        height: 18000
+        width: 2184
+        height: 1504
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9d16ad120e5835ee0800000000000000
-      internalID: -1273527071928589863
+      spriteID: ce6aa51ff12ec3fd0800000000000000
+      internalID: -2360763477827868948
       vertices: []
       indices: 
       edges: []
@@ -148,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      biom hutan_tanpa_pohon_batu_semak-01_0: -1273527071928589863
+      batu sungai_0: -2360763477827868948
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
