@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 0099f854013b63c4e9df1d0461512dbf
+guid: b95ed6b5f759c5047a75063f0ccfd554
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6194026115384136773
-    second: biom hutan1-03_0
+      213: -4127546491201431187
+    second: 4K_BiomHutan1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -72,10 +72,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: biom hutan1-03_0
+      name: 4K_BiomHutan1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 21334
-        height: 12000
+        width: 16000
+        height: 9000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 544d6f04fe995f550800000000000000
-      internalID: 6194026115384136773
+      spriteID: d69570eb55208b6c0800000000000000
+      internalID: -4127546491201431187
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      biom hutan1-03_0: 6194026115384136773
+      4K_BiomHutan1_0: -4127546491201431187
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

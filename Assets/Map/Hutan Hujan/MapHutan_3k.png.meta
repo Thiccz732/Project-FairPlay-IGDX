@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 440e66a7dc1c7db4d972bf0a7ee8b210
+guid: cbd8c0c4a7cabfb4e9c34d26986477fa
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3969689513437162918
-    second: biom hutan_tanpa_pohon_batu_semak-01 1_0
+      213: 1110291557242794184
+    second: MapHutan_3k_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: biom hutan_tanpa_pohon_batu_semak-01 1_0
+      name: MapHutan_3k_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32000
-        height: 18000
+        width: 24001
+        height: 13500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a521cfa7b64d8e8c0800000000000000
-      internalID: -3969689513437162918
+      spriteID: 8c0729ae94c886f00800000000000000
+      internalID: 1110291557242794184
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      biom hutan_tanpa_pohon_batu_semak-01 1_0: -3969689513437162918
+      MapHutan_3k_0: 1110291557242794184
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

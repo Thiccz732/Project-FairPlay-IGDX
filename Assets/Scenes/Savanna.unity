@@ -250,7 +250,7 @@ Transform:
   m_GameObject: {fileID: 30647909}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.8, y: 0.4, z: 0}
+  m_LocalPosition: {x: -7.9, y: 1.76, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5861,7 +5861,7 @@ Transform:
   m_GameObject: {fileID: 250079113}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -44.9, y: 25.6, z: 0}
+  m_LocalPosition: {x: -30.1, y: 20.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8629,7 +8629,7 @@ Transform:
   m_GameObject: {fileID: 897045177}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.1, y: 31.7, z: 0}
+  m_LocalPosition: {x: 26.2, y: 19.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9795,7 +9795,7 @@ Transform:
   m_GameObject: {fileID: 1049293450}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 14.37, y: 1, z: 0}
+  m_LocalPosition: {x: 18.9, y: -2.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10432,7 +10432,7 @@ Transform:
   m_GameObject: {fileID: 1342340433}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 46.9, y: 5.1, z: 0}
+  m_LocalPosition: {x: 45.09, y: 2.87, z: 0}
   m_LocalScale: {x: 0.71716, y: 0.71716, z: 0.71716}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10908,7 +10908,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1534726276
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12217,7 +12217,7 @@ MonoBehaviour:
   animalStages:
   - namaHewan: Cendrawasih Botak
     animalPrefab: {fileID: 7718305887417924496, guid: 41f5f368888481544aacf5657c8f6e48, type: 3}
-    requiredClues: 4
+    requiredClues: 1
     animalSpawnPoints:
     - {fileID: 30647910}
     - {fileID: 30647910}

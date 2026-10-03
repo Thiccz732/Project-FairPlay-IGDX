@@ -67,5 +67,5 @@
         "*.sln": "*.csproj",
         "*.slnx": "*.csproj"
     },
-    "dotnet.defaultSolution": "Project-FairPlay-IGDX.slnx"
+    "dotnet.defaultSolution": "Project - IGDX.slnx"
 }
