@@ -423,42 +423,41 @@ MonoBehaviour:
   - namaHewan: Cendrawasih
     keyPlayerPrefs: Koleksi_Cendrawasih
     prefabAnimasiHewan: {fileID: 1806791846295891589, guid: f10b199f18669e44798c3c29ca03dbec, type: 3}
-    teksCiriCiri: Burung endemik Papua berjuluk "Burung Surga" yang dilindungi karena
-      terancam punah.
+    teksCiriCiri: Burung jantan memikat betina dengan menari lincah di ranting sambil
+      memamerkan bulu-bulu indahnya di sela-sela bunga anggrek hutan.
     spriteFotoStatis: {fileID: -5710205414623236306, guid: af1940a1f47a1ff4e882da9176f6c557, type: 3}
     suaraHewan: {fileID: 8300000, guid: 775e035dd914a8a46a8785035911c3bc, type: 3}
   - namaHewan: Kangguru Pohon
     keyPlayerPrefs: Koleksi_Kangguru Pohon
     prefabAnimasiHewan: {fileID: 502446112264613733, guid: c67afad593811764992df9cf80fa33fe, type: 3}
-    teksCiriCiri: 'Marsupial langka Papua dan Australia yang
+    teksCiriCiri: 'Hewan ini menggunakan cakarnya untuk memanjat dan ekornya sebagai
+      penyeimbang saat bergerak lincah di antara dahan untuk mencari buah dan daun
+      muda.
 
-      hidup di pepohonan
-      dan terancam punah
-
-      akibat perburuan serta deforestasi.'
+'
     spriteFotoStatis: {fileID: 6521142630684592418, guid: 687e5d3689935bf44b53efa48925fd4e, type: 3}
     suaraHewan: {fileID: 8300000, guid: 086a6022125bcc9468bfafce53510409, type: 3}
   - namaHewan: Kasuari
     keyPlayerPrefs: Koleksi_Kasuari
     prefabAnimasiHewan: {fileID: 3019668930738692764, guid: cc4308bf887cb4e419016526122c5e63, type: 3}
-    teksCiriCiri: 'Burung raksasa yang tak bisa terbang, dari
-
-      Papua dan Australia,
-      berhelm khas dan berperan sebagai penyebar biji.'
+    teksCiriCiri: Burung teritorial ini berjalan dengan langkah berat, meninggalkan
+      jejak kaki besar dan bekas cakaran tanah, sambil menyebarkan biji buah-buahan
+      hutan yang dimakannya.
     spriteFotoStatis: {fileID: -4104340362508445918, guid: 33212a034b87a37418b4927d49064c19, type: 3}
     suaraHewan: {fileID: 8300000, guid: 602f3ebff119c004f8b51a392b60d8b1, type: 3}
   - namaHewan: Walabi Semak
     keyPlayerPrefs: Koleksi_Walabi Semak
     prefabAnimasiHewan: {fileID: 341478913122007553, guid: 3eb4c90b3e0c42b4f902c8129dbf8f4e, type: 3}
-    teksCiriCiri: Burung langka endemik Waigeo dan Batanta dengan kulit kepala biru
-      cerah pada pejantannya.
+    teksCiriCiri: Hewan nokturnal ini bergerak lincah melompat di lantai hutan untuk
+      mencari rumput dan buah liar, meninggalkan jejak kaki dan bekas lompatan.
     spriteFotoStatis: {fileID: 7603395522799856639, guid: 8da8e99dc35fc794d87bffa72905398b, type: 3}
     suaraHewan: {fileID: 8300000, guid: 252b7033fcc44374e82683880a128587, type: 3}
   - namaHewan: Cendrawasih Botak
     keyPlayerPrefs: Koleksi_Cendrawasih Botak
     prefabAnimasiHewan: {fileID: 4837405490331856862, guid: 7a5b78f017d876c43a48b5c45519122f, type: 3}
-    teksCiriCiri: Burung langka endemik Waigeo dan Batanta dengan kulit kepala biru
-      cerah pada pejantannya.
+    teksCiriCiri: Burung jantan melakukan ritual rumit dengan membersihkan lantai
+      hutan untuk membuat panggung, lalu menari memamerkan bulunya yang cerah untuk
+      memikat betina.
     spriteFotoStatis: {fileID: -5008294482684803111, guid: 5aef6b2e4b5d86f48922421850abe9d5, type: 3}
     suaraHewan: {fileID: 8300000, guid: 04c9f911564e5cf4a9a0ab0149ecf494, type: 3}
   containerPrefabHewan: {fileID: 1050868416}
@@ -1282,7 +1281,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -609, y: -240}
+  m_AnchoredPosition: {x: -609, y: -155}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &473675713
@@ -1305,10 +1304,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Text
+  m_text: 'Hewan ini menggunakan cakarnya untuk memanjat dan ekornya sebagai penyeimbang
+    saat bergerak lincah di antara dahan untuk mencari buah dan daun muda.
+
+'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 41a8ab0b7820ac349a7bc662838efb8a, type: 2}
+  m_sharedMaterial: {fileID: -8634005616548293049, guid: 41a8ab0b7820ac349a7bc662838efb8a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1332,13 +1334,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 26.8
-  m_fontSizeBase: 26.8
+  m_fontSize: 26
+  m_fontSizeBase: 26
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 8
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -1371,7 +1373,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -348.31775, w: 0}
+  m_margin: {x: 0, y: 0, z: -332.48776, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1563,7 +1565,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -482, y: -191}
+  m_AnchoredPosition: {x: -482, y: -104}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &579444353
@@ -1695,7 +1697,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1228453417}
   m_Father: {fileID: 48385493}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -1723,7 +1726,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -3300306893316611799, guid: 1a506d0c7879ebe46a474e69c0a2b662, type: 3}
+  m_Sprite: {fileID: -1535617886122992374, guid: 3c2508e0d02f2514db29e88297bbfb7f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2423,7 +2426,7 @@ Transform:
   m_GameObject: {fileID: 1050868415}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -444, y: 95.7, z: 0}
+  m_LocalPosition: {x: -444, y: 148, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -2653,6 +2656,81 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1220913313}
+  m_CullTransparentMesh: 1
+--- !u!1 &1228453416
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1228453417}
+  - component: {fileID: 1228453419}
+  - component: {fileID: 1228453418}
+  m_Layer: 5
+  m_Name: Frame Kiri (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1228453417
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1228453416}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 656432974}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.000020971, y: 106.02}
+  m_SizeDelta: {x: 510.75, y: 367.36}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1228453418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1228453416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 3557759591196149491, guid: d4441e4bb02455744aee49a485da7536, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1228453419
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1228453416}
   m_CullTransparentMesh: 1
 --- !u!1 &1275555834
 GameObject:
@@ -3385,7 +3463,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -442, y: 51}
+  m_AnchoredPosition: {x: -442, y: 116}
   m_SizeDelta: {x: 96, y: 130}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1537889349
