@@ -3,17 +3,17 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
 
-[System.Serializable]
-public class DataKoleksiHewan
-{
-    public string namaHewan;
-    public string keyPlayerPrefs;          // Harus SAMA PRESISI dengan GameManager (Misal: "Koleksi_Cendrawasih")
-    public GameObject prefabAnimasiHewan;  // Prefab Hewan ber-Animator
-    [TextArea(3, 5)]
-    public string teksCiriCiri;            // Deskripsi/Ciri-ciri
-    public Sprite spriteFotoStatis;        // Foto kecil slot kanan
-    public AudioClip suaraHewan;
-}
+    [System.Serializable]
+    public class DataKoleksiHewan
+    {
+        public string namaHewan;
+        public string keyPlayerPrefs;          // Harus SAMA PRESISI dengan GameManager (Misal: "Koleksi_Cendrawasih")
+        public GameObject prefabAnimasiHewan;  // Prefab Hewan ber-Animator
+        [TextArea(3, 5)]
+        public string teksCiriCiri;            // Deskripsi/Ciri-ciri
+        public Sprite spriteFotoStatis;        // Foto kecil slot kanan
+        public AudioClip suaraHewan;
+    }
 
 public class AlbumManager : MonoBehaviour
 {
