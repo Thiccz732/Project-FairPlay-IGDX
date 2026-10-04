@@ -47,7 +47,7 @@ public class TutorialManager : MonoBehaviour
         //     if (panelTutorialUI != null) panelTutorialUI.SetActive(false);
         // }
 
-        BukaTutorial(); // Untuk testing, selalu buka tutorial
+        if (panelTutorialUI != null) panelTutorialUI.SetActive(false);
     }
 
     public void BukaTutorial()
