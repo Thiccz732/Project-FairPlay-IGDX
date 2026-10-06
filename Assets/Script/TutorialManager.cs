@@ -37,17 +37,14 @@ public class TutorialManager : MonoBehaviour
 
     private void Start()
     {
-        // Cek apakah tutorial dengan key ini sudah pernah diselesaikan
-        // if (PlayerPrefs.GetInt(tutorialKey, 0) == 0)
-        // {
-        //     BukaTutorial();
-        // }
-        // else
-        // {
-        //     if (panelTutorialUI != null) panelTutorialUI.SetActive(false);
-        // }
-
-        if (panelTutorialUI != null) panelTutorialUI.SetActive(false);
+        if (PlayerPrefs.GetInt(tutorialKey, 0) == 0)
+        {
+            BukaTutorial();
+        }
+        else
+        {
+            if (panelTutorialUI != null) panelTutorialUI.SetActive(false);
+        }
     }
 
     public void BukaTutorial()
