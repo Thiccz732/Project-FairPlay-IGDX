@@ -9,6 +9,9 @@ public class CutsceneLevel1Manager : MonoBehaviour
     public GameObject panelCutsceneUI;
     public Button tombolSkip;
 
+    [Header("BGM Audio Source (Drag GameObject BGM ke Sini)")]
+    public AudioSource bgmAudioSource;
+
     [Header("Referensi Script Selanjutnya")]
     public TutorialManager tutorialManager;
 
@@ -20,7 +23,7 @@ public class CutsceneLevel1Manager : MonoBehaviour
 
     private void Start()
     {
-        // Jika mode testing aktif, hapus dulu key simpanannya
+        // Jika mode testing aktif, hapus dulu key simpanannyaf
         if (selaluMunculkanSaatTesting)
         {
             PlayerPrefs.DeleteKey("CutsceneLevel1_Completed");
@@ -55,16 +58,20 @@ public class CutsceneLevel1Manager : MonoBehaviour
             GameManager.instance.isTimerRunning = false;
         }
 
+        // --- PASTI MATI: Stop Langsung AudioSource BGM ---
+        if (bgmAudioSource != null)
+        {
+            bgmAudioSource.Pause();
+        }
+
         if (videoPlayer != null)
         {
             videoPlayer.playbackSpeed = 1f;
 
-            // --- KHUSUS WEBGL / BUILD ---
     #if UNITY_WEBGL && !UNITY_EDITOR
             videoPlayer.source = VideoSource.Url;
             videoPlayer.url = System.IO.Path.Combine(Application.streamingAssetsPath, "cutscene4.mp4");
     #else
-            // Di Unity Editor tetap pakai Video Clip biasa
             videoPlayer.source = VideoSource.VideoClip;
     #endif
 
@@ -98,31 +105,32 @@ public class CutsceneLevel1Manager : MonoBehaviour
         if (isCutsceneFinished) return;
         isCutsceneFinished = true;
 
-        // Simpan status
         if (!selaluMunculkanSaatTesting)
         {
             PlayerPrefs.SetInt("CutsceneLevel1_Completed", 1);
             PlayerPrefs.Save();
         }
 
-        // Matikan UI Cutscene
         if (tombolSkip != null) tombolSkip.gameObject.SetActive(false);
         if (panelCutsceneUI != null) panelCutsceneUI.SetActive(false);
 
-        // Unsubscribe event
         if (videoPlayer != null)
         {
             videoPlayer.loopPointReached -= OnVideoEnd;
         }
 
-        // LANJUTKAN KE TUTORIAL
+        // --- NYALAKAN LAGI BGM PAS CUTSCENE SELESAI ---
+        if (bgmAudioSource != null)
+        {
+            bgmAudioSource.Play();
+        }
+
         if (tutorialManager != null)
         {
             tutorialManager.BukaTutorial();
         }
         else
         {
-            // Jika tidak ada tutorialManager, langsung resume timer
             if (GameManager.instance != null) GameManager.instance.isTimerRunning = true;
         }
     }

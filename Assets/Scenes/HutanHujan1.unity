@@ -6413,6 +6413,7 @@ MonoBehaviour:
   videoPlayer: {fileID: 329809293}
   panelCutsceneUI: {fileID: 199471918}
   tombolSkip: {fileID: 96216154}
+  bgmAudioSource: {fileID: 1773693982}
   tutorialManager: {fileID: 741408206}
   selaluMunculkanSaatTesting: 1
 --- !u!1 &335934640
