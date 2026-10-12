@@ -6818,7 +6818,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 8400190091663850424, guid: 339f2f1b5082ab84cb56c24e1fd72024, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -11880,7 +11880,7 @@ MonoBehaviour:
   tombolPauseUI: {fileID: 1836054904}
   redFlashOverlay: {fileID: 1058965194}
   flashSpeed: 1
-  maxAlpha: 0.35
+  maxAlpha: 0.5
   finalPanelUI: {fileID: 373297276}
   totalPhotosToMatch: 4
   draggablePhotoUI:
