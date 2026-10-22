@@ -98,7 +98,17 @@ public class AudioManager : MonoBehaviour
         // Mute / Unmute AudioSource bawaan Unity
         if (sfxSource != null) sfxSource.mute = isSoundMuted;
         if (bgmSource != null) bgmSource.mute = isMusicMuted;
-        // AudioListener.pause = isSoundMuted;
+
+        // --- CARI DAN MUTE BGM_MANAGER ATAU AUDIOSOURCE LAIN DI SCENE ---
+        GameObject bgmManagerObj = GameObject.Find("BGM_Manager");
+        if (bgmManagerObj != null)
+        {
+            AudioSource bgmLokal = bgmManagerObj.GetComponent<AudioSource>();
+            if (bgmLokal != null)
+            {
+                bgmLokal.mute = isMusicMuted;
+            }
+        }
 
         UpdateUISprites();
     }
