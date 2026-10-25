@@ -5315,7 +5315,7 @@ GameObject:
   - component: {fileID: 101506420}
   - component: {fileID: 101506421}
   - component: {fileID: 101506422}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Map1_rumput2_0 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5421,7 +5421,7 @@ GameObject:
   - component: {fileID: 112410774}
   - component: {fileID: 112410775}
   - component: {fileID: 112410776}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Map1_rumput2_0 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5527,7 +5527,7 @@ GameObject:
   - component: {fileID: 130608116}
   - component: {fileID: 130608117}
   - component: {fileID: 130608118}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Map1_rumput_0 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5761,6 +5761,112 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97c8bbbd7e1f5c54dbe38dc05b10530d, type: 3}
+--- !u!1 &165155965
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 165155966}
+  - component: {fileID: 165155968}
+  - component: {fileID: 165155967}
+  m_Layer: 7
+  m_Name: Map1_rumput_0 (8)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &165155966
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 165155965}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.65, y: 6.59, z: 0}
+  m_LocalScale: {x: 0.3792, y: 0.3792, z: 0.3792}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 243314553}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &165155967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 165155965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72c10443304b2f74a9a8669363b64074, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AutoSorting
+  isStatic: 1
+  yOffset: 3
+--- !u!212 &165155968
+SpriteRenderer:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 165155965}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: -3
+  m_MaskInteraction: 0
+  m_Sprite: {fileID: -6898615679878817904, guid: bb869a5c285df234b9ff50c0df195f89, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 6.93, y: 4.38}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_SpriteSortPoint: 0
 --- !u!1 &171640595
 GameObject:
   m_ObjectHideFlags: 0
@@ -6472,6 +6578,7 @@ Transform:
   - {fileID: 343958167}
   - {fileID: 2042839146}
   - {fileID: 112410774}
+  - {fileID: 526786517}
   - {fileID: 310383575}
   - {fileID: 1815094213}
   - {fileID: 1848784822}
@@ -6480,6 +6587,7 @@ Transform:
   - {fileID: 1305078063}
   - {fileID: 2043981280}
   - {fileID: 1365698601}
+  - {fileID: 165155966}
   - {fileID: 288431759}
   - {fileID: 1912121898}
   - {fileID: 1035117839}
@@ -6558,7 +6666,7 @@ GameObject:
   - component: {fileID: 288431759}
   - component: {fileID: 288431760}
   - component: {fileID: 288431761}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Map1_rumput_0 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6817,7 +6925,7 @@ GameObject:
   - component: {fileID: 310383575}
   - component: {fileID: 310383576}
   - component: {fileID: 310383577}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Map1_rumput2_0 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7116,7 +7224,7 @@ GameObject:
   - component: {fileID: 343958167}
   - component: {fileID: 343958168}
   - component: {fileID: 343958169}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Map1_rumput2_0 (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7408,7 +7516,7 @@ GameObject:
   - component: {fileID: 447189712}
   - component: {fileID: 447189713}
   - component: {fileID: 447189714}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Map1_rumput2_0 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8281,6 +8389,112 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_MaxRayIntersections: 0
+--- !u!1 &526786516
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 526786517}
+  - component: {fileID: 526786519}
+  - component: {fileID: 526786518}
+  m_Layer: 7
+  m_Name: Map1_rumput2_0 (14)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &526786517
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 526786516}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 5.75, y: 7.78, z: 0}
+  m_LocalScale: {x: 0.2908, y: 0.2908, z: 0.2908}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 243314553}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &526786518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 526786516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72c10443304b2f74a9a8669363b64074, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AutoSorting
+  isStatic: 1
+  yOffset: 3
+--- !u!212 &526786519
+SpriteRenderer:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 526786516}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: -3
+  m_MaskInteraction: 0
+  m_Sprite: {fileID: -656870476949252764, guid: 18b677e7722640743ba3294d1baca502, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 12.89, y: 3.68}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_SpriteSortPoint: 0
 --- !u!1 &527908098
 GameObject:
   m_ObjectHideFlags: 0
@@ -9707,7 +9921,7 @@ GameObject:
   - component: {fileID: 844418678}
   - component: {fileID: 844418679}
   - component: {fileID: 844418680}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Map1_rumput2_0 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10928,7 +11142,7 @@ GameObject:
   - component: {fileID: 1009831451}
   - component: {fileID: 1009831452}
   - component: {fileID: 1009831453}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Map1_rumput_0 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11202,7 +11416,7 @@ GameObject:
   - component: {fileID: 1035117839}
   - component: {fileID: 1035117840}
   - component: {fileID: 1035117841}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Map1_rumput_0 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12516,7 +12730,7 @@ GameObject:
   - component: {fileID: 1305078063}
   - component: {fileID: 1305078064}
   - component: {fileID: 1305078065}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Map1_rumput2_0 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12884,7 +13098,7 @@ GameObject:
   - component: {fileID: 1365698601}
   - component: {fileID: 1365698602}
   - component: {fileID: 1365698603}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Map1_rumput_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13287,7 +13501,7 @@ GameObject:
   - component: {fileID: 1410685816}
   - component: {fileID: 1410685817}
   - component: {fileID: 1410685818}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Map1_rumput2_0 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15132,7 +15346,7 @@ GameObject:
   - component: {fileID: 1815094213}
   - component: {fileID: 1815094214}
   - component: {fileID: 1815094215}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Map1_rumput2_0 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15325,7 +15539,7 @@ GameObject:
   - component: {fileID: 1848784822}
   - component: {fileID: 1848784823}
   - component: {fileID: 1848784824}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Map1_rumput2_0 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15431,7 +15645,7 @@ GameObject:
   - component: {fileID: 1852951308}
   - component: {fileID: 1852951309}
   - component: {fileID: 1852951310}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Map1_rumput_0 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15537,7 +15751,7 @@ GameObject:
   - component: {fileID: 1854345375}
   - component: {fileID: 1854345376}
   - component: {fileID: 1854345377}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Map1_rumput2_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15955,7 +16169,7 @@ GameObject:
   - component: {fileID: 1912121898}
   - component: {fileID: 1912121899}
   - component: {fileID: 1912121900}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Map1_rumput_0 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17427,7 +17641,7 @@ GameObject:
   - component: {fileID: 2030324219}
   - component: {fileID: 2030324220}
   - component: {fileID: 2030324221}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Map1_rumput2_0 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17533,7 +17747,7 @@ GameObject:
   - component: {fileID: 2042839146}
   - component: {fileID: 2042839147}
   - component: {fileID: 2042839148}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Map1_rumput2_0 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17639,7 +17853,7 @@ GameObject:
   - component: {fileID: 2043981280}
   - component: {fileID: 2043981281}
   - component: {fileID: 2043981282}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Map1_rumput2_0 (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17745,7 +17959,7 @@ GameObject:
   - component: {fileID: 2075584016}
   - component: {fileID: 2075584017}
   - component: {fileID: 2075584018}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Map1_rumput_0 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
