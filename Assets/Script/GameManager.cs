@@ -426,6 +426,9 @@ public class GameManager : MonoBehaviour
             string keyKoleksi = "Koleksi_" + namaHewanSaatIni; 
             
             PlayerPrefs.SetInt(keyKoleksi, 1);
+
+            PlayerPrefs.SetString("HewanBaruDidapat", namaHewanSaatIni);
+
             PlayerPrefs.Save();
             Debug.Log("Berhasil menyimpan koleksi: " + keyKoleksi);
         }
