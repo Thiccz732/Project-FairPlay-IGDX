@@ -87,6 +87,9 @@ public class MenuDistrikManager : MonoBehaviour
 
     public void PindahKeMenuKoleksi()
     {
+        PlayerPrefs.SetString("AsalSceneKoleksi", "MenuDistrikScene");
+        PlayerPrefs.Save();
+        
         SceneManager.LoadScene("AlbumScene"); 
     }
 }

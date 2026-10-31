@@ -90,6 +90,8 @@ public class MainMenuManager : MonoBehaviour
 
     public void PindahKeMenuKoleksi()
     {
+        PlayerPrefs.SetString("AsalSceneKoleksi", "MainMenu");
+        PlayerPrefs.Save();
         SceneManager.LoadScene("AlbumScene"); 
     }
 

@@ -182,7 +182,15 @@ public class AlbumManager : MonoBehaviour
 
     public void KembaliKeMenu()
     {
-        SceneManager.LoadScene("MainMenu");
+        // Ambil penanda asal scene (Default: "MainMenu" jika tidak ada data)
+        string sceneAsal = PlayerPrefs.GetString("AsalSceneKoleksi", "MainMenu");
+
+        // Bersihkan key penanda agar tidak mengendap
+        PlayerPrefs.DeleteKey("AsalSceneKoleksi");
+        PlayerPrefs.Save();
+
+        // Pindah ke scene asal yang tersimpan
+        SceneManager.LoadScene(sceneAsal);
     }
 
     public void PlaySuaraHewanSaatIni()
