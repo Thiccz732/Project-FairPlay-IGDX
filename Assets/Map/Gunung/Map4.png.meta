@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 0ee4dc27200db9d49b2ecaf4002cdcf6
+guid: 23a134bb403207245ae9cf5d7c075c50
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8554884262887718234
-    second: biom gunung1-03-03_0
+      213: 909770270833512845
+    second: Map4_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -72,10 +72,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: biom gunung1-03-03_0
+      name: Map4_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 19
         y: 0
-        width: 21334
-        height: 12000
+        width: 7981
+        height: 4500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6a28fffa612f64980800000000000000
-      internalID: -8554884262887718234
+      spriteID: d811e3cbd3720ac00800000000000000
+      internalID: 909770270833512845
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      biom gunung1-03-03_0: -8554884262887718234
+      Map4_0: 909770270833512845
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

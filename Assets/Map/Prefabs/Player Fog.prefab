@@ -5245,7 +5245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af269b6b1e7352d4f880a446465c5c7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
-  maxSpeed: 5
+  maxSpeed: 6
   acceleration: 40
   deceleration: 50
   walkParticle: {fileID: 1930447958194127560}

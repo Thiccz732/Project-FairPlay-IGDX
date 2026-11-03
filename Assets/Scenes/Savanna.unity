@@ -273,6 +273,84 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AutoSorting
   isStatic: 1
   yOffset: 3
+--- !u!1 &13479471
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 13479472}
+  - component: {fileID: 13479473}
+  m_Layer: 7
+  m_Name: PlayerSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &13479472
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 13479471}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 23.75, y: 3.59, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1441430220}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &13479473
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 13479471}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.078149796, y: 0.19537687}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 8.346174, y: 7.9554186}
+  m_EdgeRadius: 0
 --- !u!1 &14603445
 GameObject:
   m_ObjectHideFlags: 0
@@ -716,7 +794,7 @@ Transform:
   m_GameObject: {fileID: 87778258}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1, y: 27.9, z: 0}
+  m_LocalPosition: {x: 0.1, y: 28.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1120,7 +1198,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -5000
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -6150841510314090211, guid: 819ab9d9612a0d44d808579161858b57, type: 3}
+  m_Sprite: {fileID: 8051445658188133891, guid: b9f881d2a10843545bbe3315c497e929, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1140,7 +1218,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -23.171, y: 11.105, z: 0}
-  m_LocalScale: {x: 0.44138986, y: 0.44138986, z: 0.44138986}
+  m_LocalScale: {x: 1.1966962, y: 1.1966962, z: 1.1966962}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1692,7 +1770,7 @@ Transform:
   m_GameObject: {fileID: 253961571}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.2, y: 66.7, z: 0}
+  m_LocalPosition: {x: 16.3, y: 66.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2107,7 +2185,7 @@ Transform:
   m_GameObject: {fileID: 323562421}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -48.5, y: -3.5, z: 0}
+  m_LocalPosition: {x: -47.8, y: -3.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3630,7 +3708,7 @@ Transform:
   m_GameObject: {fileID: 593693697}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -17.5, z: 0}
+  m_LocalPosition: {x: 1.3, y: -17.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4084,7 +4162,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5474905476223209985, guid: 97c8bbbd7e1f5c54dbe38dc05b10530d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.91962
+      value: 4.8
       objectReference: {fileID: 0}
     - target: {fileID: 5474905476223209985, guid: 97c8bbbd7e1f5c54dbe38dc05b10530d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4158,7 +4236,7 @@ Transform:
   m_GameObject: {fileID: 676332880}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.2, y: 57.3, z: 0}
+  m_LocalPosition: {x: -12.4, y: 58.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5104,7 +5182,7 @@ Transform:
   m_GameObject: {fileID: 882582773}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.3, y: 8.9, z: 0}
+  m_LocalPosition: {x: -9.3, y: 9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6015,7 +6093,7 @@ Transform:
   m_GameObject: {fileID: 1010607379}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.88202, y: 2.91962, z: -10}
+  m_LocalPosition: {x: -5.88202, y: 4.8, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7021,7 +7099,7 @@ Transform:
   m_GameObject: {fileID: 1327143204}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.88202, y: 2.91962, z: -10}
+  m_LocalPosition: {x: -5.88202, y: 4.8, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7313,6 +7391,7 @@ Transform:
   - {fileID: 557303726}
   - {fileID: 1041180891}
   - {fileID: 54199554}
+  - {fileID: 13479472}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1463533994
@@ -8224,14 +8303,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a29ca4a3c5e4299409c38e98ab2f0229, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  cluePrefab: {fileID: 5645975296016794199, guid: 15a7a67046337f84f918f61c354e8a9b, type: 3}
+  cluePrefab: {fileID: 5645975296016794199, guid: 78fced277a4100b40b4e019c43b621b7, type: 3}
   clueImages:
-  - {fileID: 667285732379039772, guid: 5228c6f942153384e90ca3d9ddb803d1, type: 3}
-  - {fileID: 8069830994492556104, guid: 5228c6f942153384e90ca3d9ddb803d1, type: 3}
-  - {fileID: 1350128070082706223, guid: 5228c6f942153384e90ca3d9ddb803d1, type: 3}
-  - {fileID: -6467354976091625785, guid: 5228c6f942153384e90ca3d9ddb803d1, type: 3}
-  - {fileID: -469517197277182853, guid: 5228c6f942153384e90ca3d9ddb803d1, type: 3}
-  minimumDistance: 30
+  - {fileID: -1909467888593190853, guid: cf9dff45b5571304487bcb6cc1cd6ba3, type: 3}
+  - {fileID: -6727690070703844663, guid: cf9dff45b5571304487bcb6cc1cd6ba3, type: 3}
+  - {fileID: 6214766609477139852, guid: cf9dff45b5571304487bcb6cc1cd6ba3, type: 3}
+  - {fileID: 3086257274215968665, guid: cf9dff45b5571304487bcb6cc1cd6ba3, type: 3}
+  - {fileID: -5341438082226076058, guid: cf9dff45b5571304487bcb6cc1cd6ba3, type: 3}
+  minimumDistance: 10
   spawnAreaSize: {x: 82.3, y: 42.1}
   obstacleLayer:
     serializedVersion: 2
@@ -8538,7 +8617,7 @@ Transform:
   m_GameObject: {fileID: 1761211826}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.5, y: 5, z: 0}
+  m_LocalPosition: {x: 9.2, y: 5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8923,15 +9002,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   currentLevelNumber: 5
   animalStages:
-  - namaHewan: Cendrawasih Botak
-    animalPrefab: {fileID: 7718305887417924496, guid: 41f5f368888481544aacf5657c8f6e48, type: 3}
+  - namaHewan: Walabi Semak
+    animalPrefab: {fileID: 7718305887417924496, guid: 42ffc725c847669428a344a59f915167, type: 3}
     requiredClues: 4
     animalSpawnPoints:
     - {fileID: 30647910}
-    - {fileID: 30647910}
-    - {fileID: 30647910}
-    - {fileID: 30647910}
-    timeLimit: 130
+    - {fileID: 1049293451}
+    - {fileID: 250079114}
+    - {fileID: 897045178}
+    timeLimit: 120
   teleportInterval: 25
   isTeleportPaused: 0
   isPhotoModeActive: 0

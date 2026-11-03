@@ -6633,7 +6633,7 @@ MonoBehaviour:
   - {fileID: 8120378500081733368, guid: 318f8588097e4c34f9c79d31aaea6b63, type: 3}
   - {fileID: -7224218902949251785, guid: 318f8588097e4c34f9c79d31aaea6b63, type: 3}
   - {fileID: -8705903866655950142, guid: 318f8588097e4c34f9c79d31aaea6b63, type: 3}
-  minimumDistance: 13
+  minimumDistance: 10
   spawnAreaSize: {x: 64.9, y: 39.2}
   obstacleLayer:
     serializedVersion: 2
@@ -7639,8 +7639,8 @@ Transform:
   m_GameObject: {fileID: 456968145}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 16.32, y: -23.78, z: 0}
-  m_LocalScale: {x: 0.2929, y: 0.2929, z: 0.2929}
+  m_LocalPosition: {x: -22.07, y: -10.33, z: 0}
+  m_LocalScale: {x: 0.17691745, y: 0.17691745, z: 0.17691745}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1216419702}
@@ -9582,7 +9582,7 @@ Transform:
   m_GameObject: {fileID: 782425951}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -18.86, y: -10.57, z: 0}
+  m_LocalPosition: {x: 15.2, y: -26, z: 0}
   m_LocalScale: {x: 0.7536451, y: 0.7536451, z: 0.7536451}
   m_ConstrainProportionsScale: 0
   m_Children:
