@@ -144,7 +144,7 @@ Transform:
   m_GameObject: {fileID: 30647909}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -46.08, y: 7.3, z: 0}
+  m_LocalPosition: {x: -48.44, y: 7.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5915,7 +5915,7 @@ Transform:
   m_GameObject: {fileID: 250079113}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 24.3, y: 12.8, z: 0}
+  m_LocalPosition: {x: 24.3, y: -3.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8308,7 +8308,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -14.7, y: 12.6, z: 0}
-  m_LocalScale: {x: 93.76398, y: 55.021957, z: 33.023018}
+  m_LocalScale: {x: 93.76398, y: 52.82108, z: 33.023018}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -10251,7 +10251,7 @@ Transform:
   m_GameObject: {fileID: 1010607379}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.7, y: 8.04, z: -10}
+  m_LocalPosition: {x: -11.700001, y: 8.04, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14709,13 +14709,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a29ca4a3c5e4299409c38e98ab2f0229, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  cluePrefab: {fileID: 5645975296016794199, guid: b9ca830137988c0488fdbf8a04982dec, type: 3}
+  cluePrefab: {fileID: 5645975296016794199, guid: 15a7a67046337f84f918f61c354e8a9b, type: 3}
   clueImages:
-  - {fileID: 667285732379039772, guid: 5228c6f942153384e90ca3d9ddb803d1, type: 3}
-  - {fileID: 8069830994492556104, guid: 5228c6f942153384e90ca3d9ddb803d1, type: 3}
-  - {fileID: 1350128070082706223, guid: 5228c6f942153384e90ca3d9ddb803d1, type: 3}
-  - {fileID: -6467354976091625785, guid: 5228c6f942153384e90ca3d9ddb803d1, type: 3}
-  - {fileID: -469517197277182853, guid: 5228c6f942153384e90ca3d9ddb803d1, type: 3}
+  - {fileID: 5278852439765480506, guid: 89457b62b5346264c8efdcba50cbc3de, type: 3}
+  - {fileID: -8051251606492099088, guid: 89457b62b5346264c8efdcba50cbc3de, type: 3}
+  - {fileID: -5208317122011840099, guid: 89457b62b5346264c8efdcba50cbc3de, type: 3}
+  - {fileID: 9191883556456067864, guid: 89457b62b5346264c8efdcba50cbc3de, type: 3}
+  - {fileID: -4362167833274879824, guid: 89457b62b5346264c8efdcba50cbc3de, type: 3}
   minimumDistance: 6
   spawnAreaSize: {x: 60.4, y: 41.7}
   obstacleLayer:
@@ -14884,7 +14884,7 @@ Transform:
   m_GameObject: {fileID: 1753935243}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.80662, y: -7.30147, z: 0}
+  m_LocalPosition: {x: 0.80662, y: -4.02, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -15584,8 +15584,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   currentLevelNumber: 4
   animalStages:
-  - namaHewan: Kangguru Pohon
-    animalPrefab: {fileID: 7718305887417924496, guid: 588f490d8afbf0243ab57ed17b65493b, type: 3}
+  - namaHewan: Cendrawasih Botak
+    animalPrefab: {fileID: 7718305887417924496, guid: 41f5f368888481544aacf5657c8f6e48, type: 3}
     requiredClues: 4
     animalSpawnPoints:
     - {fileID: 30647910}

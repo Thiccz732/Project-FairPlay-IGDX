@@ -245,7 +245,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7902927236450922638
 RectTransform:
   m_ObjectHideFlags: 0
@@ -730,8 +730,8 @@ MonoBehaviour:
   lensButtonPanel: {fileID: 7012372003966950111}
   clueCamera: {fileID: 0}
   currentLens: 0
-  wajibNormal: 0
-  wajibNightVision: 1
+  wajibNormal: 1
+  wajibNightVision: 0
   wajibMakro: 0
 --- !u!114 &3752783042639435368
 MonoBehaviour:
@@ -893,7 +893,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7632343888362010374
 RectTransform:
   m_ObjectHideFlags: 0

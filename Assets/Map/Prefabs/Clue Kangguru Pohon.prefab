@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4460854139184346816
 RectTransform:
   m_ObjectHideFlags: 0
@@ -336,15 +336,15 @@ RectTransform:
   m_GameObject: {fileID: 1435371624521226976}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 19.179956, y: 10.727112, z: 5.9928}
+  m_LocalScale: {x: 7.095625, y: 8.367254, z: 5.9928}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6819371699453992166}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.00012207031, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 0.000061035, y: -70.30734}
+  m_SizeDelta: {x: 100, y: 88.6002}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7648101557159149606
 CanvasRenderer:
@@ -539,12 +539,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraLensManager
   nightVisionEffect: {fileID: 1435371624521226976}
-  macroEffect: {fileID: 35199846353463883}
+  macroEffect: {fileID: 0}
   lensButtonPanel: {fileID: 1522489127385979677}
   clueCamera: {fileID: 0}
   currentLens: 0
-  wajibNormal: 1
-  wajibNightVision: 0
+  wajibNormal: 0
+  wajibNightVision: 1
   wajibMakro: 0
 --- !u!114 &4871761214321800659
 MonoBehaviour:
@@ -736,7 +736,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &6046470335074134584
 RectTransform:
   m_ObjectHideFlags: 0
@@ -838,7 +838,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 3060575129189570776}
         m_TargetAssemblyTypeName: CameraLensManager, Assembly-CSharp
         m_MethodName: SetNightVisionLens
         m_Mode: 1
