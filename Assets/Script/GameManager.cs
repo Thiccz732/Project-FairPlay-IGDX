@@ -86,6 +86,31 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
+        PlayerPrefs.SetInt("LevelUnlocked", 10); 
+        PlayerPrefs.Save();
+        UnlockSemuaKoleksi();
+    }
+
+    private void UnlockSemuaKoleksi()
+    {
+        // Masukkan semua nama hewan yang ada di game kamu
+        string[] daftarHewan = new string[] 
+        { 
+            "Cendrawasih", 
+            "Kasuari", 
+            "Kangguru Pohon", 
+            "Cendrawasih Botak", 
+            "Walabi Semak" // Tambahkan nama hewan lainnya sesuai di Inspector GameManager
+        };
+
+        foreach (string namaHewan in daftarHewan)
+        {
+            string keyKoleksi = "Koleksi_" + namaHewan;
+            PlayerPrefs.SetInt(keyKoleksi, 1); // Set 1 = Terbuka
+        }
+
+        PlayerPrefs.Save();
+        Debug.Log("Semua koleksi hewan berhasil di-unlock untuk Beta Test!");
     }
 
     private void Start()
@@ -424,15 +449,12 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator NextStageRoutine()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(0.2f);
         LanjutKeHewanBerikutnya();
     }
 
     private void LanjutKeHewanBerikutnya()
     {
-        if (finalPanelUI != null) finalPanelUI.SetActive(false);
-        if (playerTransform != null) playerTransform.GetComponent<PlayerController>().enabled = true;
-
         if (animalStages.Length > 0 && currentStageIndex < animalStages.Length)
         {
             string namaHewanSaatIni = animalStages[currentStageIndex].namaHewan;
@@ -440,51 +462,60 @@ public class GameManager : MonoBehaviour
             string keyKoleksi = "Koleksi_" + namaHewanSaatIni; 
             
             PlayerPrefs.SetInt(keyKoleksi, 1);
+            PlayerPrefs.SetInt("AdaKoleksiBaru", 1); // Notifikasi Red Dot
             PlayerPrefs.Save();
             Debug.Log("Berhasil menyimpan koleksi: " + keyKoleksi);
 
-            // --- COROUTINE POP-UP OVERLAY HEWAN BARU ---
+            // SFX Berhasil / Dapet Hewan dipanggil di sini biar pasti bunyi
+            if (AudioManager.instance != null)
+            {
+                AudioManager.instance.PlayAnimalFoundSFX();
+            }
+
+            // Jalankan pop-up poster MENIMPA buku foto
             StartCoroutine(TampilkanOverlayDanLanjut(namaHewanSaatIni));
         }
         else
         {
+            if (finalPanelUI != null) finalPanelUI.SetActive(false);
             ProsesTamatLevel();
         }
     }
 
     private IEnumerator TampilkanOverlayDanLanjut(string namaHewan)
     {
-        // Cari sprite overlay yang sesuai nama hewan saat ini
         Sprite spriteDitemukan = null;
-        foreach (var data in daftarOverlayHewan)
+
+        if (daftarOverlayHewan != null && daftarOverlayHewan.Length > 0)
         {
-            if (data.namaHewan == namaHewan)
+            foreach (var data in daftarOverlayHewan)
             {
-                spriteDitemukan = data.spriteOverlay;
-                break;
+                if (data != null && data.namaHewan == namaHewan)
+                {
+                    spriteDitemukan = data.spriteOverlay;
+                    break;
+                }
             }
         }
 
-        // Jika sprite ketemu, munculkan panel overlay dulu
         if (spriteDitemukan != null && overlayPanelUI != null && overlayImageDisplay != null)
         {
             overlayImageDisplay.sprite = spriteDitemukan;
-            overlayPanelUI.SetActive(true);
+            overlayPanelUI.SetActive(true); // Popup muncul MENIMPA buku foto
 
-            // Mainkan SFX hewan / SFX selebrasi jika ada
-            if (AudioManager.instance != null)
-            {
-                AudioManager.instance.PlayAnimalFoundSFX();
-            }
-
-            // Tunggu beberapa detik agar pemain bisa lihat pop-up nya
             yield return new WaitForSeconds(durasiPopUpHewan);
 
-            // Matikan kembali overlay
             overlayPanelUI.SetActive(false);
         }
+        else
+        {
+            yield return new WaitForSeconds(1.5f);
+        }
 
-        // Eksekusi Pindah Level / Finish
+        // SEKARANG baru matikan panel buku setelah pop-up selesai
+        if (finalPanelUI != null) finalPanelUI.SetActive(false);
+        if (playerTransform != null) playerTransform.GetComponent<PlayerController>().enabled = true;
+
         EksekusiPindahStage();
     }
 
