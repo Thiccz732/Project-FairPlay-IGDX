@@ -5,6 +5,14 @@ using System.Collections;
 using TMPro; 
 
 [System.Serializable]
+
+public class OverlayHewanGameplayData
+{
+    public string namaHewan;      // SAMA PERSIS dengan namaHewan di animalStages (misal: "Cendrawasih")
+    public Sprite spriteOverlay;  // Drag sprite popup_cen, popup_cen_botak, dll ke sini
+}
+    
+[System.Serializable]
 public class AnimalStage
 {
     public string namaHewan = "Hewan 1";
@@ -49,6 +57,12 @@ public class GameManager : MonoBehaviour
     public GameObject finalPanelUI;      
     public int totalPhotosToMatch = 4;   
     public Image[] draggablePhotoUI; 
+
+    [Header("UI Pop-up Hewan Baru (Gameplay)")]
+    public GameObject overlayPanelUI;           // Panel UI Pop-up (misal: PopupHewanPanel)
+    public Image overlayImageDisplay;          // Component Image di dalam panel tersebut
+    public float durasiPopUpHewan = 2.5f;       // Durasi pop-up tampil sebelum pindah stage
+    public OverlayHewanGameplayData[] daftarOverlayHewan; // List mapping nama & sprite overlay
 
     [Header("UI Game Over")]
     public GameObject gameOverPanel; 
@@ -216,7 +230,7 @@ public class GameManager : MonoBehaviour
             ClueSpawner.instance.SpawnClues(amountToSpawn);
         }
 
-        if (animalStages.Length > 0)
+        if (animalStages.Length > 0)    
         {
             currentTimeLeft = animalStages[currentStageIndex].timeLimit;
             isTimerRunning = true;
@@ -426,13 +440,56 @@ public class GameManager : MonoBehaviour
             string keyKoleksi = "Koleksi_" + namaHewanSaatIni; 
             
             PlayerPrefs.SetInt(keyKoleksi, 1);
-
-            PlayerPrefs.SetString("HewanBaruDidapat", namaHewanSaatIni);
-
             PlayerPrefs.Save();
             Debug.Log("Berhasil menyimpan koleksi: " + keyKoleksi);
+
+            // --- COROUTINE POP-UP OVERLAY HEWAN BARU ---
+            StartCoroutine(TampilkanOverlayDanLanjut(namaHewanSaatIni));
+        }
+        else
+        {
+            ProsesTamatLevel();
+        }
+    }
+
+    private IEnumerator TampilkanOverlayDanLanjut(string namaHewan)
+    {
+        // Cari sprite overlay yang sesuai nama hewan saat ini
+        Sprite spriteDitemukan = null;
+        foreach (var data in daftarOverlayHewan)
+        {
+            if (data.namaHewan == namaHewan)
+            {
+                spriteDitemukan = data.spriteOverlay;
+                break;
+            }
         }
 
+        // Jika sprite ketemu, munculkan panel overlay dulu
+        if (spriteDitemukan != null && overlayPanelUI != null && overlayImageDisplay != null)
+        {
+            overlayImageDisplay.sprite = spriteDitemukan;
+            overlayPanelUI.SetActive(true);
+
+            // Mainkan SFX hewan / SFX selebrasi jika ada
+            if (AudioManager.instance != null)
+            {
+                AudioManager.instance.PlayAnimalFoundSFX();
+            }
+
+            // Tunggu beberapa detik agar pemain bisa lihat pop-up nya
+            yield return new WaitForSeconds(durasiPopUpHewan);
+
+            // Matikan kembali overlay
+            overlayPanelUI.SetActive(false);
+        }
+
+        // Eksekusi Pindah Level / Finish
+        EksekusiPindahStage();
+    }
+
+    private void EksekusiPindahStage()
+    {
         currentStageIndex++;
         
         if (currentStageIndex < animalStages.Length)
@@ -441,37 +498,30 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            PlayerPrefs.SetInt("LevelCompleted", currentLevelNumber);
-
-            int levelTerbukaSaatIni = PlayerPrefs.GetInt("LevelUnlocked", 1);
-            if (currentLevelNumber + 1 > levelTerbukaSaatIni)
-            {
-                PlayerPrefs.SetInt("LevelUnlocked", currentLevelNumber + 1);
-            }
-            
-            if (BadgeManager.instance != null)
-            {
-                // Contoh logic: Jika ini Level 2 Hutan Hujan
-                if (currentLevelNumber == 2) 
-                {
-                    BadgeManager.instance.CheckHutanHujanBadge();
-                }
-                // Contoh logic: Jika ini Level 4 (Level 2 Hutan Pegunungan)
-                else if (currentLevelNumber == 4) 
-                {
-                    BadgeManager.instance.CheckPegununganBadge();
-                }
-                // Contoh logic: Jika ini Level 5 (Level Savanna)
-                else if (currentLevelNumber == 5) 
-                {
-                    BadgeManager.instance.CheckSavannaBadge();
-                }
-            }
-
-            PlayerPrefs.Save();
-
-            if (!string.IsNullOrEmpty(nextSceneName)) SceneManager.LoadScene(nextSceneName);
+            ProsesTamatLevel();
         }
+    }
+
+    private void ProsesTamatLevel()
+    {
+        PlayerPrefs.SetInt("LevelCompleted", currentLevelNumber);
+
+        int levelTerbukaSaatIni = PlayerPrefs.GetInt("LevelUnlocked", 1);
+        if (currentLevelNumber + 1 > levelTerbukaSaatIni)
+        {
+            PlayerPrefs.SetInt("LevelUnlocked", currentLevelNumber + 1);
+        }
+        
+        if (BadgeManager.instance != null)
+        {
+            if (currentLevelNumber == 2) BadgeManager.instance.CheckHutanHujanBadge();
+            else if (currentLevelNumber == 4) BadgeManager.instance.CheckPegununganBadge();
+            else if (currentLevelNumber == 5) BadgeManager.instance.CheckSavannaBadge();
+        }
+
+        PlayerPrefs.Save();
+
+        if (!string.IsNullOrEmpty(nextSceneName)) SceneManager.LoadScene(nextSceneName);
     }
 
     public void SetTrackerUIVisible(bool isVisible)
