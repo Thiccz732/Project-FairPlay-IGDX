@@ -1351,16 +1351,16 @@ MonoBehaviour:
     spriteCompleted: {fileID: -4269689171831539364, guid: c189f05eeaf55b84792fb663adf04725, type: 3}
   - button: {fileID: 1221436591}
     spriteLocked: {fileID: 3183780878320308285, guid: 0f0fd06b8d76ab94dadc6e336c5b8f98, type: 3}
-    spriteUnlocked: {fileID: 7420080500666788733, guid: 6f069e4d8e59acf46bf24380d650691e, type: 3}
-    spriteCompleted: {fileID: -3608025624613442897, guid: d427ec243f0236a40bdc74d7f5b621fa, type: 3}
-  - button: {fileID: 559340384}
-    spriteLocked: {fileID: 3183780878320308285, guid: 0f0fd06b8d76ab94dadc6e336c5b8f98, type: 3}
     spriteUnlocked: {fileID: -5897786992144674257, guid: a1926bfb84b0c9847b8440bcc81a5005, type: 3}
     spriteCompleted: {fileID: 9192825302229162205, guid: 1008ddf083746eb448f498922c175aad, type: 3}
-  - button: {fileID: 458922212}
+  - button: {fileID: 559340384}
     spriteLocked: {fileID: 3183780878320308285, guid: 0f0fd06b8d76ab94dadc6e336c5b8f98, type: 3}
     spriteUnlocked: {fileID: 7209043928068515437, guid: 3eeb3f2f30cce5c47aa9a4c3c7cb40dc, type: 3}
     spriteCompleted: {fileID: 30944483610430819, guid: df6c398a168333144aeb37ece23aa2de, type: 3}
+  - button: {fileID: 458922212}
+    spriteLocked: {fileID: 3183780878320308285, guid: 0f0fd06b8d76ab94dadc6e336c5b8f98, type: 3}
+    spriteUnlocked: {fileID: 7420080500666788733, guid: 6f069e4d8e59acf46bf24380d650691e, type: 3}
+    spriteCompleted: {fileID: -3608025624613442897, guid: d427ec243f0236a40bdc74d7f5b621fa, type: 3}
   teksIndikatorDistrik: {fileID: 1089202509}
 --- !u!4 &1439259807
 Transform:

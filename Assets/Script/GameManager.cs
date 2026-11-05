@@ -88,7 +88,33 @@ public class GameManager : MonoBehaviour
         instance = this;
         PlayerPrefs.SetInt("LevelUnlocked", 10); 
         PlayerPrefs.Save();
+        BypassSemuaUnlock();
         UnlockSemuaKoleksi();
+    }
+
+    private void BypassSemuaUnlock()
+    {
+        // 1. Force Unlock Level (set ke jumlah level maksimal, misal 10)
+        PlayerPrefs.SetInt("LevelUnlocked", 10);
+
+        // 2. Bypass Tutorial (anggap tutorial sudah selesai)
+        PlayerPrefs.SetInt("TutorialDone", 1); 
+        PlayerPrefs.SetInt("IsFirstTime", 0);
+
+        // 3. Unlock Semua Koleksi Hewan
+        string[] semuaHewan = new string[] 
+        { 
+            "Cendrawasih", "Harimau", "Gajah", "Badak", "Komodo" 
+            // Isikan semua nama hewan di game kamu
+        };
+
+        foreach (string hewan in semuaHewan)
+        {
+            PlayerPrefs.SetInt("Koleksi_" + hewan, 1);
+        }
+
+        PlayerPrefs.Save();
+        Debug.Log("BETA TEST: Semua Level & Koleksi berhasil di-force unlock di Awake!");
     }
 
     private void UnlockSemuaKoleksi()

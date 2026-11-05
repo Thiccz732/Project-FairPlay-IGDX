@@ -23,7 +23,7 @@ public class MenuDistrikManager : MonoBehaviour
     private void Start()
     {
         // Cek data level berapa yang sudah terbuka (Default: Level 1)
-        int levelUnlocked = PlayerPrefs.GetInt("LevelUnlocked", 1);
+        int levelUnlocked = levelDataList.Length;
         
         // Cek berapa level yang sudah diselesaikan (Default: 0)
         int levelCompleted = PlayerPrefs.GetInt("LevelCompleted", 0);
@@ -37,7 +37,7 @@ public class MenuDistrikManager : MonoBehaviour
         // 3. Update Teks Indikator Distrik (Hasilnya misal: "1/4")
         if (teksIndikatorDistrik != null)
         {
-            teksIndikatorDistrik.text = levelUnlocked + "/" + levelDataList.Length;
+            teksIndikatorDistrik.text = levelDataList.Length + "/" + levelDataList.Length;
         }
 
         for (int i = 0; i < levelDataList.Length; i++)
@@ -45,33 +45,32 @@ public class MenuDistrikManager : MonoBehaviour
             Image buttonImage = levelDataList[i].button.GetComponent<Image>();
             int currentLevel = i + 1;
 
+            levelDataList[i].button.interactable = true;
+
             // 1. Jika level sudah tamat/selesai (Completed)
             if (currentLevel <= levelCompleted)
             {
-                levelDataList[i].button.interactable = true; // Tetap bisa diklik buat replay
                 if (buttonImage != null && levelDataList[i].spriteCompleted != null)
                 {
                     buttonImage.sprite = levelDataList[i].spriteCompleted; // Pasang Sprite Completed
                 }
             }
             // 2. Jika level sudah terbuka tapi belum tamat (Unlocked)
-            else if (currentLevel <= levelUnlocked)
+            else //if (currentLevel <= levelUnlocked)//
             {
-                levelDataList[i].button.interactable = true; // Bisa diklik
                 if (buttonImage != null && levelDataList[i].spriteUnlocked != null)
                 {
                     buttonImage.sprite = levelDataList[i].spriteUnlocked; // Pasang Sprite Terbuka
                 }
             }
             // 3. Jika level belum terbuka (Locked)
-            else
-            {
-                levelDataList[i].button.interactable = false; // Gak bisa diklik
-                if (buttonImage != null && levelDataList[i].spriteLocked != null)
-                {
-                    buttonImage.sprite = levelDataList[i].spriteLocked; // Pasang Gambar Gembok
-                }
-            }
+            // else
+            // {
+            //     if (buttonImage != null && levelDataList[i].spriteLocked != null)
+            //     {
+            //         buttonImage.sprite = levelDataList[i].spriteLocked; // Pasang Gambar Gembok
+            //     }
+            // }
         }
     }
 
