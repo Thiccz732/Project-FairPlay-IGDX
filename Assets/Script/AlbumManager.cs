@@ -63,7 +63,8 @@ public class AlbumManager : MonoBehaviour
         }
 
         // 3. Cek Status Unlock Hewan Aktif
-        bool isUnlocked = PlayerPrefs.GetInt(data.keyPlayerPrefs, 0) == 1;
+        bool isUnlocked = true;
+        // PlayerPrefs.GetInt(data.keyPlayerPrefs, 0) == 1;
 
         if (isUnlocked)
         {
@@ -102,15 +103,17 @@ public class AlbumManager : MonoBehaviour
 // Fungsi Tambahan: Menghitung berapa banyak hewan yang sudah unlocked
     private int HitungTotalUnlocked()
     {
-        int jumlah = 0;
-        foreach (var hewan in daftarHewan)
-        {
-            if (PlayerPrefs.GetInt(hewan.keyPlayerPrefs, 0) == 1)
-            {
-                jumlah++;
-            }
-        }
-        return jumlah;
+        return daftarHewan.Length; 
+        
+        // int jumlah = 0;
+        // foreach (var hewan in daftarHewan)
+        // {
+        //     if (PlayerPrefs.GetInt(hewan.keyPlayerPrefs, 0) == 1)
+        //     {
+        //         jumlah++;
+        //     }
+        // }
+        // return jumlah;
     }
 
     private void UpdateSlotSamping()
@@ -136,8 +139,10 @@ public class AlbumManager : MonoBehaviour
             targetImage.sprite = daftarHewan[i].spriteFotoStatis;
             targetImage.preserveAspect = true; // Biar tetep proporsional
             
-            bool sideUnlocked = PlayerPrefs.GetInt(daftarHewan[i].keyPlayerPrefs, 0) == 1;
+            bool sideUnlocked = true;
+            // PlayerPrefs.GetInt(daftarHewan[i].keyPlayerPrefs, 0) == 1;
             targetImage.color = sideUnlocked ? Color.white : new Color(0.2f, 0.2f, 0.2f, 1f);
+            // sideUnlocked ? Color.white : new Color(0.2f, 0.2f, 0.2f, 1f);
             
             slotIndex++;
             }
